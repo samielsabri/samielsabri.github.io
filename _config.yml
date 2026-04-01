@@ -22,7 +22,7 @@ author: Sami El Sabri
 navbar-links:
   About Me: "aboutme"
   Data Portfolio:
-    - FIFA ON-MARG: "dashboards/fifa_onmarg/index"
+    - FIFA ON-MARG: "dashboards/fifa_onmarg/index.html"
 
 ################
 # --- Logo --- #
