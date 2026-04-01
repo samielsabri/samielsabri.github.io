@@ -21,8 +21,8 @@ author: Sami El Sabri
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+  Data Portfolio:
+    - FIFA ON-MARG: "dashboards/fifa_onmarg/index"
 
 ################
 # --- Logo --- #
