@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: 
 ---
 
 As you may have noticed, I love maps. Each map I create or draw is a moment of reflection: on the lines that divide us, on the sheer luck of where one is born, and on the beauty that lies in the diversity across those pencil strokes. As amazing as maps are, they are a stark reminder of the arbitrariness of global inequality. 
