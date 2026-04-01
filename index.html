@@ -1,5 +1,300 @@
----
-layout: home
-title: My website
-subtitle: This is where I will tell my friends way too much about me
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of epidemiology and global health projects, dashboards, and research work." />
+  <title>Your Name | Epidemiology & Global Health Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f7f7;
+      --text: #111111;
+      --muted: #555555;
+      --line: #e5e5e5;
+      --accent: #0f4c81;
+      --max: 1080px;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      padding: 64px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 16px;
+      max-width: 14ch;
+    }
+
+    .lede {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 72ch;
+      margin: 0 0 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: white;
+      border-color: var(--text);
+    }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 0 0 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .two-up .card { grid-column: span 12; }
+
+    .embed {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      padding: 28px 0 56px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 760px) {
+      .two-up .card { grid-column: span 6; }
+      .span-7 { grid-column: span 7; }
+      .span-5 { grid-column: span 5; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">MSc Global Health Sciences & Epidemiology</div>
+      <h1>Data, disease, and public health.</h1>
+      <p class="lede">
+        I build epidemiology projects, dashboards, and analysis workflows focused on global health,
+        spatial patterns, climate-sensitive health risks, migration, and infectious and non-communicable diseases.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="#dashboards">View dashboards</a>
+        <a class="btn" href="mailto:your.email@example.com">Contact</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid">
+        <div class="card span-7">
+          <h3>Research interests</h3>
+          <p>
+            My work sits at the intersection of epidemiology, spatial analysis, and global health.
+            I am especially interested in methods and applications that support surveillance,
+            outbreak analysis, and policy-relevant public health decisions.
+          </p>
+        </div>
+        <div class="card span-5">
+          <h3>Methods</h3>
+          <p class="meta">Python • R • GIS • Data visualization • Reproducible analysis</p>
+          <p>
+            I use transparent workflows and clear communication to turn data into interpretable public health evidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+      <div class="grid two-up">
+        <article class="card">
+          <h3>Climate-sensitive disease mapping</h3>
+          <div class="meta">Spatial epidemiology • Geocoded data • Policy relevance</div>
+          <p>
+            A project examining geographic variation in health outcomes and environmental exposures,
+            with emphasis on visual clarity and reproducible analysis.
+          </p>
+          <div class="tags">
+            <span class="tag">GIS</span>
+            <span class="tag">Map-based analysis</span>
+            <span class="tag">Public health</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Interactive surveillance dashboard</h3>
+          <div class="meta">Case trends • Descriptive epidemiology • Monitoring</div>
+          <p>
+            A lightweight dashboard for tracking trends over time, suitable for portfolio presentation
+            and methods demonstration.
+          </p>
+          <div class="tags">
+            <span class="tag">Streamlit</span>
+            <span class="tag">Dash</span>
+            <span class="tag">Tableau Public</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="dashboards">
+      <h2>Dashboards</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Dashboard title</h3>
+          <p class="meta">Embed a hosted dashboard here.</p>
+          <div class="embed">
+            <iframe
+              src="https://your-dashboard-url-here"
+              title="Dashboard embed"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="meta" style="margin-top:12px;">
+            If embedding is blocked by the host, use a direct link instead.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <h2>Writing and outputs</h2>
+      <div class="grid two-up">
+        <div class="card">
+          <h3>Brief methods note</h3>
+          <p>
+            A short explanation of the analysis question, data source, and approach.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Poster or report</h3>
+          <p>
+            A downloadable PDF version of a research poster, placement report, or project summary.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div class="card">
+          <p>
+            Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br />
+            GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+            LinkedIn: <a href="https://www.linkedin.com/in/yourprofile/">linkedin.com/in/yourprofile</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Your Name
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
