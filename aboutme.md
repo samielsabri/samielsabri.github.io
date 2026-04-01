@@ -4,13 +4,6 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+As you may have noticed, I love maps. Each map I create or draw is a moment of reflection: on the lines that divide us, on the sheer luck of where one is born, and on the beauty that lies in the diversity across those pencil strokes. As amazing as maps are, they are a stark reminder of the arbitrariness of global inequality. 
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Growing up as a Moroccan immigrant in Germany, trekking to Costa Rica at 16, and now calling one of Earth’s most diverse cities home, I have lived these contrasts. Crossing these borders is where my insatiable curiosity about the world stems from, and what motivates me every day to learn even more languages, travel to even more places, and connect with even more people.
