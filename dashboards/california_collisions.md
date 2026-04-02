@@ -9,7 +9,7 @@ This analysis was initially developed for a technical interview at MAP Centre fo
 
 ---
 
-<div style="width: 120%; margin: 30px 0;">
+<div style="width: 100%; margin: 30px 0;">
   <div style="border: 2px solid #2c3e50; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
     <iframe src="/dashboards/california_collisions_dashboard.html" width="100%" height="800px" style="border:none;"></iframe>
   </div>
