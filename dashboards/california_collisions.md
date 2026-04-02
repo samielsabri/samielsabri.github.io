@@ -1,4 +1,7 @@
 ---
+layout: default
+title: California Traffic Collisions
+---
 
 # California Traffic Collisions
 
