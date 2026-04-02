@@ -23,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Data Portfolio:
     - FIFA 2026 Toronto Socio-Spatial Impact: "dashboards/fifa-project"
-    - California Traffic Collisions: "dashboards/california-collisions-dashboard
+    - California Traffic Collisions: "dashboards/california-collisions-dashboard"
 
 ################
 # --- Logo --- #
