@@ -159,8 +159,8 @@ Phonetic complexity effects are intuitive: more phones → more chances for a na
 
 ## What this means
 
-The results support a modest but real phonosemantic bias: across language families with no shared ancestor, the word for "nose" is drawn toward nasal sounds more than chance would predict. The articulatory logic is appealing — nasal phones are produced by directing airflow through the nose, mirroring the body part they name. This would make "nose" a case of *sound iconicity* rather than pure arbitrariness.
+The results support a modest but real phonosemantic bias: across language families with no shared ancestor, the word for "nose" is drawn toward nasal sounds more than chance would predict. The articulatory logic is appealing because nasal phones are produced by directing airflow through the nose, mirroring the body part they name. This would make "nose" a case of *sound iconicity* rather than pure arbitrariness.
 
 The finding also has a methodological implication: controlling for word length is essential in any phonosemantic analysis. A long word like */dægunu/* (Latvian) contains a nasal almost by accident; a short word like */nun/* (Bambara) is far more likely to reflect an underlying symbolic tendency.
 
-Limitations are significant: the Indo-European bias in available data persists despite efforts to broaden sampling, and the absence of phone-frequency corpora for most languages makes it impossible to estimate a true baseline rate. The permutation workaround is principled but not a substitute for that data.
+Limitations are still significant: the Indo-European bias in available data persists despite efforts to broaden sampling, and the absence of phone-frequency corpora for most languages makes it impossible to estimate a true baseline rate. The permutation workaround is principled but not a substitute for that data.
