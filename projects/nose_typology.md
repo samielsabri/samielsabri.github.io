@@ -8,7 +8,7 @@ title: Nasal Phones Across Tongues
 **Phonosemantics · Linguistic Typology · April 2024**  
 `R` · `Logistic Regression` · `Permutation Testing` · `Leaflet`
 
-Does the word for "nose" tend to *sound* nasal across languages — or is that just a coincidence of English? A cross-linguistic analysis of 242 languages across 40 families using logistic regression and permutation testing.
+Does the word for "nose" tend to *sound* nasal across languages — or is that just a coincidence of English? A cross-linguistic analysis of 242 languages across 40 families using logistic regression and permutation testing. This personal project was not part of any contract or academic exercise, but purely to satisfy a question I have had since I was a child.
 
 *Links: [↗ GitHub](https://github.com/samielsabri/phonosemantic_typology_analysis) · [↗ Live Shiny app](https://samielsabri.shinyapps.io/nose_typology_app/)*
 
@@ -16,7 +16,7 @@ Does the word for "nose" tend to *sound* nasal across languages — or is that j
 
 ## The question
 
-One of the foundational principles of modern linguistics is the *arbitrariness of the sign*: the sounds of a word bear no inherent relationship to its meaning. Nothing about the word "cat" tells you it refers to a small furry animal. Yet a growing body of typological research finds cracks in this principle — places where sound and meaning appear non-randomly linked.
+One of the foundational principles of modern linguistics is the *arbitrariness of the sign*: the sounds of a word bear no inherent relationship to its meaning. Nothing about the word "cat" tells you it refers to a small furry animal. However, a growing body of typological research finds more examples of possible sound symbolism — places where sound and meaning appear non-randomly linked.
 
 The word for "nose" is a striking candidate. In English it starts with /n/. In French: *nez*. Spanish: *nariz*. Hindi: *nāk*. But are these patterns real across unrelated language families, or just an artefact of shared Indo-European ancestry? This project tests that question across 242 languages from 40 families.
 
@@ -51,7 +51,7 @@ Each marker represents one language. Hover for the language name; click for the 
 
 ## What the data show
 
-The 80% figure is striking on its own, but raw prevalence isn't the finding — the finding is that this pattern holds across unrelated language families, suggesting it isn't simply inherited from a common ancestor.
+This pattern holds across unrelated language families, suggesting it isn't simply inherited from a common ancestor.
 
 <!-- BAR CHARTS: Built with inline HTML to bypass Markdown parser issues -->
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 1.5rem 0; font-family: sans-serif;">
