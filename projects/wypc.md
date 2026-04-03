@@ -6,7 +6,7 @@ title: Mapping hidden deprivation in Wolvercote (North Oxford)
 # Mapping hidden deprivation in Wolvercote (North Oxford)
 
 **Deprivation analysis · Oxford, UK · 2026**  
-`R` · `ONS Census 2021` · `IMD 2025` · `ONS Open Geography Portal`
+`R` · `GIS` · `ONS Census 2021` · `IMD 2025` · `ONS Open Geography Portal`
 
 Wolvercote Young People's Club (WYPC) serves young people aged 8–24 in Wolvercote and Cutteslowe, a north Oxford area perceived as affluent but containing real concentrations of disadvantage invisible to standard area statistics. I was commissioned to build the evidence base for their funding case.
 
