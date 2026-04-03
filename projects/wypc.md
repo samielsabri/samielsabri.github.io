@@ -40,7 +40,7 @@ To synthesise evidence across four deprivation dimensions (employment, housing, 
 
 ### LSOA-level (IMD 2025) vs. OA-level (Census 2021) — side by side
 
-![Comparative spatial analysis: LSOA IMD 2025 quintiles alongside OA Census 2021 deprivation quintiles, for each of the four deprivation dimensions](/img/wypc_lsoa_oa_compare_gh.jpg)
+![Comparative spatial analysis: LSOA IMD 2025 quintiles alongside OA Census 2021 deprivation quintiles, for each of the four deprivation dimensions](/img/wypc_lsoa_oa_compare_gh.jpeg)
 
 *The divergence between the two columns illustrates how much within-LSOA variation is lost when analysis stops at neighbourhood level.*
 
