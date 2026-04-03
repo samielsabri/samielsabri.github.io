@@ -24,6 +24,7 @@ navbar-links:
   Data Portfolio:
     - FIFA 2026 Toronto Socio-Spatial Impact: "dashboards/fifa-project"
     - California Traffic Collisions: "dashboards/california_collisions"
+    - North Oxford Spatial Analysis: Hidden Deprivation: "projects/wypc"
 
 ################
 # --- Logo --- #
@@ -31,7 +32,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/img/Sami_Headshot_2025.JPG"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
