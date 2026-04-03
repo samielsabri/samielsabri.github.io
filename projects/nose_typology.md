@@ -66,4 +66,101 @@ The 80% figure is striking on its own, but raw prevalence isn't the finding — 
     </div>
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
       <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">Absent</span>
-      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 20%; background
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 20%; background: #b83030;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">20%</span>
+    </div>
+  </div>
+
+  <!-- Chart 2 -->
+  <div style="flex: 1 1 45%; min-width: 250px;">
+    <h3 style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6560; margin-bottom: 1rem; font-family: monospace;">Nasal phone in "nose" — Indo-European</h3>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">Present</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 88%; background: #2a5fa8;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~88%</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">Absent</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 12%; background: #b83030;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~12%</span>
+    </div>
+  </div>
+
+  <!-- Chart 3 -->
+  <div style="flex: 1 1 45%; min-width: 250px;">
+    <h3 style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6560; margin-bottom: 1rem; font-family: monospace;">Nasal count per word</h3>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">0 nasals</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 20%; background: #6b6560;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~48</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">1 nasal</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 66%; background: #2a5fa8;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~160</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">2 nasals</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 12%; background: #2a5fa8;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~29</span>
+    </div>
+  </div>
+
+  <!-- Chart 4 -->
+  <div style="flex: 1 1 45%; min-width: 250px;">
+    <h3 style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6560; margin-bottom: 1rem; font-family: monospace;">Nasal onset position — IE languages</h3>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">Onset</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 78%; background: #2a5fa8;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~78%</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 9px;">
+      <span style="font-size: 12.5px; color: #6b6560; min-width: 68px; text-align: right;">Not onset</span>
+      <div style="flex: 1; height: 20px; background: #efeae3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 22%; background: #6b6560;"></div></div>
+      <span style="font-size: 12px; color: #6b6560; min-width: 34px; font-family: monospace;">~22%</span>
+    </div>
+  </div>
+
+</div>
+
+Contrast: across all languages with a nasal, the nasal more often falls in the coda/rhyme (e.g. Arabic */ænf/*, Turkish */burun/*) than at the onset.
+
+---
+
+## Methodology
+
+Two approaches were used to assess whether nasal phone presence in words for "nose" is non-random:
+
+* **Logistic regression** modelled the probability of a nasal phone as a function of language family membership, number of phones, and number of syllables. Word length is a necessary control: longer words are simply more likely to contain any given phone by chance.
+* **Permutation testing** assessed robustness without parametric assumptions. Language family labels were shuffled 10,000 times and the test statistic recalculated each time, generating a null distribution. The observed statistic was then compared against it.
+
+> **Benchmarking note:** Because nasal phones (/m/, /n/, /ŋ/) appear in over 94%, 78%, and 63% of the world's languages respectively, and tend to be high-frequency sounds within each language, we cannot directly estimate a "baseline" rate of nasal occurrence in arbitrary words. The permutation test sidesteps this by asking: is the pattern more structured than chance shuffling of family labels would produce?
+
+---
+
+## Results
+
+| Term | Estimate | Odds ratio | p-value | Significance |
+| :--- | :--- | :--- | :--- | :--- |
+| (Intercept) | −0.382 | 0.683 | 0.555 | |
+| Indo-European (vs. other) | +0.980 | 2.67× | 0.092 | marginal |
+| Number of phones | +0.923 | 2.52× | <0.001 | \*\*\* |
+| Number of syllables | −1.326 | 0.27× | 0.002 | \*\* |
+
+*Table data based on the logistic regression model.*
+
+The permutation test yielded *p* = 0.024, confirming the pattern is unlikely under the null hypothesis of random nasal distribution.
+
+Indo-European membership increases the odds of a nasal phone by 2.67× but this effect does not reach conventional significance — meaning we cannot claim IE languages are categorically different, only that the overall cross-linguistic trend is real. The two families significantly less likely to feature nasal phones are Sino-Tibetan (e.g. Mandarin *bízi*) and Northeast Caucasian (e.g. Chechen).
+
+Phonetic complexity effects are intuitive: more phones → more chances for a nasal (positive); more syllables → each syllable carries fewer phones on average, diluting the density (negative).
+
+---
+
+## What this means
+
+The results support a modest but real phonosemantic bias: across language families with no shared ancestor, the word for "nose" is drawn toward nasal sounds more than chance would predict. The articulatory logic is appealing — nasal phones are produced by directing airflow through the nose, mirroring the body part they name. This would make "nose" a case of *sound iconicity* rather than pure arbitrariness.
+
+The finding also has a methodological implication: controlling for word length is essential in any phonosemantic analysis. A long word like */dægunu/* (Latvian) contains a nasal almost by accident; a short word like */nun/* (Bambara) is far more likely to reflect an underlying symbolic tendency.
+
+Limitations are significant: the Indo-European bias in available data persists despite efforts to broaden sampling, and the absence of phone-frequency corpora for most languages makes it impossible to estimate a true baseline rate. The permutation workaround is principled but not a substitute for that data.
