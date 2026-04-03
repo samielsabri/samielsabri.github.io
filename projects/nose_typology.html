@@ -1,1 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nasal Phones Across Tongues</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  :root {
+    --ink:     #1a1714;
+    --ink-mid: #6b6560;
+    --ink-faint:#b8b3ae;
+    --paper:   #f7f4ef;
+    --paper-2: #efeae3;
+    --accent:  #2a5fa8;
+    --accent-r:#b83030;
+    --rule:    #d9d3cb;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ─────────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 4rem 2rem 3rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-mid);
+    max-width: 580px;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .meta-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-mid);
+    background: var(--paper-2);
+  }
+
+  .pill.link {
+    color: var(--accent);
+    border-color: #a8c0e8;
+    background: #eef3fb;
+    text-decoration: none;
+  }
+
+  .pill.link:hover { background: #dce8f7; }
+
+  /* ── MAIN LAYOUT ─────────────────────────────── */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
+
+  section { margin-top: 3.5rem; }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin-bottom: 1rem; color: var(--ink); }
+  p:last-child { margin-bottom: 0; }
+
+  em { font-family: 'Lora', serif; font-style: italic; }
+
+  /* ── STAT CARDS ──────────────────────────────── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 2rem 0;
+  }
+
+  .stat {
+    background: var(--paper);
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--ink-mid);
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  /* ── MAP ─────────────────────────────────────── */
+  .map-wrap {
+    border: 1px solid var(--rule);
+    margin: 1.5rem 0 0.75rem;
+    position: relative;
+  }
+
+  #map { height: 440px; width: 100%; }
+
+  .map-caption {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    font-style: italic;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+  }
+
+  /* ── BAR CHARTS ──────────────────────────────── */
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .chart-block h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 1rem;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 9px;
+  }
+
+  .bar-label {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    min-width: 68px;
+    text-align: right;
+    line-height: 1.3;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 20px;
+    background: var(--paper-2);
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 1px;
+    transition: width 1s cubic-bezier(.16,1,.3,1);
+  }
+
+  .bar-fill.presence { background: var(--accent); }
+  .bar-fill.absence  { background: var(--accent-r); }
+  .bar-fill.neutral  { background: var(--ink-mid); }
+
+  .bar-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mid);
+    min-width: 34px;
+  }
+
+  /* ── MODEL TABLE ─────────────────────────────── */
+  .model-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 1.5rem 0;
+  }
+
+  .model-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-align: left;
+    padding: 6px 12px 6px 0;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 400;
+  }
+
+  .model-table td {
+    padding: 7px 12px 7px 0;
+    border-bottom: 1px solid var(--paper-2);
+    vertical-align: middle;
+  }
+
+  .model-table .mono { font-family: 'DM Mono', monospace; font-size: 12px; }
+  .model-table .sig  { color: var(--accent); font-weight: 500; }
+  .model-table .sig2 { color: var(--ink-mid); }
+
+  .sig-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: #eef3fb;
+    color: var(--accent);
+    border: 1px solid #a8c0e8;
+  }
+
+  /* ── CALLOUT ─────────────────────────────────── */
+  .callout {
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.2rem;
+    background: #eef3fb;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .callout strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ── FOOTER ──────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem;
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 580px) {
+    .charts { grid-template-columns: 1fr; }
+    .stats  { grid-template-columns: 1fr; }
+    footer  { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Phonosemantics &nbsp;·&nbsp; Linguistic Typology &nbsp;·&nbsp; April 2024</p>
+  <h1>Nasal Phones Across Tongues</h1>
+  <p class="subtitle">
+    Does the word for "nose" tend to <em>sound</em> nasal across languages — or is that just a coincidence of English? A cross-linguistic analysis of 242 languages using logistic regression and permutation testing.
+  </p>
+  <div class="meta-pills">
+    <span class="pill">R</span>
+    <span class="pill">Logistic Regression</span>
+    <span class="pill">Permutation Testing</span>
+    <span class="pill">Leaflet</span>
+    <span class="pill">242 languages · 40 families</span>
+    <a class="pill link" href="https://github.com/samielsabri/phonosemantic_typology_analysis" target="_blank">↗ GitHub</a>
+    <a class="pill link" href="https://samielsabri.shinyapps.io/nose_typology_app/" target="_blank">↗ Live Shiny app</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- OVERVIEW -->
+  <section>
+    <h2>The question</h2>
+    <p>One of the foundational principles of modern linguistics is the <em>arbitrariness of the sign</em>: the sounds of a word bear no inherent relationship to its meaning. Nothing about the word "cat" tells you it refers to a small furry animal. Yet a growing body of typological research finds cracks in this principle — places where sound and meaning appear non-randomly linked.</p>
+    <p>The word for "nose" is a striking candidate. In English it starts with /n/. In French: <em>nez</em>. Spanish: <em>nariz</em>. Hindi: <em>nāk</em>. But are these patterns real across unrelated language families, or just an artefact of shared Indo-European ancestry? This project tests that question across 242 languages from 40 families.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">242</span>
+        <span class="stat-label">languages in the dataset</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">40</span>
+        <span class="stat-label">language families sampled</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">80%</span>
+        <span class="stat-label">have a nasal phone in their word for "nose"</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section>
+    <h2>Interactive map</h2>
+    <p>Each marker represents one language. Hover for the language name; click for the IPA transcription of its word for "nose." Blue = nasal phone present, red = absent.</p>
+    <div class="map-wrap">
+      <div id="map"></div>
+    </div>
+    <p class="map-caption">Data sourced from Google Translate, Bing Translate, Glosbe, and specialist dictionaries for underrepresented languages. IPA transcriptions consulted where available; secondary literature used to confirm suspected nasals in Latin-script data.</p>
+  </section>
+
+  <!-- DATA -->
+  <section>
+    <h2>What the data show</h2>
+    <p>The 80% figure is striking on its own, but raw prevalence isn't the finding — the finding is that this pattern holds across unrelated language families, suggesting it isn't simply inherited from a common ancestor.</p>
+
+    <div class="charts">
+      <div class="chart-block">
+        <h3>Nasal phone in "nose" — all languages</h3>
+        <div class="bar-row">
+          <span class="bar-label">Present</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="80%"></div></div>
+          <span class="bar-val">80%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Absent</span>
+          <div class="bar-track"><div class="bar-fill absence" style="width:0%" data-w="20%"></div></div>
+          <span class="bar-val">20%</span>
+        </div>
+      </div>
+
+      <div class="chart-block">
+        <h3>Nasal phone in "nose" — Indo-European only</h3>
+        <div class="bar-row">
+          <span class="bar-label">Present</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="88%"></div></div>
+          <span class="bar-val">~88%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Absent</span>
+          <div class="bar-track"><div class="bar-fill absence" style="width:0%" data-w="12%"></div></div>
+          <span class="bar-val">~12%</span>
+        </div>
+      </div>
+
+      <div class="chart-block">
+        <h3>Nasal count per word (all languages)</h3>
+        <div class="bar-row">
+          <span class="bar-label">0 nasals</span>
+          <div class="bar-track"><div class="bar-fill neutral" style="width:0%" data-w="20%"></div></div>
+          <span class="bar-val">~48</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">1 nasal</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="66%"></div></div>
+          <span class="bar-val">~160</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2 nasals</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="12%"></div></div>
+          <span class="bar-val">~29</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">3 nasals</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="2%"></div></div>
+          <span class="bar-val">~5</span>
+        </div>
+      </div>
+
+      <div class="chart-block">
+        <h3>Nasal onset position — IE languages</h3>
+        <div class="bar-row">
+          <span class="bar-label">Onset</span>
+          <div class="bar-track"><div class="bar-fill presence" style="width:0%" data-w="78%"></div></div>
+          <span class="bar-val">~78%</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Not onset</span>
+          <div class="bar-track"><div class="bar-fill neutral" style="width:0%" data-w="22%"></div></div>
+          <span class="bar-val">~22%</span>
+        </div>
+        <p style="font-size:12px; color:var(--ink-mid); margin-top:0.6rem; line-height:1.4;">Contrast: across all languages with a nasal, the nasal more often falls in the coda/rhyme (e.g. Arabic <em>/ænf/</em>, Turkish <em>/burun/</em>) than at the onset.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section>
+    <h2>Methodology</h2>
+    <p>Two approaches were used to assess whether nasal phone presence in words for "nose" is non-random:</p>
+
+    <p><strong>Logistic regression</strong> modelled the probability of a nasal phone as a function of language family membership, number of phones, and number of syllables. Word length is a necessary control: longer words are simply more likely to contain any given phone by chance.</p>
+
+    <p><strong>Permutation testing</strong> assessed robustness without parametric assumptions. Language family labels were shuffled 10,000 times and the test statistic recalculated each time, generating a null distribution. The observed statistic was then compared against it.</p>
+
+    <div class="callout">
+      <strong>Benchmarking note</strong>
+      Because nasal phones (/m/, /n/, /ŋ/) appear in over 94%, 78%, and 63% of the world's languages respectively, and tend to be high-frequency sounds within each language, we cannot directly estimate a "baseline" rate of nasal occurrence in arbitrary words. The permutation test sidesteps this by asking: is the pattern more structured than chance shuffling of family labels would produce?
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section>
+    <h2>Results</h2>
+
+    <table class="model-table">
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Estimate</th>
+          <th>Odds ratio</th>
+          <th>p-value</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(Intercept)</td>
+          <td class="mono">−0.382</td>
+          <td class="mono">0.683</td>
+          <td class="mono sig2">0.555</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Indo-European (vs. other)</td>
+          <td class="mono">+0.980</td>
+          <td class="mono sig">2.67×</td>
+          <td class="mono sig2">0.092</td>
+          <td><span class="sig-badge">marginal</span></td>
+        </tr>
+        <tr>
+          <td>Number of phones</td>
+          <td class="mono">+0.923</td>
+          <td class="mono sig">2.52×</td>
+          <td class="mono sig">&lt;0.001</td>
+          <td><span class="sig-badge">***</span></td>
+        </tr>
+        <tr>
+          <td>Number of syllables</td>
+          <td class="mono">−1.326</td>
+          <td class="mono">0.27×</td>
+          <td class="mono sig">0.002</td>
+          <td><span class="sig-badge">**</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The permutation test yielded <em>p</em> = 0.024, confirming the pattern is unlikely under the null hypothesis of random nasal distribution.</p>
+
+    <p>Indo-European membership increases the odds of a nasal phone by 2.67× but this effect does not reach conventional significance — meaning we cannot claim IE languages are categorically different, only that the overall cross-linguistic trend is real. The two families significantly less likely to feature nasal phones are Sino-Tibetan (e.g. Mandarin <em>bízi</em>) and Northeast Caucasian (e.g. Chechen).</p>
+
+    <p>Phonetic complexity effects are intuitive: more phones → more chances for a nasal (positive); more syllables → each syllable carries fewer phones on average, diluting the density (negative).</p>
+  </section>
+
+  <!-- DISCUSSION -->
+  <section>
+    <h2>What this means</h2>
+    <p>The results support a modest but real phonosemantic bias: across language families with no shared ancestor, the word for "nose" is drawn toward nasal sounds more than chance would predict. The articulatory logic is appealing — nasal phones are produced by directing airflow through the nose, mirroring the body part they name. This would make "nose" a case of <em>sound iconicity</em> rather than pure arbitrariness.</p>
+    <p>The finding also has a methodological implication: controlling for word length is essential in any phonosemantic analysis. A long word like <em>/dægunu/</em> (Latvian) contains a nasal almost by accident; a short word like <em>/nun/</em> (Bambara) is far more likely to reflect an underlying symbolic tendency.</p>
+    <p>Limitations are significant: the Indo-European bias in available data persists despite efforts to broaden sampling, and the absence of phone-frequency corpora for most languages makes it impossible to estimate a true baseline rate. The permutation workaround is principled but not a substitute for that data.</p>
+  </section>
+
+</main>
+
+<footer>
+  <span>Sami El Sabri · April 2024</span>
+  <span>R · leaflet · sf · tidyverse</span>
+</footer>
+
+<script>
+  /* ── MAP ── */
+  const map = L.map('map', { scrollWheelZoom: false }).setView([20, 10], 2);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
+
+  /* Sample of languages from the paper — representative spread across families */
+  const langs = [
+    /* Indo-European — nasal */
+    { name:"English",   ipa:"/noʊz/",   lat:51.5,  lng:-0.1,   nasal:true  },
+    { name:"French",    ipa:"/ne/",     lat:48.8,  lng:2.3,    nasal:true  },
+    { name:"Spanish",   ipa:"/naˈɾis/", lat:40.4,  lng:-3.7,   nasal:true  },
+    { name:"Hindi",     ipa:"/naːk/",   lat:28.6,  lng:77.2,   nasal:true  },
+    { name:"Italian",   ipa:"/ˈnazo/",  lat:41.9,  lng:12.5,   nasal:true  },
+    { name:"Odia",      ipa:"/naːk/",   lat:20.3,  lng:85.8,   nasal:true  },
+    /* Turkic — mixed */
+    { name:"Turkish",   ipa:"/buˈɾun/", lat:39.9,  lng:32.9,   nasal:true  },
+    { name:"Kumyk",     ipa:"/burun/",  lat:43.1,  lng:46.0,   nasal:true  },
+    /* Sino-Tibetan — nasal absent */
+    { name:"Mandarin",  ipa:"/pi˧˥tsi˨˩˦/",lat:39.9,lng:116.4,nasal:false },
+    { name:"Wu Chinese",ipa:"/bitoː/",  lat:31.2,  lng:121.5,  nasal:false },
+    { name:"Tibetan",   ipa:"/sna/",    lat:29.6,  lng:91.1,   nasal:true  },
+    /* Niger-Congo */
+    { name:"Edo",       ipa:"/unu/",    lat:6.3,   lng:5.6,    nasal:true  },
+    { name:"Swahili",   ipa:"/pua/",    lat:-6.2,  lng:35.7,   nasal:false },
+    { name:"Bambara",   ipa:"/nun/",    lat:12.6,  lng:-8.0,   nasal:true  },
+    /* Afro-Asiatic */
+    { name:"Arabic",    ipa:"/ænf/",    lat:24.0,  lng:45.0,   nasal:true  },
+    { name:"Hebrew",    ipa:"/ʔaf/",    lat:31.8,  lng:35.2,   nasal:false },
+    { name:"Amharic",   ipa:"/afɨnʧa/",lat:9.0,   lng:38.7,   nasal:true  },
+    /* Dravidian */
+    { name:"Tamil",     ipa:"/mukkʊ/",  lat:11.1,  lng:78.6,   nasal:true  },
+    { name:"Telugu",    ipa:"/mukkʊ/",  lat:17.4,  lng:78.5,   nasal:true  },
+    /* Koreanic */
+    { name:"Korean",    ipa:"/ko/",     lat:37.6,  lng:127.0,  nasal:false },
+    /* Japonic */
+    { name:"Japanese",  ipa:"/hana/",   lat:35.7,  lng:139.7,  nasal:true  },
+    /* Austronesian */
+    { name:"Malay",     ipa:"/ʰidʊŋ/",  lat:3.1,   lng:101.7,  nasal:true  },
+    { name:"Tagalog",   ipa:"/iloŋ/",   lat:14.6,  lng:121.0,  nasal:true  },
+    { name:"Hawaiian",  ipa:"/ihu/",    lat:21.3,  lng:-157.8, nasal:false },
+    /* Uralic */
+    { name:"Finnish",   ipa:"/nena/",   lat:61.9,  lng:25.7,   nasal:true  },
+    { name:"Hungarian", ipa:"/orr/",    lat:47.2,  lng:19.5,   nasal:false },
+    /* Dravidian */
+    { name:"Kannada",   ipa:"/mūku/",   lat:15.3,  lng:75.7,   nasal:true  },
+    /* NE Caucasian */
+    { name:"Chechen",   ipa:"/ʕer/",    lat:43.3,  lng:45.7,   nasal:false },
+    /* Trans-New Guinea */
+    { name:"Tok Pisin", ipa:"/nus/",    lat:-6.3,  lng:143.9,  nasal:true  },
+    /* Quechua */
+    { name:"Quechua",   ipa:"/sinqa/",  lat:-13.5, lng:-71.9,  nasal:true  },
+    /* Maya */
+    { name:"Yucatec Maya",ipa:"/niʔ/",  lat:20.7,  lng:-88.2,  nasal:true  },
+    /* Eskimo-Aleut */
+    { name:"Inuktitut", ipa:"/qingaq/", lat:63.7,  lng:-68.5,  nasal:true  },
+    /* Isolates */
+    { name:"Basque",    ipa:"/surdea/", lat:43.3,  lng:-1.9,   nasal:true  },
+    { name:"Georgian",  ipa:"/cxviri/", lat:41.7,  lng:44.8,   nasal:false },
+  ];
+
+  langs.forEach(l => {
+    L.circleMarker([l.lat, l.lng], {
+      radius: 7,
+      color: l.nasal ? '#2a5fa8' : '#b83030',
+      fillColor: l.nasal ? '#2a5fa8' : '#b83030',
+      fillOpacity: 0.75,
+      weight: 1.5
+    })
+    .bindTooltip(l.name, { permanent: false, direction: 'top', className: 'map-tip' })
+    .bindPopup(`<b style="font-family:'DM Sans',sans-serif;">${l.name}</b><br>
+      <span style="font-family:'DM Mono',monospace;font-size:13px;">${l.ipa}</span><br>
+      <span style="font-size:11px;color:#6b6560;">Nasal phone: ${l.nasal ? '✓ yes' : '✗ no'}</span>`)
+    .addTo(map);
+  });
+
+  /* Legend */
+  const legend = L.control({ position: 'bottomright' });
+  legend.onAdd = () => {
+    const d = L.DomUtil.create('div');
+    d.style.cssText = 'background:#f7f4ef;border:1px solid #d9d3cb;padding:10px 14px;font-family:"DM Sans",sans-serif;font-size:12px;line-height:1.8;';
+    d.innerHTML = `
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6b6560;margin-bottom:6px;">Nasal phone in "nose"</div>
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2a5fa8;margin-right:6px;vertical-align:middle;"></span>Present<br>
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#b83030;margin-right:6px;vertical-align:middle;"></span>Absent`;
+    return d;
+  };
+  legend.addTo(map);
+
+  /* ── ANIMATE BARS on scroll ── */
+  const bars = document.querySelectorAll('.bar-fill[data-w]');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.w;
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(b => io.observe(b));
+</script>
+
+</body>
+</html>
