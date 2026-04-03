@@ -32,7 +32,7 @@ To synthesise evidence across four deprivation dimensions (employment, housing, 
 
 ### Hidden deprivation score by Output Area
 
-![Distribution of hidden deprivation (n_hidden) across Output Areas in the five target LSOAs](/img/oa_hidden_n.png)
+![Distribution of hidden deprivation (n_hidden) across Output Areas in the five target LSOAs](/assets/img/oa_hidden_n.png)
 
 *Each OA is scored on the number of census deprivation dimensions where it exceeds both the Oxford city average and its own LSOA average. High scores identify acute need masked by neighbourhood-level statistics.*
 
@@ -40,7 +40,7 @@ To synthesise evidence across four deprivation dimensions (employment, housing, 
 
 ### LSOA-level (IMD 2025) vs. OA-level (Census 2021) — side by side
 
-![Comparative spatial analysis: LSOA IMD 2025 quintiles alongside OA Census 2021 deprivation quintiles, for each of the four deprivation dimensions](/img/wypc_lsoa_oa_compare_gh.jpeg)
+![Comparative spatial analysis: LSOA IMD 2025 quintiles alongside OA Census 2021 deprivation quintiles, for each of the four deprivation dimensions](/assets/img/wypc_lsoa_oa_compare_gh.jpeg)
 
 *The divergence between the two columns illustrates how much within-LSOA variation is lost when analysis stops at neighbourhood level.*
 
