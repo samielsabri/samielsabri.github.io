@@ -1,9 +1,9 @@
 ---
 layout: default
-title: FIFA 2026 Socio-Spatial Impact Analysis
+title: Mapping hidden deprivation in Wolvercote (North Oxford)
 ---
 
-# Mapping hidden deprivation in north Oxford
+# Mapping hidden deprivation in Wolvercote (North Oxford)
 
 **Deprivation analysis · Oxford, UK · 2026**  
 `R` · `ONS Census 2021` · `IMD 2025` · `ONS Open Geography Portal`
