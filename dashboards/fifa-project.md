@@ -4,6 +4,8 @@ title: FIFA 2026 Socio-Spatial Impact Analysis
 ---
 
 # FIFA 2026 Socio-Spatial Impact Analysis: Generation 2026
+**Urban Health · Health Equity · April 2025**
+`R` · `GIS` · `ON-MARG` · `Statistics Canada Census` · `Leaflet`
 
 ### Advancing Youth Agency, Safety, and Rights
 
