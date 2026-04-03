@@ -24,7 +24,7 @@ navbar-links:
   Data Portfolio:
     - FIFA 2026 Toronto Socio-Spatial Impact: "dashboards/fifa-project"
     - California Traffic Collisions: "dashboards/california_collisions"
-    - North Oxford Spatial Analysis: Hidden Deprivation: "projects/wypc"
+    - North Oxford Spatial Analysis Hidden Deprivation: "projects/wypc"
 
 ################
 # --- Logo --- #
@@ -58,6 +58,8 @@ social-network-links:
 ###########################
 # --- General options --- #
 ###########################
+
+baseurl: ""
 
 # Select which social network share links to show in posts
 share-links-active:
