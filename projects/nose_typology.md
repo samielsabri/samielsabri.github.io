@@ -3,85 +3,204 @@ layout: default
 title: Nasal Phones Across Tongues
 ---
 
-# Nasal Phones Across Tongues
+<!-- Include required external resources for fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-**Phonosemantics · Linguistic Typology · April 2024**[cite: 2]  
-`R` · `Logistic Regression` · `Permutation Testing` · `Leaflet`[cite: 2]
+<style>
+  /* Scope all custom variables to this specific page wrapper so it doesn't break your site's global nav */
+  .typology-wrapper {
+    --ink:     #1a1714;
+    --ink-mid: #6b6560;
+    --ink-faint:#b8b3ae;
+    --paper:   #f7f4ef;
+    --paper-2: #efeae3;
+    --accent:  #2a5fa8;
+    --accent-r:#b83030;
+    --rule:    #d9d3cb;
+    
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
 
-Does the word for "nose" tend to *sound* nasal across languages — or is that just a coincidence of English?[cite: 2] A cross-linguistic analysis of 242 languages across 40 families using logistic regression and permutation testing[cite: 2].
+  .typology-wrapper *, .typology-wrapper *::before, .typology-wrapper *::after { 
+    box-sizing: border-box; 
+  }
 
-*Links: [↗ GitHub](https://github.com/samielsabri/phonosemantic_typology_analysis) · [↗ Live Shiny app](https://samielsabri.shinyapps.io/nose_typology_app/)*[cite: 2]
+  /* ── HEADER ─────────────────────────────────── */
+  .typology-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 4rem 2rem 3rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
 
----
+  .typology-wrapper .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 1.2rem;
+  }
 
-## The question
+  .typology-wrapper h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.01em;
+    border: none;
+  }
 
-One of the foundational principles of modern linguistics is the *arbitrariness of the sign*: the sounds of a word bear no inherent relationship to its meaning[cite: 2]. Nothing about the word "cat" tells you it refers to a small furry animal[cite: 2]. Yet a growing body of typological research finds cracks in this principle — places where sound and meaning appear non-randomly linked[cite: 2].
+  .typology-wrapper .subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-mid);
+    max-width: 580px;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
 
-The word for "nose" is a striking candidate[cite: 2]. In English it starts with /n/[cite: 2]. In French: *nez*[cite: 2]. Spanish: *nariz*[cite: 2]. Hindi: *nāk*[cite: 2]. But are these patterns real across unrelated language families, or just an artefact of shared Indo-European ancestry?[cite: 2] This project tests that question across 242 languages from 40 families[cite: 2].
+  .typology-wrapper .meta-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 
-**Key Stats:**
-* **242** languages in the dataset[cite: 2]
-* **40** language families sampled[cite: 2]
-* **80%** have a nasal phone in their word for "nose"[cite: 2]
+  .typology-wrapper .pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-mid);
+    background: var(--paper-2);
+  }
 
----
+  .typology-wrapper .pill.link {
+    color: var(--accent);
+    border-color: #a8c0e8;
+    background: #eef3fb;
+    text-decoration: none;
+  }
 
-## Interactive map
+  .typology-wrapper .pill.link:hover { background: #dce8f7; }
 
-Each marker represents one language[cite: 2]. Hover for the language name; click for the IPA transcription of its word for "nose."[cite: 2] Blue = nasal phone present, red = absent[cite: 2].
+  /* ── MAIN LAYOUT ─────────────────────────────── */
+  .typology-main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
 
-<iframe src="/dashboards/nose_sound_symbolism_dashboard.html" width="100%" height="500px" style="border: 1px solid #d9d3cb; border-radius: 4px; margin-top: 1rem; margin-bottom: 0.5rem;"></iframe>
+  .typology-wrapper section { margin-top: 3.5rem; }
 
-*Data sourced from Google Translate, Bing Translate, Glosbe, and specialist dictionaries for underrepresented languages[cite: 2]. IPA transcriptions consulted where available; secondary literature used to confirm suspected nasals in Latin-script data[cite: 2].*
+  .typology-wrapper h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
 
----
+  .typology-wrapper p { margin-bottom: 1rem; color: var(--ink); }
+  .typology-wrapper p:last-child { margin-bottom: 0; }
+  .typology-wrapper em { font-family: 'Lora', serif; font-style: italic; }
 
-## What the data show
+  /* ── STAT CARDS ──────────────────────────────── */
+  .typology-wrapper .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 2rem 0;
+  }
 
-The 80% figure is striking on its own, but raw prevalence isn't the finding — the finding is that this pattern holds across unrelated language families, suggesting it isn't simply inherited from a common ancestor[cite: 2].
+  .typology-wrapper .stat {
+    background: var(--paper);
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+  }
 
-* **Nasal phone in "nose" (All languages):** Present: 80% | Absent: 20%[cite: 2]
-* **Nasal phone in "nose" (Indo-European only):** Present: ~88% | Absent: ~12%[cite: 2]
-* **Nasal count per word (All languages):** 0 nasals: ~48 | 1 nasal: ~160 | 2 nasals: ~29 | 3 nasals: ~5[cite: 2]
-* **Nasal onset position (Indo-European):** Onset: ~78% | Not onset: ~22%[cite: 2]. Contrast: across all languages with a nasal, the nasal more often falls in the coda/rhyme (e.g. Arabic */ænf/*, Turkish */burun/*) than at the onset[cite: 2].
+  .typology-wrapper .stat-number {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
 
----
+  .typology-wrapper .stat-label {
+    font-size: 12px;
+    color: var(--ink-mid);
+    line-height: 1.4;
+    font-weight: 300;
+  }
 
-## Methodology
+  /* ── MAP IFRAME ──────────────────────────────── */
+  .typology-wrapper .map-wrap {
+    margin: 1.5rem 0 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
 
-Two approaches were used to assess whether nasal phone presence in words for "nose" is non-random:[cite: 2]
+  .typology-wrapper .map-caption {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    font-style: italic;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+  }
 
-* **Logistic regression** modelled the probability of a nasal phone as a function of language family membership, number of phones, and number of syllables[cite: 2]. Word length is a necessary control: longer words are simply more likely to contain any given phone by chance[cite: 2].
-* **Permutation testing** assessed robustness without parametric assumptions[cite: 2]. Language family labels were shuffled 10,000 times and the test statistic recalculated each time, generating a null distribution[cite: 2]. The observed statistic was then compared against it[cite: 2].
+  /* ── BAR CHARTS ──────────────────────────────── */
+  .typology-wrapper .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
 
-> **Benchmarking note:** Because nasal phones (/m/, /n/, /ŋ/) appear in over 94%, 78%, and 63% of the world's languages respectively, and tend to be high-frequency sounds within each language, we cannot directly estimate a "baseline" rate of nasal occurrence in arbitrary words[cite: 2]. The permutation test sidesteps this by asking: is the pattern more structured than chance shuffling of family labels would produce?[cite: 2]
+  .typology-wrapper .chart-block h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-bottom: 1rem;
+    border: none;
+  }
 
----
+  .typology-wrapper .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 9px;
+  }
 
-## Results
+  .typology-wrapper .bar-label {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    min-width: 68px;
+    text-align: right;
+    line-height: 1.3;
+  }
 
-| Term | Estimate | Odds ratio | p-value | Significance |
-| :--- | :--- | :--- | :--- | :--- |
-| (Intercept) | −0.382 | 0.683 | 0.555 | |
-| Indo-European (vs. other) | +0.980 | 2.67× | 0.092 | marginal |
-| Number of phones | +0.923 | 2.52× | <0.001 | *** |
-| Number of syllables | −1.326 | 0.27× | 0.002 | ** |
+  .typology-wrapper .bar-track {
+    flex: 1;
+    height: 20px;
+    background: var(--paper-2);
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
 
-*Table data based on the logistic regression model[cite: 2].*
-
-The permutation test yielded *p* = 0.024, confirming the pattern is unlikely under the null hypothesis of random nasal distribution[cite: 2].
-
-Indo-European membership increases the odds of a nasal phone by 2.67× but this effect does not reach conventional significance — meaning we cannot claim IE languages are categorically different, only that the overall cross-linguistic trend is real[cite: 2]. The two families significantly less likely to feature nasal phones are Sino-Tibetan (e.g. Mandarin *bízi*) and Northeast Caucasian (e.g. Chechen)[cite: 2].
-
-Phonetic complexity effects are intuitive: more phones → more chances for a nasal (positive); more syllables → each syllable carries fewer phones on average, diluting the density (negative)[cite: 2].
-
----
-
-## What this means
-
-The results support a modest but real phonosemantic bias: across language families with no shared ancestor, the word for "nose" is drawn toward nasal sounds more than chance would predict[cite: 2]. The articulatory logic is appealing — nasal phones are produced by directing airflow through the nose, mirroring the body part they name[cite: 2]. This would make "nose" a case of *sound iconicity* rather than pure arbitrariness[cite: 2].
-
-The finding also has a methodological implication: controlling for word length is essential in any phonosemantic analysis[cite: 2]. A long word like */dægunu/* (Latvian) contains a nasal almost by accident; a short word like */nun/* (Bambara) is far more likely to reflect an underlying symbolic tendency[cite: 2].
-
-Limitations are significant: the Indo-European bias in available data persists despite efforts to broaden sampling, and the absence of phone-frequency corpora for most languages makes it impossible to estimate a true baseline rate[cite: 2]. The permutation workaround is principled but not a substitute for that data[cite: 2].
+  .typology-wrapper .bar-fill {
+    height: 100%;
+    border-radius: 1px;
+    transition: width 1s cubic-bezier(.1
