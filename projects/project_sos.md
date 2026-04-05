@@ -11,7 +11,7 @@ title: Project S.O.S – Award-Winning Policy & Innovation Strategy
 **Global Health Strategy · Lahore, Pakistan · 2021**  
 `Policy Analysis` · `Stakeholder Engagement` · `SDG 3.2.2` · `Frugal Innovation`
 
-Project S.O.S was an award-winning strategic proposal designed to tackle Pakistan's high neonatal mortality rate—specifically deaths caused by **omphalitis** (umbilical cord infections). Our team engineered a high-fidelity policy and technical framework for a low-cost, solar-powered autoclave to sterilize medical tools in off-grid rural regions. 
+Project S.O.S was an award-winning strategic proposal designed to tackle Pakistan's high neonatal mortality rate – specifically deaths caused by omphalitis (umbilical cord infections). Our team engineered a high-fidelity policy and technical framework for a low-cost, solar-powered autoclave to sterilize medical tools in off-grid rural regions. 
 
 > **Winner: 2021 Munk School of Global Affairs & Public Policy Munk One Dragon’s Den Pitch Competition**  
 > Awarded **$5,000** in seed funding for project feasibility and stakeholder development.
@@ -44,4 +44,4 @@ The $5,000 Dragon’s Den win validated our ability to take a complex medical cr
    </a>
 </div>
 
-<iframe src="/assets/pdf/Project_SOS_Pitch.pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
+<iframe src="/assets/pdf/Dragon's Den Pitch.pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
