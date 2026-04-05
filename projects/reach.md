@@ -6,7 +6,11 @@ title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migran
 # Reach Alliance: Streamlining Access to Social Benefits for Internal Seasonal Migrants in India
 **Migration · Mumbai, India · Rajasthan, India · 2024**  
 
-`Mixed-Methods` | `Policy Analysis` | `Public Health Equity` | `Data-Driven Insights` | `Fieldwork`
+`Mixed-Methods` · `Policy Analysis` · `Public Health Equity` · `Data-Driven Insights` · `Fieldwork`
+
+<div style="float: left; margin-right: 20px; margin-bottom: 10px; width: 40%;">
+  <img src="/assets/img/Reach/reach_speech.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
 
 As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mastercard Center for Inclusive Growth), I investigated the structural barriers preventing India's ~600 million internal migrants from accessing entitled social protections. Our team conducted primary fieldwork in Mumbai and Rajasthan to evaluate how Civil Society Organizations (CSOs) bridge the gap between policy intent and "last-mile" delivery.
 
@@ -22,19 +26,17 @@ As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mast
 * **IEEE Global Humanitarian Technology Conference (GHTC), 2024** *Leveraging technology for equitable access to social benefits: a case study of civil society organization interventions among internal seasonal migrant workers in India.* [Read Proceedings (p. 439–445)](https://ieeexplore.ieee.org/) 
 * **International Conference on Sustainable Development (ICSD), New York, 2024** *Service delivery ecosystems as infrastructure: a case study of the Migrant Resilience Collaborative in Rajasthan, India.* [View Presentation](https://airtable.com/appqDaefO2ZPw02QW/shrL3WonZwA0aOo2h?detail=eyJwYWdlSWQiOiJwYWdtaUFnVVZKY0hFcFFwZyIsInJvd0lkIjoicmVjRGU0S1g5bXBPUEo5R28iLCJzaG93Q29tbWVudHMiOmZhbHNlLCJxdWVyeU9yaWdpbkhpbnQiOnsidHlwZSI6InBhZ2VFbGVtZW50IiwiZWxlbWVudElkIjoicGVscGM2THVXb1BxR1g1RzciLCJxdWVyeUNvbnRhaW5lcklkIjoicGVsbWxFR2Y0d2UyVHVONVgifX0)
 
-{% capture gallery_content %}
-<img src="/assets/img/Reach/1.jpg">
-<img src="/assets/img/Reach/2.jpg">
-<img src="/assets/img/Reach/3.jpg">
-<img src="/assets/img/Reach/4.jpg">
-<img src="/assets/img/Reach/5.jpg">
-<img src="/assets/img/Reach/6.jpg">
-<img src="/assets/img/Reach/7.jpg">
-<img src="/assets/img/Reach/8.jpg">
-<img src="/assets/img/Reach/9.jpg">
-{% endcapture %}
-
-{% include gallery.html content=gallery_content %}
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
+  <img src="/assets/img/Reach/1.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/Reach/2.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/Reach/3.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/Reach/4.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/Reach/5.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/Reach/6.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+   <img src="/assets/img/Reach/7.JPG" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+     <img src="/assets/img/Reach/8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+     <img src="/assets/img/Reach/9.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+</div>
 
 ## Public Health & Social Equity
 My research focused on the intersection of migration and health outcomes. We examined how precarious living conditions in urban slums, lacking clean water and sanitation—compound health risks for mobile populations.
