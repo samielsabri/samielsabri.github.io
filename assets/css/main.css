@@ -379,7 +379,7 @@ pre code {
   justify-content: space-between;
   gap: 40px;
   max-width: var(--wide-width);
-  margin: 0 auto;
+  margin: 0;
 }
 
 .page-header__left {
