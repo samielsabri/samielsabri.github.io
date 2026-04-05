@@ -7,7 +7,7 @@ links:
   - label: "↗ GitHub"
     url: "https://github.com/samielsabri/phonosemantic_typology_analysis"
   - label: "↗ Live Shiny app"
-    url: "https://samielsabri.shinyapps.io/nose_typology_app/
+    url: "https://samielsabri.shinyapps.io/nose_typology_app/"
 ---
 
 Does the word for "nose" tend to *sound* nasal across languages — or is that just a coincidence of English? A cross-linguistic analysis of 242 languages across 40 families using logistic regression and permutation testing. This personal project was not part of any contract or academic exercise, but purely to satisfy a question I have had since I was a child.
