@@ -1,11 +1,14 @@
 ---
 layout: page
 title: Renewable Energy Transition - A Decade of Progress in Toronto
+keywords: "Urban Sustainability · Toronto, Canada · 2024"
+stack: "R · GIS · Open Data Toronto"
+links:
+  - label: "Open Data Toronto Blog Post"
+    url: "https://open.toronto.ca/a-decade-of-progress-on-city-owned-buildings-and-facilities"
+  - label: "Full Research Paper (Telling Stories with Data)"
+    url: "https://tellingstorieswithdata.com/inputs/pdfs/paper-1-2024-SamiElSabri.pdf"
 ---
-
-# Renewable Energy Transition: A Decade of Progress in Toronto
-**Urban Sustainability · Toronto, Canada · 2024**  | `R` · `GIS` · `Open Data Toronto` | [↗ Open Data Toronto Blog Post](https://open.toronto.ca/a-decade-of-progress-on-city-owned-buildings-and-facilities) · [↗ Full Research Paper (Telling Stories with Data)](https://tellingstorieswithdata.com/inputs/pdfs/paper-1-2024-SamiElSabri.pdf) 
-
 ### Analyzing Urban Sustainability & City-Owned Infrastructure
 
 **The Project:** Utilizing the **City of Toronto Open Data Portal**, I conducted a longitudinal study (2010–2019) of renewable energy installations on city-owned facilities to evaluate Toronto's progress toward its carbon neutrality commitments.
