@@ -1,31 +1,30 @@
 ---
-layout: base
+layout: default
 ---
 
-{% include header.html type="page" %}
-
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
-      {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {{ content }}
-
-      {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% include comments.html %}
-    </div>
+{% if page.hero-image %}
+<div class="page-hero" style="background-image: url('{{ page.hero-image | relative_url }}');">
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <h1 class="page-hero__title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="page-hero__subtitle">{{ page.subtitle }}</p>
+    {% endif %}
   </div>
-</main>
+</div>
+{% else %}
+<div class="page-header">
+  <div class="page-header__inner">
+    <h1 class="page-header__title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="page-header__subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+<div class="page-content">
+  <div class="page-content__inner">
+    {{ content }}
+  </div>
+</div>
