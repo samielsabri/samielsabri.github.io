@@ -93,10 +93,19 @@ Linguify is a full-stack web application that allows users to analyze the lingui
 <div class="gallery-container">
   <div class="main-view">
     <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-    
-    <img class="active" src="/assets/img/Figure_7_Renewable_QGIS.png" alt="Image 1">
-    <img src="/assets/img/Figure_8_Renewable_QGIS.png" alt="Image 2">
-    <img src="/assets/img/renewable_energy_figure3.png" alt="Image 3">
+
+    <img class="active" src="/assets/img/Linguify/linguify_home_first_time copy.png" class="active-thumb" onclick="currentSlide(0)">
+    <img src="/assets/img/Linguify/linguify_home copy.png">
+    <img src="/assets/img/Linguify/linguify_home_table copy.png">
+    <img src="/assets/img/Linguify/linguify_map copy.png">
+    <img src="/assets/img/Linguify/linguify_language_grid copy.png">
+    <img src="/assets/img/Linguify/linguify_home_table copy.png">
+    <img src="/assets/img/Linguify/linguify_songs_by_language copy.png">
+    <img src="/assets/img/Linguify/linguify_song_info copy.png">
+    <img src="/assets/img/Linguify/linguify_analyze copy.png">
+    <img src="/assets/img/Linguify/linguify_analyze_2 copy.png">
+    <img src="/assets/img/Linguify/linguify_analyze_modal copy.png">
+    <img src="/assets/img/Linguify/linguify_mobile.png">
     
     <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
   </div>
