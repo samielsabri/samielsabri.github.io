@@ -14,7 +14,7 @@ The report was published as a blog post on [Open Data Toronto)](https://open.tor
 
 <img src="/assets/img/Figure_7_Renewable_QGIS.png" width="520" alt="Geographical Distribution of City-Owned Renewable Energy Installations in Toronto between 2010 and 2019">
 <img src="/assets/img/Figure_8_Renewable_QGIS.png" width="520" alt="Geographical Distribution of City-Owned Renewable Energy Installations in Toronto by size">
-<img src="/assets/img/renewable_energy_Figure3.png" width="520" alt="Count of new City-Owned Renewable Energy Installations in Toronto by type of installation between 2010 and 2019">
+<img src="/assets/img/renewable_energy_figure3.png" width="520" alt="Count of new City-Owned Renewable Energy Installations in Toronto by type of installation between 2010 and 2019">
 
 
 
