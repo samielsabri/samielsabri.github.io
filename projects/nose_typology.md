@@ -4,9 +4,9 @@ title: "Nasal Phones Across Tongues"
 keywords: "Linguistics · 2024"
 stack: "R · Logistic Regression · Permutation Testing · Leaflet · Shiny"
 links:
-  - label: "↗ GitHub"
+  - label: "GitHub"
     url: "https://github.com/samielsabri/phonosemantic_typology_analysis"
-  - label: "↗ Live Shiny app"
+  - label: "Live Shiny app"
     url: "https://samielsabri.shinyapps.io/nose_typology_app/"
 ---
 
