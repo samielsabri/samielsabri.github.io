@@ -122,7 +122,7 @@ During my two years in Costa Rica, attending the United World College, I was eng
     <h2>La Carpio: Refugee Community Support Program</h2>
     <hr>
     <p class="location">La Carpio, San Jose, Costa Rica</p>
-    <p>During my time at United World College Costa Rica, I volunteered in La Carpio, the country's most marginalized settlement, inhabited predominantly by refugees from Nicaragua. We were based at Fundación Sistema Integral de Formación Artística para la Inclusión Social (SIFAIS). This experience reshaped my perception of Costa Rica, revealing the stark inequalities that exist even in the "happiest country on earth."</p>
+    <p>La Carpio is Costa Rica's most marginalized settlement, inhabited predominantly by refugees from Nicaragua. We were based at Fundación Sistema Integral de Formación Artística para la Inclusión Social (SIFAIS). This experience reshaped my perception of Costa Rica, revealing the stark inequalities that exist even in the "happiest country on earth."</p>
     <p>To bridge cultural gaps, I fast-tracked my Spanish language acquisition, moving beyond simple tutoring to provide holistic support, including healthcare navigation, career counseling, personal growth workshops, and anti-discrimination advocacy for the local immigrant and refugee population.</p>
   </div>
 </div>
