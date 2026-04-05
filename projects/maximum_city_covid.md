@@ -4,21 +4,13 @@ title: Maximum City Impact of COVID-19 Pandemic on Physical Activity of Toronto'
 ---
 
 # Maximum City: Impact of COVID-19 Pandemic on Physical Activity of Toronto's Youth
-**Urban Health · Health Equity · September, 2023** | `R` · `GIS` · `Ontario Parent Survey`
+**Urban Health · Health Equity · September, 2023** | `R` · `GIS` · `Ontario Parent Survey` | [↗ Read the Full Data Report (Maximum City)](https://static1.squarespace.com/static/5a7a164dd0e628ac7b90b463/t/65a0ae51b1e83b5425106796/1705029205252/Play+and+Physical+Activity_+Findings+from+the+Third+Ontario+Parent+Survey+FINAL+Report.pdf)
 
 
 ## Project Overview
 This research analyzes data from the third Ontario Parent Survey (OPS3) to evaluate the physical activity and outdoor play levels of 2,093 children and youth (ages 5-17). Conducted in 2022 as COVID-19 restrictions were lifted, the study investigates the intersection of children's health, urban density, and parental well-being.
 
-<div style="margin: 30px 0; text-align: center;">
-   <a href="https://static1.squarespace.com/static/5a7a164dd0e628ac7b90b463/t/65a0ae51b1e83b5425106796/1705029205252/Play+and+Physical+Activity_+Findings+from+the+Third+Ontario+Parent+Survey+FINAL+Report.pdf" 
-      target="_blank" 
-      style="background: #004a99; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
-      Read the Full Data Report (Maximum City) ↗
-   </a>
-</div>
-
-## Research Pillars and Key Findings
+## Key Findings
 The following maps are extracted from the full report. Each Forward Sortation Area (FSA; based on postal code) is shaded by population density and marked by colored dots based on whether the average level of physical activity (moderate: MVP, low: LPA) or outdoor play (OA) is meeting target (yellow), under target (unmarked for legibility), or extremely under target (red).
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
   
