@@ -12,43 +12,73 @@ This research analyzes data from the third Ontario Parent Survey (OPS3) to evalu
 
 ## Key Findings
 The following maps are extracted from the full report. Each Forward Sortation Area (FSA; based on postal code) is shaded by population density and marked by colored dots based on whether the average level of physical activity (moderate: MVP, low: LPA) or outdoor play (OA) is meeting target (yellow), under target (unmarked for legibility), or extremely under target (red).
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
-  
-  <a href="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" target="_blank">
-    <img src="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Ontario Average MVPA Levels Map">
-  </a>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 2rem 0;">
 
-  <a href="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" target="_blank">
-    <img src="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Ontario Average LPA Levels Map">
-  </a>
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" target="_blank">
+      <img src="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Ontario Average MVPA Levels Map">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Average MVPA Levels (Ontario)</strong>: Regional distribution of moderate to vigorous physical activity targets by FSA.
+    </figcaption>
+  </figure>
 
-  <a href="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" target="_blank">
-    <img src="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Ontario Average OP Levels Map">
-  </a>
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" target="_blank">
+      <img src="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Ontario Average LPA Levels Map">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Average LPA Levels (Ontario)</strong>: Light physical activity performance across provincial forward sortation areas.
+    </figcaption>
+  </figure>
 
-  <a href="/assets/img/Maximum City/ops2_toronto_rec_edited.png" target="_blank">
-    <img src="/assets/img/Maximum City/ops2_toronto_rec_edited.png" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Toronto Youth Recreation Access 2021 Map">
-  </a>
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" target="_blank">
+      <img src="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Ontario Average OP Levels Map">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Average Outdoor Play (Ontario)</strong>: FSA-level analysis of outdoor play duration relative to health targets.
+    </figcaption>
+  </figure>
 
-  <a href="/assets/img/Maximum City/ops3_toronto_rec_edited.png" target="_blank">
-    <img src="/assets/img/Maximum City/ops3_toronto_rec_edited.png" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Toronto Youth Recreation Access 2022 Map">
-  </a>
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/ops2_toronto_rec_edited.png" target="_blank">
+      <img src="/assets/img/Maximum City/ops2_toronto_rec_edited.png" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Toronto Youth Recreation Access 2021 Map">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Youth Recreation Access in Toronto (2021)</strong>: Correlation between high-density FSAs and youth program availability during pandemic restrictions.
+    </figcaption>
+  </figure>
 
-  <a href="/assets/img/Maximum City/phys_act_oa_year_chisq.png" target="_blank">
-    <img src="/assets/img/Maximum City/phys_act_oa_year_chisq.png" 
-         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-         alt="Physical Activity and Outdoor Play Comparison Bar Chart">
-  </a>
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/ops3_toronto_rec_edited.png" target="_blank">
+      <img src="/assets/img/Maximum City/ops3_toronto_rec_edited.png" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Toronto Youth Recreation Access 2022 Map">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Youth Recreation Access in Toronto (2022)</strong>: Observed shift in activity targets following the lifting of local facility restrictions. 
+    </figcaption>
+  </figure>
+
+  <figure style="margin: 0;">
+    <a href="/assets/img/Maximum City/phys_act_oa_year_chisq.png" target="_blank">
+      <img src="/assets/img/Maximum City/phys_act_oa_year_chisq.png" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="Physical Activity Comparison Bar Chart">
+    </a>
+    <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
+      <strong>Yearly Progress (2021–2022)</strong>: Significant increase in meeting health targets across MVPA, LPA, and OP categories.
+    </figcaption>
+  </figure>
 
 </div>
 
