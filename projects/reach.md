@@ -1,15 +1,17 @@
 ---
 layout: page
 title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India
+keywords: Migration · Mumbai, India · Rajasthan, India · 2024
+stack: "Mixed-Methods · Policy Analysis · Public Health Equity · Data-Driven Insights · Fieldwork"
+links:
+  - label: "Full Case Study Report"
+    url: "https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/"
 ---
 
 # Reach Alliance: Streamlining Access to Social Benefits for Internal Seasonal Migrants in India
 <div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
   <img src="/assets/img/Reach/reach_speech.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
-**Migration · Mumbai, India · Rajasthan, India · 2024**  
-
-`Mixed-Methods` · `Policy Analysis` · `Public Health Equity` · `Data-Driven Insights` · `Fieldwork`
 
 As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mastercard Center for Inclusive Growth), I investigated the structural barriers preventing India's ~600 million internal migrants from accessing entitled social protections. Our team conducted primary fieldwork in Mumbai and Rajasthan to evaluate how Civil Society Organizations (CSOs) bridge the gap between policy intent and "last-mile" delivery.
 
