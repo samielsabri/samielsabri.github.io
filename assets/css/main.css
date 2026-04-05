@@ -23,7 +23,7 @@
   --font-ui:      'Montserrat', 'Helvetica Neue', sans-serif;
 
   --nav-height: 68px;
-  --content-width: 780px;
+  --content-width: 500px;
   --wide-width: 1100px;
 }
 
@@ -350,7 +350,7 @@ pre code {
 .page-header {
   margin-top: var(--nav-height);
   background: var(--navy);
-  padding: 56px 48px 52px;
+  padding: 64px 48px 56px;
 }
 
 .page-header__inner {
@@ -379,7 +379,7 @@ pre code {
 /* --- Page content ----------------------------------------- */
 
 .page-content {
-  padding: 60px 24px 80px;
+  padding: 60px 48px 80px;
 }
 
 .page-content__inner {
