@@ -4,7 +4,7 @@ title: My Travels
 ---
 As of 2026, I have visited  62 countries and over 250 places in the world! Zoom into the map to find out where I've been and don't hesitate to share travel tips!
 
-<div style="width: 100%; margin: 30px 0;">
+<div style="width: 80%; margin: 30px 0;">
   <div style="border: 2px solid #2c3e50; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
     <iframe src="/dashboards/travel_map.html" width="100%" height="800px" style="border:none;"></iframe>
   </div>
