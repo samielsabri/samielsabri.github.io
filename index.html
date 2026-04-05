@@ -307,40 +307,7 @@ layout: default
     // guard being removed means the iframe only receives scroll when clicked.
   }, { passive: true });
 
-  // Dropdown nav — JS hover with close delay so submenu is clickable
-  document.querySelectorAll('.nav-links > li').forEach(li => {
-    let closeTimer;
-
-    const open = () => {
-      clearTimeout(closeTimer);
-      // Close any other open dropdowns
-      document.querySelectorAll('.nav-links > li.open').forEach(other => {
-        if (other !== li) other.classList.remove('open');
-      });
-      li.classList.add('open');
-    };
-
-    const scheduleClose = () => {
-      closeTimer = setTimeout(() => li.classList.remove('open'), 120);
-    };
-
-    li.addEventListener('mouseenter', open);
-    li.addEventListener('mouseleave', scheduleClose);
-
-    // Clicking the toggle also opens/closes
-    const toggle = li.querySelector('.nav-dropdown-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        li.classList.toggle('open');
-      });
-    }
-  });
-
-  // Click outside closes all dropdowns
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.nav-links > li.open').forEach(li => li.classList.remove('open'));
-  });
+  
 
   new Typed('#typed', {
     strings: [
