@@ -1,14 +1,10 @@
 ---
 layout: page
 title: Mapping hidden deprivation in Wolvercote (North Oxford)
+keywords: Deprivation analysis · Health Equity · Oxford, UK · 2026
+stack: "R · GIS · ONS Census 2021 · IMD 2025 · ONS Open Geography Portal"
 ---
-
-# Mapping hidden deprivation in Wolvercote (North Oxford)
-
-**Deprivation analysis · Oxford, UK · 2026**  
-`R` · `GIS` · `ONS Census 2021` · `IMD 2025` · `ONS Open Geography Portal`
-
-Wolvercote Young People's Club (WYPC) serves young people aged 8–24 in Wolvercote and Cutteslowe, a north Oxford area perceived as affluent but containing real concentrations of disadvantage invisible to standard area statistics. I was commissioned to build the evidence base for their funding case.
+[Wolvercote Young People's Club (WYPC)](https://wypc.org.uk/about-us/) serves young people aged 8–24 in Wolvercote and Cutteslowe, a north Oxford area perceived as affluent but containing real concentrations of disadvantage invisible to standard area statistics. I was commissioned to build the evidence base for their funding case.
 
 ---
 
@@ -38,6 +34,6 @@ I moved the analysis to Output Area geography (~300 residents), the smallest ava
 
 ## Key findings
 
-Health deprivation ranged from below 20% to nearly 49% across OAs within the same neighbourhood. Social renting concentrated above 70% in specific OAs while approaching zero in adjacent streets. Several OAs in Oxford 002G (Sunnymead) scored 4–5 out of 5 on `n_hidden` — their deprivation worse than both the city and their own neighbourhood average, and invisible to standard analysis.
+Health deprivation ranged from below 20% to nearly 49% across OAs within the same neighbourhood. Social renting concentrated above 70% in specific OAs while approaching zero in adjacent streets. Several OAs in Oxford 002G (Sunnymead) scored 4–5 out of 5 on n_hidden — their deprivation worse than both the city and their own neighbourhood average, and invisible to standard analysis.
 
 The report gave WYPC a spatially precise funding case: not "our area has pockets of deprivation" but a demonstration of exactly where, on which dimensions, and why standard statistics had been missing it.
