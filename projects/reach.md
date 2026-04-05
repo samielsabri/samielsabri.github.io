@@ -8,7 +8,7 @@ title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migran
 
 `Mixed-Methods` · `Policy Analysis` · `Public Health Equity` · `Data-Driven Insights` · `Fieldwork`
 
-<div style="float: left; margin-right: 20px; margin-bottom: 10px; width: 40%;">
+<div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
   <img src="/assets/img/Reach/reach_speech.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 
