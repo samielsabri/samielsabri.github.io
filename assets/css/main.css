@@ -352,9 +352,6 @@ pre code {
   padding: 56px 48px 52px;
 }
 
-.page-header__inner {
-}
-
 .page-header__title {
   font-family: var(--font-body);
   font-weight: 300;
@@ -378,7 +375,6 @@ pre code {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  max-width: var(--wide-width);
   margin: 0;
 }
 
