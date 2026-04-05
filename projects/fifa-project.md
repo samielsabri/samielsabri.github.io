@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FIFA 2026 Socio-Spatial Impact Analysis
-keywords: "rban Health · Health Equity · April 2025"
+keywords: "Urban Health · Health Equity · April 2025"
 stack: "R · GIS · Leaflet · ON-MARG · Statistics Canada Census"
 ---
 
