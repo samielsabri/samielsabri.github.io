@@ -113,6 +113,9 @@ During my two years in Costa Rica, attending the United World College, I was eng
     <img class="main" src="/assets/img/costarica/lacarpio1.jpg" alt="La Carpio community">
     <img class="secondary" src="/assets/img/costarica/lacarpio2.jpg" alt="La Carpio volunteering">
     <img class="secondary" src="/assets/img/costarica/lacarpio3.jpg" alt="La Carpio community support">
+    <img class="secondary" src="/assets/img/costarica/lacarpio4.jpg" alt="La Carpio community support">
+    <img class="secondary" src="/assets/img/costarica/lacarpio5.jpg" alt="La Carpio community support">
+    <img class="secondary" src="/assets/img/costarica/lacarpio6.jpg" alt="La Carpio community support">
   </div>
 
   <div class="section-text">
