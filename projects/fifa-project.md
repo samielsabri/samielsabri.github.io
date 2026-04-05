@@ -35,9 +35,9 @@ In urban policy research, results often shift based on how boundaries are drawn.
 * **Sensitivity Analysis:** This approach allows stakeholders to observe how marginalization quintiles shift as the "impact zone" expands, providing a robust basis for policy and budgetary proposals.
 
 #### Software Stack & Professional Implementation
-* **Data Engineering:** Utilized **R (`sf`, `tidyverse`, `readxl`)** to automate the cleaning and joining of the <strong>2021 Ontario Marginalization Index (ON-Marg)</strong> with Statistics Canada spatial data.
+* **Data Engineering:** Utilized **R (`sf`, `tidyverse`)** to automate the cleaning and joining of the 2021 Ontario Marginalization Index (ON-Marg) with Statistics Canada spatial data.
 * **GIS Processing:** Conducted spatial intersections and population-weighted averaging to ensure statistical rigor across varying census tract geometries.
-* **Operational Integration:** While this dashboard serves as a portfolio demonstration, the underlying data layers and logic were designed to be integrated into <strong>internal ESRI ArcGIS environments</strong> for use by municipal planning and safety teams.
+* **Operational Integration:** While this dashboard serves as a portfolio demonstration, the underlying data layers and logic were designed to be integrated into internal ESRI ArcGIS environments for use by municipal planning and safety teams.
 
 ---
 
