@@ -361,7 +361,7 @@ pre code {
 .page-header__title {
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--white);
   letter-spacing: 0.04em;
   margin-bottom: 10px;
@@ -399,7 +399,7 @@ pre code {
 
 .page-header__keywords {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.12em;
   color: rgba(255,255,255,0.5);
   margin: 0;
@@ -407,7 +407,7 @@ pre code {
 
 .page-header__stack {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   color: rgba(255,255,255,0.75);
   margin: 0;
 }
@@ -427,7 +427,7 @@ pre code {
 
 .page-header__links a {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.65);
   text-decoration: underline;
