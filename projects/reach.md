@@ -22,7 +22,7 @@ As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mast
 </div>
 
 ## Selected Publications & Presentations
-* **IEEE Global Humanitarian Technology Conference (GHTC), 2024** *Leveraging technology for equitable access to social benefits: a case study of civil society organization interventions among internal seasonal migrant workers in India.* [Read Proceedings (p. 439–445)](https://ieeexplore.ieee.org/) 
+* **IEEE Global Humanitarian Technology Conference (GHTC), 2024** *Leveraging technology for equitable access to social benefits: a case study of civil society organization interventions among internal seasonal migrant workers in India.* [Read Proceedings (p. 439–445)](https://ieeexplore.ieee.org/document/10771516)
 * **International Conference on Sustainable Development (ICSD), New York, 2024** *Service delivery ecosystems as infrastructure: a case study of the Migrant Resilience Collaborative in Rajasthan, India.* [View Presentation](https://airtable.com/appqDaefO2ZPw02QW/shrL3WonZwA0aOo2h?detail=eyJwYWdlSWQiOiJwYWdtaUFnVVZKY0hFcFFwZyIsInJvd0lkIjoicmVjRGU0S1g5bXBPUEo5R28iLCJzaG93Q29tbWVudHMiOmZhbHNlLCJxdWVyeU9yaWdpbkhpbnQiOnsidHlwZSI6InBhZ2VFbGVtZW50IiwiZWxlbWVudElkIjoicGVscGM2THVXb1BxR1g1RzciLCJxdWVyeUNvbnRhaW5lcklkIjoicGVsbWxFR2Y0d2UyVHVONVgifX0)
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
