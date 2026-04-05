@@ -115,7 +115,6 @@ During my two years in Costa Rica, attending the United World College, I was eng
     <img class="secondary" src="/assets/img/costarica/lacarpio3.jpg" alt="La Carpio community support">
     <img class="secondary" src="/assets/img/costarica/lacarpio4.jpg" alt="La Carpio community support">
     <img class="secondary" src="/assets/img/costarica/lacarpio5.jpg" alt="La Carpio community support">
-    <img class="secondary" src="/assets/img/costarica/lacarpio6.jpg" alt="La Carpio community support">
   </div>
 
   <div class="section-text">
@@ -142,6 +141,8 @@ During my two years in Costa Rica, attending the United World College, I was eng
     <img class="main" src="/assets/img/costarica/cabecar1.jpg" alt="Cabécar community">
     <img class="secondary" src="/assets/img/costarica/cabecar2.JPG" alt="Cabécar service">
     <img class="secondary" src="/assets/img/costarica/cabecar3.JPG" alt="Cabécar infrastructure">
+    <img class="secondary" src="/assets/img/costarica/cabecar5.JPG" alt="Cabécar infrastructure">
+    <img class="secondary" src="/assets/img/costarica/cabecar7.JPG" alt="Cabécar infrastructure">
   </div>
 </div>
 
