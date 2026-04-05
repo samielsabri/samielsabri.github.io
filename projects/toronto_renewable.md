@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Renewable Energy Transition: A Decade of Progress in Toronto
+title: Renewable Energy Transition - A Decade of Progress in Toronto
 ---
 
 # Renewable Energy Transition: A Decade of Progress in Toronto
