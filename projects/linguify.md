@@ -10,34 +10,128 @@ Linguify is a full-stack web application that allows users to analyze the lingui
 
 ** Status Update: Due to recent restrictive changes in the Spotify Web API for independent developers, Linguify is currently in a "Read-Only" portfolio state. At its peak, the platform supported over 100 active users during its initial feedback phase.**
 
-<div style="
-    display: flex; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    scroll-behavior: smooth; 
-    gap: 10px; 
-    border-radius: 8px; 
-    background: #1a1a1a; 
-    padding: 10px;
-">
-  
-  <div style="flex: 0 0 100%; scroll-snap-align: center;">
-    <img src="/assets/img/Figure_7_Renewable_QGIS.png" style="width: 100%; border-radius: 4px; display: block;">
+<style>
+  .gallery-container {
+    display: flex;
+    gap: 15px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    align-items: flex-start;
+  }
+
+  /* Main Viewport */
+  .main-view {
+    position: relative;
+    flex-grow: 1;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .main-view img {
+    max-width: 100%;
+    max-height: 500px;
+    display: none; /* Hidden by default, toggled by JS */
+  }
+
+  .main-view img.active {
+    display: block;
+  }
+
+  /* Navigation Buttons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    z-index: 10;
+  }
+
+  .nav-btn:hover { background: rgba(255,255,255,0.5); }
+  .prev { left: 0; border-radius: 0 5px 5px 0; }
+  .next { right: 0; border-radius: 5px 0 0 5px; }
+
+  /* Vertical Thumbnails */
+  .thumb-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .thumb-sidebar img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .thumb-sidebar img.active-thumb {
+    opacity: 1;
+    border-color: #4CAF50;
+  }
+</style>
+
+<div class="gallery-container">
+  <div class="main-view">
+    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    
+    <img class="active" src="/assets/img/Figure_7_Renewable_QGIS.png" alt="Image 1">
+    <img src="/assets/img/Figure_8_Renewable_QGIS.png" alt="Image 2">
+    <img src="/assets/img/renewable_energy_figure3.png" alt="Image 3">
+    
+    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
   </div>
 
-  <div style="flex: 0 0 100%; scroll-snap-align: center;">
-    <img src="/assets/img/Figure_8_Renewable_QGIS.png" style="width: 100%; border-radius: 4px; display: block;">
+  <div class="thumb-sidebar">
+    <img src="/assets/img/Figure_7_Renewable_QGIS.png" class="active-thumb" onclick="currentSlide(0)">
+    <img src="/assets/img/Figure_8_Renewable_QGIS.png" onclick="currentSlide(1)">
+    <img src="/assets/img/renewable_energy_figure3.png" onclick="currentSlide(2)">
   </div>
-
-  <div style="flex: 0 0 100%; scroll-snap-align: center;">
-    <img src="/assets/img/renewable_energy_figure3.png" style="width: 100%; border-radius: 4px; display: block;">
-  </div>
-
 </div>
 
-<p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 5px;">
-  ← Swipe or scroll to view more →
-</p>
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".main-view img");
+  const thumbs = document.querySelectorAll(".thumb-sidebar img");
+
+  function showSlide(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+    
+    slides.forEach(img => img.classList.remove("active"));
+    thumbs.forEach(t => t.classList.remove("active-thumb"));
+    
+    slides[slideIndex].classList.add("active");
+    thumbs[slideIndex].classList.add("active-thumb");
+  }
+
+  function changeSlide(n) {
+    showSlide(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlide(slideIndex = n);
+  }
+</script>
 
 ## Technical Stack
 ** Frontend: React, Tailwind CSS
