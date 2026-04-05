@@ -353,8 +353,6 @@ pre code {
 }
 
 .page-header__inner {
-  max-width: var(--wide-width);
-  margin: 0 auto;
 }
 
 .page-header__title {
