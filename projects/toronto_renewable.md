@@ -33,6 +33,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
       <strong>Geographical Distribution of City-Owned Renewable Energy Installations in Toronto by size.
     </figcaption>
   </figure>
+        
   <figure style="margin: 0;">
     <a href="/assets/img/renewable_energy_figure3.png" target="_blank">
       <img src="/assets/img/renewable_energy_figure3.png" 
@@ -43,6 +44,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
       <strong>Count of new City-Owned Renewable Energy Installations in Toronto by type of installation between 2010 and 2019.
     </figcaption>
   </figure>
+        
 </div>
 
 
