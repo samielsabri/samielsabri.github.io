@@ -399,7 +399,7 @@ pre code {
 
 .page-header__keywords {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   color: rgba(255,255,255,0.5);
   margin: 0;
@@ -407,7 +407,7 @@ pre code {
 
 .page-header__stack {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.75);
   margin: 0;
 }
@@ -421,7 +421,7 @@ pre code {
 
 .page-header__links a {
   font-family: var(--font-ui);
-  font-size: 0.72rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.65);
   text-decoration: none;
