@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "California Traffic Collisions"
-keywords: "Urban Health · Road Safety · May 2024*"
+keywords: "Urban Health · Road Safety · May 2024"
 stack: "R · GIS · Leaflet"
 ---
 
