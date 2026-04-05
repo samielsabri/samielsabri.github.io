@@ -18,15 +18,6 @@ Standard deprivation analysis operates at LSOA level (~1,500 residents). In mixe
 
 I moved the analysis to Output Area geography (~300 residents), the smallest available census unit, and benchmarked all indicators against Oxford city rather than national averages — a deliberate choice given Oxford's overall affluence.
 
----
-
-## Original measures
-
-To synthesise evidence across four deprivation dimensions (employment, housing, health, education) I designed a composite score:
-
-**`n_hidden`** — dimensions where an OA is above both the Oxford average and its own LSOA average. This encapsulates deprivation a neighbourhood-level analysis cannot see.
-
----
 
 ## Maps
 
