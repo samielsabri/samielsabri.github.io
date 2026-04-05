@@ -4,9 +4,8 @@ title: Maximum City Impact of COVID-19 Pandemic on Physical Activity of Toronto'
 ---
 
 # Maximum City: Impact of COVID-19 Pandemic on Physical Activity of Toronto's Youth
-**Urban Health · Health Equity · September, 2023**
+**Urban Health · Health Equity · September, 2023** | `R` · `GIS` · `Ontario Parent Survey`
 
-`R` · `GIS` · `Ontario Parent Survey`
 
 ## Project Overview
 This research analyzes data from the third Ontario Parent Survey (OPS3) to evaluate the physical activity and outdoor play levels of 2,093 children and youth (ages 5-17). Conducted in 2022 as COVID-19 restrictions were lifted, the study investigates the intersection of children's health, urban density, and parental well-being.
