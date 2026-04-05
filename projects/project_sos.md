@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Project S.O.S – Award-Winning Policy & Innovation Strategy
 ---
 

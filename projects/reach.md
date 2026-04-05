@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Mapping hidden deprivation in Wolvercote (North Oxford)
 ---
 

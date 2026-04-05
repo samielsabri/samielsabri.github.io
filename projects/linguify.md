@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Linguify – A Full-Stack Spotify Language Analytics Dashboard
 ---
 

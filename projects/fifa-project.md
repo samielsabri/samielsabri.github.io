@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: FIFA 2026 Socio-Spatial Impact Analysis
 ---
 

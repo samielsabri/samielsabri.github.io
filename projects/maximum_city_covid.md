@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Impact of COVID-19 Pandemic on Physical Activity of Toronto's Youth
 ---
 

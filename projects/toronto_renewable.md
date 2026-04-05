@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Renewable Energy Transition - A Decade of Progress in Toronto
 ---
 
