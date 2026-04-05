@@ -7,9 +7,11 @@ title: Volunteer Engagements – Costa Rica
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
   <div style="flex: 1; min-width: 300px;">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+      <img src="/assets/img/costarica/lacarpio1.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       <img src="/assets/img/costarica/lacarpio2.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       <img src="/assets/img/costarica/lacarpio3.jpg" style="width: 100%; grid-row: span 2; border-radius: 4px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       <img src="/assets/img/costarica/lacarpio4.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="/assets/img/costarica/lacarpio5.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     </div>
   </div>
   
@@ -46,10 +48,13 @@ title: Volunteer Engagements – Costa Rica
 
   <div style="flex: 1; min-width: 300px;">
     <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 15px;">
-      <img src="/assets/img/costarica/20181105_150747_001.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="/assets/img/costarica/cabecar1.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; flex-direction: column; gap: 15px;">
-        <img src="/assets/img/costarica/cr_map_rural.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="/assets/img/costarica/technical_chart.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="/assets/img/costarica/cabecar2.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="/assets/img/costarica/cabecar3.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="/assets/img/costarica/cabecar4.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="/assets/img/costarica/cabecar5.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="/assets/img/costarica/cabecar6.jpg" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </div>
     </div>
   </div>
