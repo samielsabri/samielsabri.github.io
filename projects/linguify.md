@@ -94,7 +94,8 @@ Linguify is a full-stack web application that allows users to analyze the lingui
   <div class="main-view">
     <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
 
-    <img class="active" src="/assets/img/Linguify/linguify_home_first_time copy.png" class="active-thumb" onclick="currentSlide(0)">
+    <!-- Fixed: Removed extra class/onclick from the main image -->
+    <img class="active" src="/assets/img/Linguify/linguify_home_first_time copy.png">
     <img src="/assets/img/Linguify/linguify_home copy.png">
     <img src="/assets/img/Linguify/linguify_home_table copy.png">
     <img src="/assets/img/Linguify/linguify_map copy.png">
@@ -128,10 +129,11 @@ Linguify is a full-stack web application that allows users to analyze the lingui
 
 <script>
   let slideIndex = 0;
-  const slides = document.querySelectorAll(".main-view img");
-  const thumbs = document.querySelectorAll(".thumb-sidebar img");
 
   function showSlide(n) {
+    const slides = document.querySelectorAll(".main-view img");
+    const thumbs = document.querySelectorAll(".thumb-sidebar img");
+    
     if (n >= slides.length) slideIndex = 0;
     if (n < 0) slideIndex = slides.length - 1;
     
@@ -149,6 +151,11 @@ Linguify is a full-stack web application that allows users to analyze the lingui
   function currentSlide(n) {
     showSlide(slideIndex = n);
   }
+
+  // THIS FIXES THE INITIAL LOAD:
+  window.onload = function() {
+    showSlide(slideIndex);
+  };
 </script>
 
 ## Technical Stack
