@@ -16,7 +16,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
     <a href="/assets/img/Figure_7_Renewable_QGIS.png" target="_blank">
       <img src="/assets/img/Figure_7_Renewable_QGIS.png" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-           alt="">
+           alt="Map showing renewable energy installations in Toronto (2010-2019)">
     </a>
     <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
       <strong>Geographical Distribution of City-Owned Renewable Energy Installations in Toronto between 2010 and 2019.</strong>
@@ -27,7 +27,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
     <a href="/assets/img/Figure_8_Renewable_QGIS.png" target="_blank">
       <img src="/assets/img/Figure_8_Renewable_QGIS.png" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-           alt="">
+           alt="Map showing renewable energy installations in Toronto by size">
     </a>
     <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
       <strong>Geographical Distribution of City-Owned Renewable Energy Installations in Toronto by size.</strong>
@@ -38,7 +38,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
     <a href="/assets/img/renewable_energy_figure3.png" target="_blank">
       <img src="/assets/img/renewable_energy_figure3.png" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
-           alt="">
+           alt="Chart of new renewable energy installations by type (2010-2019)">
     </a>
     <figcaption style="margin-top: 8px; font-size: 0.9rem; color: #555; line-height: 1.4;">
       <strong>Count of new City-Owned Renewable Energy Installations in Toronto by type of installation between 2010 and 2019.</strong>
