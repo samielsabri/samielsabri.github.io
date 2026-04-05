@@ -33,10 +33,9 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
       <strong>Geographical Distribution of City-Owned Renewable Energy Installations in Toronto by size.
     </figcaption>
   </figure>
-
-   <figure style="margin: 0;">
+  <figure style="margin: 0;">
     <a href="/assets/img/renewable_energy_figure3.png" target="_blank">
-      <img src="/assets/img/renewable_energy_figure3.png.png" 
+      <img src="/assets/img/renewable_energy_figure3.png" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
            alt="">
     </a>
@@ -48,7 +47,7 @@ title: Renewable Energy Transition - A Decade of Progress in Toronto
 
 
 
-**Strategic Insights:**
+### Strategic Insights
 * **Diversification:** Analysis shows a shift from large-scale **FIT** programs to more localized **MicroFIT** systems, balancing the city's energy portfolio.
 * **Equitable Expansion:** QGIS mapping reveals a deliberate strategy to expand renewable infrastructure beyond the downtown core into peripheral areas like **Scarborough and North York**.
 * **Policy Alignment:** This research directly informs discussions regarding the city's **TransformTO Net Zero Strategy**.
