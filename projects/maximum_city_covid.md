@@ -19,22 +19,46 @@ This research analyzes data from the third Ontario Parent Survey (OPS3) to evalu
    </a>
 </div>
 
-## Technical Skills
-* Statistical Analysis: R (Chi-Square Analysis, Jonckheere’s Trend Test)
-* Geospatial Mapping: QGIS (FSA-level population density and activity heatmaps)
-* Mental Health Metrics: Scoring and integration of CESD-10 and GAD-7 scales
-* Data Visualization: Longitudinal comparison of 2021 vs. 2022 health targets
-
-
 ## Research Pillars and Key Findings
 The following maps are extracted from the full report. Each Forward Sortation Area (FSA; based on postal code) is shaded by population density and marked by colored dots based on whether the average level of physical activity (moderate: MVP, low: LPA) or outdoor play (OA) is meeting target (yellow), under target (unmarked for legibility), or extremely under target (red).
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
-  <img src="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/Maximum City/ops2_toronto_rec_edited.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/Maximum City/ops3_toronto_rec_edited.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-    <img src="/assets/img/Maximum City/phys_act_oa_year_chisq.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  
+  <a href="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" target="_blank">
+    <img src="/assets/img/Maximum City/Ontario Average MVPA Levels Compressed.jpg" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Ontario Average MVPA Levels Map">
+  </a>
+
+  <a href="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" target="_blank">
+    <img src="/assets/img/Maximum City/Ontario Average LPA Levels Compressed.jpg" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Ontario Average LPA Levels Map">
+  </a>
+
+  <a href="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" target="_blank">
+    <img src="/assets/img/Maximum City/Ontario Average OP Levels Compressed.jpg" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Ontario Average OP Levels Map">
+  </a>
+
+  <a href="/assets/img/Maximum City/ops2_toronto_rec_edited.png" target="_blank">
+    <img src="/assets/img/Maximum City/ops2_toronto_rec_edited.png" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Toronto Youth Recreation Access 2021 Map">
+  </a>
+
+  <a href="/assets/img/Maximum City/ops3_toronto_rec_edited.png" target="_blank">
+    <img src="/assets/img/Maximum City/ops3_toronto_rec_edited.png" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Toronto Youth Recreation Access 2022 Map">
+  </a>
+
+  <a href="/assets/img/Maximum City/phys_act_oa_year_chisq.png" target="_blank">
+    <img src="/assets/img/Maximum City/phys_act_oa_year_chisq.png" 
+         style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+         alt="Physical Activity and Outdoor Play Comparison Bar Chart">
+  </a>
+
 </div>
 
 ### Children's Health and Age Disparities
