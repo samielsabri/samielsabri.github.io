@@ -4,13 +4,11 @@ title: FIFA 2026 Socio-Spatial Impact Analysis
 ---
 
 # FIFA 2026 Socio-Spatial Impact Analysis: Generation 2026
-**Urban Health · Health Equity · April 2025**
-
-`R` · `GIS` · `ON-MARG` · `Statistics Canada Census` · `Leaflet`
+**Urban Health · Health Equity · April 2025** | `R` · `GIS` · `ON-MARG` · `Statistics Canada Census` · `Leaflet`
 
 ### Advancing Youth Agency, Safety, and Rights
 
-Developed during a strategic consultancy with **Maximum City**, this research supports *Generation 2026*—a global initiative by the **Centre for Sport and Human Rights**. The project aims to advance youth agency, safety, and rights ahead of, during, and after the FIFA World Cup 2026. 
+Developed during a strategic consultancy with [Maximum City]|(https://maximumcity.ca), this research supports *Generation 2026* – a global initiative by the [Centre for Sport and Human Rights](https://www.sporthumanrights.org/what-we-do/generation-2026-advancing-safer-youth-inclusive-sports). The project aims to advance youth agency, safety, and rights ahead of, during, and after the FIFA World Cup 2026. 
 
 By mapping the Ontario Marginalization Index (ON-Marg) against proposed fan sites, this tool provides the "fresh perspectives on complex issues" required for strategic municipal program development and equitable resource allocation.
 
