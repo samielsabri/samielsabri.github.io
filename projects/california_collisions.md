@@ -1,12 +1,9 @@
 ---
 layout: page
-title: California Traffic Collisions
+title: "California Traffic Collisions"
+keywords: "Urban Health · Road Safety · May 2024*"
+stack: "R · GIS · Leaflet"
 ---
-
-# California Traffic Collisions
-**Urban Health · Road Safety · May 2024**
-
-`R` · `GIS` · `Leaflet`
 
 This analysis was initially developed for a technical interview at MAP Centre for Urban Health Solutions, with some additional time spent afterwards on refining and playing around with some novel visualization options. The data is sourced from the Statewide Integrated Traffic Records System (SWITRS), collected and maintained by the California Highway Patrol (CHP).
 
