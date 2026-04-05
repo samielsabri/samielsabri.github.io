@@ -4,7 +4,7 @@ title: Linguify – A Full-Stack Spotify Language Analytics Dashboard
 ---
 
 # Linguify: A Full-Stack Spotify Language Analytics Dashboard
-`Full-Stack` ·  `Web-Development` ·  `API` · `Python` · `SQL` · `JavaScript` · `HTML` · `CSS` · `Data Visualization` ·| [↗ Web-App (not active)](https://samielsabri.github.io/projects/linguify) 
+`Full-Stack` ·  `Web-Development` ·  `API` · `Python` · `SQL` · `JavaScript` · `HTML` · `CSS` · `Data Visualization` | [↗ Web-App (not active)](https://samielsabri.github.io/projects/linguify) 
 
 Linguify is a full-stack web application that allows users to analyze the linguistic diversity of their Spotify libraries. By processing track metadata and lyrics, the app generates a comprehensive language profile, identifying bilingual tracks and providing tools for lyric-based language learning
 
