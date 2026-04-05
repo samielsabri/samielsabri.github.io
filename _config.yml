@@ -22,11 +22,13 @@ author: Sami El Sabri
 navbar-links:
   About Me: "aboutme"
   Data Portfolio:
+    - Linguify: "projects/linguify"
     - FIFA 2026 Toronto Socio-Spatial Impact: "projects/fifa-project"
     - California Traffic Collisions: "projects/california_collisions"
     - North Oxford Spatial Analysis Hidden Deprivation: "projects/wypc"
     - Linguistic Symbolism: "projects/nose_typology"
     - Toronto Renewable Energy: "projects/toronto_renewable"
+    - "Covid-19 Children's Physical Activity": "projects/maximum_city_covid"
   Other Projects:
     - Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India: "projects/reach"
 
