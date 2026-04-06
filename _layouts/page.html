@@ -37,13 +37,13 @@ layout: default
       </p>
       {% endif %}
       {% if page.links %}
-      <p class="page-header__links">
+      <div class="page-header__links">
         {% for link in page.links %}
-          <a href="{{ link.url }}" target="_blank">↗ {{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
+          <a href="{{ link.url }}" target="_blank">↗ {{ link.label }}</a>
         {% endfor %}
-      </p>
+      </div>
       {% endif %}
-    </div>
+          </div>
     {% endif %}
   </div>
 </div>
