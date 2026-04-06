@@ -4,16 +4,16 @@ title: About me
 subtitle: 
 ---
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 4rem;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 0px;">
 
-  <h2 style="width: 100%; font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 20px;">
+  <h2 style="width: 100%; font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 0px;">
     Hallo! Salut! ⴰⵣⵓⵍ! ¡Hola! Olá! أهلاً
   </h2>
 
   <div style="flex: 1; min-width: 300px;">
     <div style="font-family: var(--font-body); line-height: 1.6; color: var(--text);">
       <p style="margin-bottom: 20px;">
-        Welcome to my personal website and project portfolio! I am <strong>Sami El Sabri</strong>, a public health analyst, epidemiologist, and data scientist[cite: 8, 150]. Currently, I am a <strong>Clarendon Scholar at the University of Oxford</strong> completing an MSc in Global Health Science & Epidemiology.
+        Welcome to my personal website and project portfolio! I am <strong>Sami El Sabri</strong>, a public health analyst, epidemiologist, and data scientist. Currently, I am a <strong>Clarendon Scholar at the University of Oxford</strong> completing an MSc in Global Health Science & Epidemiology.
       </p>
       
       <p style="margin-bottom: 30px;">
@@ -21,7 +21,7 @@ subtitle:
       </p>
       
       <p style="margin-bottom: 0;">
-        Here you find a curated collection of my endeavours across quantitative applications, interdisciplinary collaborations, community service, and enriching travel experiences[cite: 39, 246]. Thanks for visiting, I hope you enjoy!
+        Here you find a curated collection of my endeavours across quantitative applications, interdisciplinary collaborations, community service, and enriching travel experiences. Thanks for visiting, I hope you enjoy!
       </p>
     </div>
   </div>
