@@ -5,18 +5,9 @@
 
 /* --- Reset & base ----------------------------------------- */
 
-@font-face {
-  font-family: 'BirdseyeSans'; /* You can name this whatever you want */
-  src: url('/assets/fonts/birdseye_sans.ttf') format('true-type');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
 
-@font-face {
-  font-family: 'BirdseyeSerif'; /* For a different header font */
-  src: url('/assets/fonts/birdseye_serif.ttf') format('true-type');
-  font-weight: bold;
-}
+/* Delete the old @font-face blocks for Birdseye entirely */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -32,14 +23,15 @@
   --accent-hover: #3a6aaa;
   --border:     #e0ddd6;
 
-  --font-body:    'BirdseyeSans', sans-serif;
-  --font-title:   'BirdseyeSerif', serif;
+  --font-body:    'Lato', sans-serif;
+  --font-title:   'Montserrat', ssans-serif;
   --font-ui:      'Montserrat', 'Helvetica Neue', sans-serif;
 
   --nav-height: 68px;
   --content-width: 1000px;
   --wide-width: 1100px;
 }
+
 
 html { font-size: 100%; scroll-behavior: smooth; }
 
