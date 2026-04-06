@@ -67,4 +67,4 @@ Leveraging a mixed-methods approach, we analyzed the operational efficiency of M
 ## Conference Poster
 Presented at the **2024 International Conference on Sustainable Development**, this poster summarizes our findings on collaborative ecosystems and technological solutions.
 
-<img src="/assets/img/ICSD_Poster.png" alt="ICSD 2024 Research Poster" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
+<img src="/assets/img/posters/ICSD_Poster.png" alt="ICSD 2024 Research Poster" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
