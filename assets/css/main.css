@@ -5,6 +5,19 @@
 
 /* --- Reset & base ----------------------------------------- */
 
+@font-face {
+  font-family: 'BirdseyeSans'; /* You can name this whatever you want */
+  src: url('/assets/fonts/birdseye_sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BirdseyeSerif'; /* For a different header font */
+  src: url('/assets/fonts/birdseye_serif.woff') format('woff');
+  font-weight: bold;
+}
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -19,7 +32,8 @@
   --accent-hover: #3a6aaa;
   --border:     #e0ddd6;
 
-  --font-body:    'Open Sans', sans-serif;
+  --font-body:    'BirdseyeSans', sans-serif;
+  --font-title:   'BirdseyeSerif', serif;
   --font-ui:      'Montserrat', 'Helvetica Neue', sans-serif;
 
   --nav-height: 68px;
@@ -51,11 +65,20 @@ a {
 }
 a:hover { color: var(--accent-hover); }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--navy);
+}
+h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   color: var(--navy);
 }
 
