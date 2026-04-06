@@ -42,10 +42,12 @@ My research focused on the intersection of migration and health outcomes. We exa
 * **Occupational Health:** Evaluated the impact of silicosis in the mineral-grinding sector, advocating for health as an "entry point" for broader labor rights and financial compensation.
 * **Benefit Linkages:** Analyzed the efficacy of the **Ayushman Bharat** (national health insurance) and **BOCW Act** in providing secondary and tertiary care for families living below the poverty line.
 
+
 ## Policy Analysis & Advocacy
 I performed a deep-dive into the "administrative silos" that cause policy failure despite robust legislative frameworks.
 * **Portability Barriers:** Identified how the lack of interstate database synchronization prevents "split families" from accessing food rations through the **One-Nation One-Ration Card** scheme.
 * **Digital Governance:** Evaluated the **Aadhaar** and **eShram** portals, identifying how the "Digital Divide" and language barriers exclude those without technological literacy.
+
 
 ## Quantitative & Structural Insights
 Leveraging a mixed-methods approach, we analyzed the operational efficiency of Migrant Resource Centres (MRCs).
