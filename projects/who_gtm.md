@@ -14,14 +14,14 @@ links:
 </div>
 As a core contributor to the fifth Epidemic Intelligence from Open Sources (EIOS) Global Technical Meeting (GTM), I worked at the WHO Hub for Pandemic and Epidemic Intelligence to convene nearly 200 experts from 70 countries. Our mission was to define "The Future of Public Health Intelligence (PHI)" by integrating cutting-edge AI technologies with robust collaborative surveillance frameworks to detect and respond to global health threats in real-time.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 2rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 2rem 0;">
   <img src="/assets/img/who/who1.JPG" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who2.JPG" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who3.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who4.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who6.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who7.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-   <img src="/assets/img/who/who8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who2.JPG" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who3.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who4.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who6.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who7.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  <img src="/assets/img/who/who8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
 </div>
 
 ### AI Governance & Tech Innovation
