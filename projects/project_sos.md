@@ -1,15 +1,14 @@
 ---
-layout: default
+layout: page
 title: Project S.O.S – Award-Winning Policy & Innovation Strategy
+keywords: "Global Health Strategy · Lahore, Pakistan · 2021"
+stack: "Policy Analysis · Stakeholder Engagement · SDG 3.2 · Global Innovation"
 ---
 
 # Project S.O.S: Addressing Neonatal Mortality in Pakistan
 <div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
   <img src="/assets/img/Munk One Dragon's Den Winners.png" alt="Solar Powered Autoclave Prototype" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
-
-**Global Health Strategy · Lahore, Pakistan · 2021**  
-`Policy Analysis` · `Stakeholder Engagement` · `SDG 3.2.2` · `Frugal Innovation`
 
 Project S.O.S was an award-winning strategic proposal designed to tackle Pakistan's high neonatal mortality rate – specifically deaths caused by omphalitis (umbilical cord infections). Our team engineered a high-fidelity policy and technical framework for a low-cost, solar-powered autoclave to sterilize medical tools in off-grid rural regions. 
 

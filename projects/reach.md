@@ -1,25 +1,34 @@
 ---
-layout: default
+layout: page
 title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India
+keywords: 
+  - "Migration"
+  - "Mumbai & Rajasthan, India"
+  - "2024"
+stack:
+  - "Mixed Methods"
+  - "Policy Analysis"
+  - "Public Health Equity"
+  - "Data-Driven Insights"
+  - "Fieldwork"
+links:
+  - label: "Full Case Study Report"
+    url: "https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/"
 ---
-
-# Reach Alliance: Streamlining Access to Social Benefits for Internal Seasonal Migrants in India
-<div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
-  <img src="/assets/img/Reach/reach_speech.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div style="float: right; margin-left: 20px; margin-bottom: 20px; width: 40%; display: flex; flex-direction: column; align-items: center;">
+  <img src="/assets/img/Reach/reach_speech.jpg" alt="Research Presentation" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  
+  <div style="margin-top: 20px; width: 100%; text-align: center;">
+    <a href="https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/" 
+       target="_blank" 
+       style="display: inline-block; background: #004a99; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
+       Read Full Report (Reach Alliance) ↗
+    </a>
+  </div>
 </div>
-**Migration · Mumbai, India · Rajasthan, India · 2024**  
-
-`Mixed-Methods` · `Policy Analysis` · `Public Health Equity` · `Data-Driven Insights` · `Fieldwork`
 
 As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mastercard Center for Inclusive Growth), I investigated the structural barriers preventing India's ~600 million internal migrants from accessing entitled social protections. Our team conducted primary fieldwork in Mumbai and Rajasthan to evaluate how Civil Society Organizations (CSOs) bridge the gap between policy intent and "last-mile" delivery.
 
-<div style="margin: 30px 0; text-align: center;">
-   <a href="https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/" 
-      target="_blank" 
-      style="background: #004a99; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
-      Read the Full Case Study Report (Reach Alliance) ↗
-   </a>
-</div>
 
 ## Selected Publications & Presentations
 * **IEEE Global Humanitarian Technology Conference (GHTC), 2024** *Leveraging technology for equitable access to social benefits: a case study of civil society organization interventions among internal seasonal migrant workers in India.* [Read Proceedings (p. 439–445)](https://ieeexplore.ieee.org/document/10771516)
@@ -42,10 +51,12 @@ My research focused on the intersection of migration and health outcomes. We exa
 * **Occupational Health:** Evaluated the impact of silicosis in the mineral-grinding sector, advocating for health as an "entry point" for broader labor rights and financial compensation.
 * **Benefit Linkages:** Analyzed the efficacy of the **Ayushman Bharat** (national health insurance) and **BOCW Act** in providing secondary and tertiary care for families living below the poverty line.
 
+
 ## Policy Analysis & Advocacy
 I performed a deep-dive into the "administrative silos" that cause policy failure despite robust legislative frameworks.
 * **Portability Barriers:** Identified how the lack of interstate database synchronization prevents "split families" from accessing food rations through the **One-Nation One-Ration Card** scheme.
 * **Digital Governance:** Evaluated the **Aadhaar** and **eShram** portals, identifying how the "Digital Divide" and language barriers exclude those without technological literacy.
+
 
 ## Quantitative & Structural Insights
 Leveraging a mixed-methods approach, we analyzed the operational efficiency of Migrant Resource Centres (MRCs).
@@ -55,4 +66,4 @@ Leveraging a mixed-methods approach, we analyzed the operational efficiency of M
 ## Conference Poster
 Presented at the **2024 International Conference on Sustainable Development**, this poster summarizes our findings on collaborative ecosystems and technological solutions.
 
-<img src="/assets/img/ICSD_Poster.png" alt="ICSD 2024 Research Poster" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">
+<img src="/assets/img/posters/ICSD_Poster.png" alt="ICSD 2024 Research Poster" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px;">

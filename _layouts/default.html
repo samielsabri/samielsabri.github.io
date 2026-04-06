@@ -42,11 +42,15 @@
       <li class="has-dropdown">
         <span class="dropdown-toggle">Other Projects <span class="caret"></span></span>
         <ul class="dropdown">
+          <li><a href="{{ '/projects/who_gtm' | relative_url }}">WHO – Epidemic Intelligence Global Technical Meeting</a></li>
           <li><a href="{{ '/projects/reach' | relative_url }}">Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India</a></li>
           <li><a href="{{ '/projects/project_sos' | relative_url }}">Project SOS – Solving Omphalitis with Solar Power</a></li>
           <li><a href="{{ '/projects/costa_rica_projects' | relative_url }}">Costa Rica Volunteering (Multiple Projects)</a></li>
         </ul>
       </li>
+      <li><a href="{{ '/publications' | relative_url }}"{% if page.url contains 'publications' %} class="active"{% endif %}>Publications</a></li>
+      <li><a href="{{ '/travel' | relative_url }}"{% if page.url contains 'travel' %} class="active"{% endif %}>My Travels</a></li>
+      <li><a href="{{ '/music' | relative_url }}"{% if page.url contains 'music' %} class="active"{% endif %}>My Music</a></li>
     </ul>
   </nav>
 

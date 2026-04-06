@@ -7,17 +7,43 @@ layout: default
   <div class="page-hero__overlay"></div>
   <div class="page-hero__content">
     <h1 class="page-hero__title">{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="page-hero__subtitle">{{ page.subtitle }}</p>
-    {% endif %}
+    {% if page.subtitle %}<p class="page-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
   </div>
 </div>
 {% else %}
 <div class="page-header">
   <div class="page-header__inner">
-    <h1 class="page-header__title">{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="page-header__subtitle">{{ page.subtitle }}</p>
+    <div class="page-header__left">
+      <h1 class="page-header__title">{{ page.title }}</h1>
+    </div>
+    {% if page.keywords or page.stack or page.links %}
+    <div class="page-header__meta">
+      {% if page.keywords %}
+      <p class="page-header__keywords">
+        {% for kw in page.keywords %}
+          {{- kw -}}{% unless forloop.last %} · {% endunless %}
+          {% assign mod = forloop.index | modulo: 3 %}
+          {% if mod == 0 and forloop.last == false %}<br>{% endif %}
+        {% endfor %}
+      </p>
+      {% endif %}
+      {% if page.stack %}
+      <p class="page-header__stack">
+        {% for kw in page.stack %}
+          {{- kw -}}{% unless forloop.last %} · {% endunless %}
+          {% assign mod = forloop.index | modulo: 3 %}
+          {% if mod == 0 and forloop.last == false %}<br>{% endif %}
+        {% endfor %}
+      </p>
+      {% endif %}
+      {% if page.links %}
+      <div class="page-header__links">
+        {% for link in page.links %}
+          <a href="{{ link.url }}" target="_blank">↗ {{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+          </div>
     {% endif %}
   </div>
 </div>

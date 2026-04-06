@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 title: Impact of COVID-19 Pandemic on Physical Activity of Toronto's Youth
+keywords: "Urban Health · Health Equity · September, 2023"
+stack: "R · GIS · Ontario Parent Survey"
+links:
+  - label: "Read the Full Data Report (Maximum City)"
+    url: "https://static1.squarespace.com/static/5a7a164dd0e628ac7b90b463/t/65a0ae51b1e83b5425106796/1705029205252/Play+and+Physical+Activity_+Findings+from+the+Third+Ontario+Parent+Survey+FINAL+Report.pdf"
 ---
-
-## Impact of COVID-19 Pandemic on Physical Activity of Toronto's Youth
-**Urban Health · Health Equity · September, 2023** | `R` · `GIS` · `Ontario Parent Survey` | [↗ Read the Full Data Report (Maximum City)](https://static1.squarespace.com/static/5a7a164dd0e628ac7b90b463/t/65a0ae51b1e83b5425106796/1705029205252/Play+and+Physical+Activity_+Findings+from+the+Third+Ontario+Parent+Survey+FINAL+Report.pdf)
-
-
 ### Project Overview
 This research was the main output during my internship with the [Urban Data Science Corps (UDSC)](https://schoolofcities.utoronto.ca/learning-sofc/udsc/) at the University of Toronto's School of Cities. My placement was at the local consulting firm [Maximum City](https://maximumcity.ca). I analyzed data from the third Ontario Parent Survey (OPS3) to evaluate the physical activity and outdoor play levels of 2,093 children and youth (ages 5-17). Conducted in 2023, a year after major COVID-19 restrictions were lifted, the study investigated the intersection of children's health, urban density, and parental well-being.
 

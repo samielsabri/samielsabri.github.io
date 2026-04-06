@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Volunteer Projects in Costa Rica
 ---
 During my two years in Costa Rica, attending the United World College, I was engaged in a multitude of volunteer projects. This page is an overview of some of my favourite projects.
