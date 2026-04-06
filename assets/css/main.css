@@ -372,7 +372,7 @@ pre code {
 .page-header {
   margin-top: var(--nav-height);
   background: var(--navy);
-  padding: 56px 48px 52px;
+  padding: 25px 48px 25px;
 }
 
 .page-header__title {
