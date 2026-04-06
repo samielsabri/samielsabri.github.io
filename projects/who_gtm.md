@@ -9,7 +9,7 @@ links:
   - label: "Meeting Highlights (WHO Website)"
     url: "https://www.who.int/publications/m/item/2024-eios-global-technical-meeting-highlights"
 ---
-<div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
+<div style="float: right; margin-right: 20px; margin: 15px; width: 40%;">
   <img src="/assets/img/who/who5.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 As a core contributor to the fifth Epidemic Intelligence from Open Sources (EIOS) Global Technical Meeting (GTM), I worked at the WHO Hub for Pandemic and Epidemic Intelligence to convene nearly 200 experts from 70 countries. Our mission was to define "The Future of Public Health Intelligence (PHI)" by integrating cutting-edge AI technologies with robust collaborative surveillance frameworks to detect and respond to global health threats in real-time.
@@ -42,7 +42,7 @@ I facilitated high-level technical diplomacy to ensure policy intent translated 
 * **Strategic Partnerships:** Engaged with delegates from the **European Commission (HERA)** and the **WHO African Region (AFRO)** to support the expansion of the Regional Emergency Hub in Dakar.
 * **Workforce Resilience:** Co-developed training strategies to address staff turnover in national health ministries, utilizing the **WHO Academy** for scalable, competency-based learning.
 * **Cross-Border Coordination:** Facilitated knowledge exchange between 70 countries to identify "administrative silos" hindering real-time regional data sharing.
-* 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 2rem 0;">
-  <img src="/assets/img/who/who8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+  
+<div style="float: center; margin: 15px; width: 40%;">
+  <img src="/assets/img/who/who8.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
