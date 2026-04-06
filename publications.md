@@ -11,11 +11,34 @@ layout: page
 * Abuelaish I, Siddiqua A, Yousufzai S, Barakat B. Exploring the influence of perceived ingroup and outgroup threat on quality of life in a region impacted by protracted conflict. Int J Environ Res Public Health. 2023;20(16):6599. Contribution acknowledged (literature review).
  
 ## Conference Presentations
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 2rem 0;">
-  <img src="/assets/img/posters/timeuse.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/posters/ipv.JPG" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-  <img src="/assets/img/posters/rif_cancers.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 2rem 0;">
+
+  <figure style="margin: 0;">
+    <a href="/assets/img/posters/timeuse.jpg" target="_blank">
+      <img src="/assets/img/posters/timeuse.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="">
+    </a>
+  </figure>
+
+  figure style="margin: 0;">
+    <a href="/assets/img/posters/ipv.jpg" target="_blank">
+      <img src="/assets/img/posters/ipv.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="">
+    </a>
+  </figure>
+        
+  figure style="margin: 0;">
+    <a href="/assets/img/posters/rif_cancer.jpg" target="_blank">
+      <img src="/assets/img/posters/rif_cancer.jpg" 
+           style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
+           alt="">
+    </a>
+  </figure>
+        
 </div>
+
 
 * Wickens CM, Demir S, Sanches M, El Sabri S, Stoduto G, Brands B, et al. Testing validity of the standardized field sobriety test (SFST) to detect presence of and impairment by cannabis and/or alcohol: a randomized clinical trial. In: Canadian Driving Rehabilitation and Transportation Conference; Ottawa; 2026.
 * Colonna R, Hashemian SS, El Sabri S, Abnavi F, Stoduto G, Rodak T, et al. A systematic review of remedial educational interventions for drivers with impaired driving offences [oral presentation]. In: CARSP/ACIP Conference; Halifax, NS; 2026.
