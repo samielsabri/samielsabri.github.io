@@ -1,8 +1,17 @@
 ---
 layout: page
 title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India
-keywords: Migration · Mumbai, India · Rajasthan, India · 2024
-stack: "Mixed-Methods · Policy Analysis · Public Health Equity · Data-Driven Insights · Fieldwork"
+keywords: 
+  - "Migration"
+  - "Mumbai, India"
+  - "Rajasthan, India"
+  - "2024"
+stack:
+  - "Mixed Methods"
+  - "Policy Analysis"
+  - "Public Health Equity"
+  - "Data-Driven Insights"
+  - "Fieldwork"
 links:
   - label: "Full Case Study Report"
     url: "https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/"
