@@ -2,11 +2,7 @@
 layout: page
 title: Linguify – A Full-Stack Spotify Language Analytics Dashboard
 stack:
-  - "Public Health Intelligence"
-  - "Saly, Senegal"
-  - "Global Health Security"
-  - "2024"
-  - "Full-Stack
+  - "Full-Stack"
   - "Dashboards"
   - "API"
   - "Python"
