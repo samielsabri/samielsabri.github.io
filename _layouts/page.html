@@ -19,10 +19,22 @@ layout: default
     {% if page.keywords or page.stack or page.links %}
     <div class="page-header__meta">
       {% if page.keywords %}
-      <p class="page-header__keywords">{{ page.keywords }}</p>
+      <p class="page-header__keywords">
+        {% for kw in page.keywords %}
+          {{- kw -}}{% unless forloop.last %} · {% endunless %}
+          {% assign mod = forloop.index | modulo: 3 %}
+          {% if mod == 0 and forloop.last == false %}<br>{% endif %}
+        {% endfor %}
+      </p>
       {% endif %}
-      {% if page.stack %}
-      <p class="page-header__stack"><code>{{ page.stack }}</code></p>
+      {% if page.keywords %}
+      <p class="page-header__stack">
+        {% for kw in page.stack %}
+          {{- kw -}}{% unless forloop.last %} · {% endunless %}
+          {% assign mod = forloop.index | modulo: 3 %}
+          {% if mod == 0 and forloop.last == false %}<br>{% endif %}
+        {% endfor %}
+      </p>
       {% endif %}
       {% if page.links %}
       <p class="page-header__links">
