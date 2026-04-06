@@ -8,12 +8,6 @@ links:
 ---
 Linguify is a full-stack web application that allows users to analyze the linguistic diversity of their Spotify libraries. By processing track metadata and lyrics, the app generates a comprehensive language profile, identifying bilingual tracks and providing tools for lyric-based language learning
 
-<div style="display: flex; flex-wrap: wrap; background: #f7f4ef; border: 1px solid #d9d3cb; margin: 2rem 0; font-family: sans-serif;">
-  <div style="flex: 1 1 30%; text-align: center; padding: 2rem 1.5rem; border-right: 1px solid #d9d3cb; box-sizing: border-box;">
-    <span style="font-size: 0.95rem; color: #6b6560;">Status Update: Due to recent restrictive changes in the Spotify Web API for independent developers, Linguify is currently in a "Read-Only" portfolio state. At its peak, the platform supported over 100 active users during its initial feedback phase</span>
-  </div>
-</div>
-
 <style>
   .gallery-container {
     display: flex;
@@ -161,6 +155,14 @@ Linguify is a full-stack web application that allows users to analyze the lingui
     showSlide(slideIndex);
   };
 </script>
+
+<div style="display: flex; flex-wrap: wrap; background: #f7f4ef; border: 1px solid #d9d3cb; margin: 2rem 0; font-family: sans-serif;">
+  <div style="flex: 1 1 30%; text-align: center; padding: 2rem 1.5rem; border-right: 1px solid #d9d3cb; box-sizing: border-box;">
+    <span style="font-size: 0.95rem; color: #6b6560;">Status Update: Due to recent restrictive changes in the Spotify Web API for independent developers, Linguify is currently in a "Read-Only" portfolio state. At its peak, the platform supported over 100 active users during its initial feedback phase</span>
+  </div>
+</div>
+
+
 
 ## Technical Stack
 
