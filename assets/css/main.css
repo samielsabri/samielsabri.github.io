@@ -350,7 +350,7 @@ pre code {
 }
 
 .page-hero__title {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-weight: 300;
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--white);
@@ -376,7 +376,7 @@ pre code {
 }
 
 .page-header__title {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-weight: 300;
   font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--white);
@@ -633,7 +633,7 @@ figcaption {
 }
 
 .hero-name {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-weight: 300;
   font-size: clamp(3.5rem, 8vw, 7rem);
   color: #fff;
@@ -744,7 +744,7 @@ figcaption {
 }
 
 .map-section-header h2 {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-weight: 300;
   font-size: clamp(2rem, 4vw, 3rem);
   color: #fff;
