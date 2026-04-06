@@ -1,9 +1,18 @@
 ---
 layout: page
 title: WHO - Global Technical Meeting – The Future of Public Health Intelligence
-keywords: Public Health Intelligence · Saly, Senegal · Global Health Security · 2024
-stack: "AI Governance · Collaborative Surveillance · Policy Frameworks · 
-Stakeholder Engagement · Capacity Building"
+keywords: 
+  - "Public Health Intelligence"
+  - "Global Health Security"
+  - "Saly, Senegal"
+  - "Geneva, Switzerland"
+  - "Berlin, Germany"
+  - "2024-2025"
+stack:
+  - "Policy Analysis"
+  - "Project Management"
+  - "Stakeholder Engagement"
+  - "Capacity Building"
 links:
   - label: "Full Meeting Report (BMC Proceedings)"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12442272/pdf/12919_2025_Article_340.pdf"
