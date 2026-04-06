@@ -7,10 +7,7 @@ subtitle:
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
 
   <div style="flex: 1; min-width: 300px;">
-    <h1 style="font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 10px;">Hey there!</h1>
-    <p style="font-family: var(--font-title); font-weight: bold; margin-bottom: 25px; letter-spacing: 1px;">
-      Hallo! Salut! ⴰⵣⵓⵍ! ¡Hola! Olá! أهلاً
-    </p>
+    <h2 style="font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 10px;">Hallo! Salut! ⴰⵣⵓⵍ! ¡Hola! Olá! </h2>
 
     <div style="font-family: var(--font-body); line-height: 1.6; color: var(--text);">
       <p style="margin-bottom: 20px;">
