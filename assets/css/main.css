@@ -7,14 +7,14 @@
 
 @font-face {
   font-family: 'BirdseyeSans'; /* You can name this whatever you want */
-  src: url('/assets/fonts/birdseye_sans.woff') format('woff');
+  src: url('/assets/fonts/birdseye_sans.ttf') format('true-type');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'BirdseyeSerif'; /* For a different header font */
-  src: url('/assets/fonts/birdseye_serif.woff') format('woff');
+  src: url('/assets/fonts/birdseye_serif.ttf') format('true-type');
   font-weight: bold;
 }
 
