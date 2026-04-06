@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: My Travels
 ---
 As of 2026, I have visited  62 countries and over 250 places in the world! Zoom into the map to find out where I've been and don't hesitate to share travel tips!
