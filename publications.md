@@ -14,14 +14,14 @@ layout: page
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 2rem 0;">
 
   <figure style="margin: 0;">
-    <a href="/assets/img/posters/timeuse.jpg" target="_blank">
-      <img src="/assets/img/posters/timeuse.jpg" 
+    <a href="/assets/img/posters/imgs_poster.jpg" target="_blank">
+      <img src="/assets/img/posters/imgs_poster.jpg" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
            alt="">
     </a>
   </figure>
 
-  figure style="margin: 0;">
+  <figure style="margin: 0;">
     <a href="/assets/img/posters/ipv.jpg" target="_blank">
       <img src="/assets/img/posters/ipv.jpg" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
@@ -29,7 +29,7 @@ layout: page
     </a>
   </figure>
         
-  figure style="margin: 0;">
+  <figure style="margin: 0;">
     <a href="/assets/img/posters/rif_cancer.jpg" target="_blank">
       <img src="/assets/img/posters/rif_cancer.jpg" 
            style="width: 100%; height: 250px; object-fit: contain; background-color: #f8f8f8; border-radius: 6px; border: 1px solid #d9d3cb;" 
