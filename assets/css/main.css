@@ -19,7 +19,7 @@
   --accent-hover: #3a6aaa;
   --border:     #e0ddd6;
 
-  --font-body:    'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body:    'Open Sans', sans-serif;
   --font-ui:      'Montserrat', 'Helvetica Neue', sans-serif;
 
   --nav-height: 68px;
@@ -443,7 +443,7 @@ pre code {
 
 .page-content__inner {
   max-width: var(--content-width);
-  margin: 0 auto;
+  margin: ;
 }
 
 /* For pages without a hero or header (layout: default directly),
