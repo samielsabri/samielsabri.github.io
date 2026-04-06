@@ -7,15 +7,16 @@ links:
   - label: "Full Case Study Report"
     url: "https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/"
 ---
-<div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
-  <img src="/assets/img/Reach/reach_speech.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <div style="margin: 30px 0; text-align: center;">
-   <a href="https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/" 
-      target="_blank" 
-      style="background: #004a99; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
-      Read the Full Case Study Report (Reach Alliance) ↗
-   </a>
-</div>
+<div style="float: right; margin-left: 20px; margin-bottom: 20px; width: 40%; display: flex; flex-direction: column; align-items: center;">
+  <img src="/assets/img/Reach/reach_speech.jpg" alt="Research Presentation" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  
+  <div style="margin-top: 20px; width: 100%; text-align: center;">
+    <a href="https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/" 
+       target="_blank" 
+       style="display: inline-block; background: #004a99; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s;">
+       Read Full Report (Reach Alliance) ↗
+    </a>
+  </div>
 </div>
 
 As a researcher for **The Reach Alliance** (Munk School of Global Affairs & Mastercard Center for Inclusive Growth), I investigated the structural barriers preventing India's ~600 million internal migrants from accessing entitled social protections. Our team conducted primary fieldwork in Mumbai and Rajasthan to evaluate how Civil Society Organizations (CSOs) bridge the gap between policy intent and "last-mile" delivery.
