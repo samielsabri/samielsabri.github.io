@@ -27,7 +27,7 @@ layout: default
         {% endfor %}
       </p>
       {% endif %}
-      {% if page.keywords %}
+      {% if page.stack %}
       <p class="page-header__stack">
         {% for kw in page.stack %}
           {{- kw -}}{% unless forloop.last %} · {% endunless %}
