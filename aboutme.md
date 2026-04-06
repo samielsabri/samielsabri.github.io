@@ -4,7 +4,7 @@ title: About me
 subtitle: 
 ---
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin: 2rem 0; padding: 40px; border: 1px solid #eef2f6; border-radius: 8px;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
 
   <div style="flex: 1; min-width: 300px;">
     <h1 style="font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 10px;">Hey there!</h1>
@@ -33,7 +33,7 @@ subtitle:
 
 </div>
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin: 2rem 0; padding: 40px; border: 1px solid #eef2f6; border-radius: 8px;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
   
   <div style="flex: 1; min-width: 300px; text-align: center;">
     <img src="/assets/img/japan_deer.jpg" alt="Sami in Japan" style="width: 100%; max-width: 450px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
