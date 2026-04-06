@@ -443,7 +443,7 @@ pre code {
 
 .page-content__inner {
   max-width: var(--content-width);
-  margin: ;
+  margin: 0 auto;
 }
 
 /* For pages without a hero or header (layout: default directly),
