@@ -27,7 +27,7 @@ subtitle:
     </div>
   </div>
 
-  <div style="flex: 1; min-width: 300px; text-align: center;">
+  <div style="flex: 1; min-width: 300px; text-align: center; margin-top: 40px;">
     <img src="/assets/img/Sami_Headshot_2025.JPG" alt="Sami El Sabri" style="width: 100%; max-width: 450px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
   </div>
 
