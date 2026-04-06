@@ -3,8 +3,7 @@ layout: page
 title: Reach Alliance – Access to Social Benefits for Internal Seasonal Migrants in India
 keywords: 
   - "Migration"
-  - "Mumbai, India"
-  - "Rajasthan, India"
+  - "Mumbai & Rajasthan, India"
   - "2024"
 stack:
   - "Mixed Methods"
