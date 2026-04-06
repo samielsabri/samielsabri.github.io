@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Linguify – A Full-Stack Spotify Language Analytics Dashboard
-stack: "Full-Stack·  Web-Development ·  API · Python · SQL · JavaScript · HTML · CSS · Data Visualization"
+stack: "Full-Stack·  Dashboards ·  API · Python · SQL · JavaScript · HTML · CSS"
 links:
   - label: "Web-App (not active)"
     url: "https://samielsabri.github.io/projects/linguify"
@@ -93,8 +93,8 @@ Linguify is a full-stack web application that allows users to analyze the lingui
     <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
 
     <!-- Fixed: Removed extra class/onclick from the main image -->
-    <img class="active" src="/assets/img/Linguify/linguify_home_first_time copy.png">
-    <img src="/assets/img/Linguify/linguify_home copy.png">
+    <img class="active" src="/assets/img/Linguify/linguify_home copy.png">
+    <img src="/assets/img/Linguify/linguify_home_first_time copy.png">
     <img src="/assets/img/Linguify/linguify_home_table copy.png">
     <img src="/assets/img/Linguify/linguify_map copy.png">
     <img src="/assets/img/Linguify/linguify_language_grid copy.png">
@@ -110,8 +110,8 @@ Linguify is a full-stack web application that allows users to analyze the lingui
   </div>
 
   <div class="thumb-sidebar">
-    <img src="/assets/img/Linguify/linguify_home_first_time copy.png" class="active-thumb" onclick="currentSlide(0)">
-    <img src="/assets/img/Linguify/linguify_home copy.png" onclick="currentSlide(1)">
+    <img src="/assets/img/Linguify/linguify_home copy.png" class="active-thumb" onclick="currentSlide(0)">
+    <img src="/assets/img/Linguify/linguify_home_first_time copy.png" onclick="currentSlide(1)">
     <img src="/assets/img/Linguify/linguify_home_table copy.png" onclick="currentSlide(2)">
     <img src="/assets/img/Linguify/linguify_map copy.png" onclick="currentSlide(3)">
     <img src="/assets/img/Linguify/linguify_language_grid copy.png" onclick="currentSlide(4)">
