@@ -3,6 +3,7 @@ layout: page
 ---
 ## Publications
 
+* El Sabri, S., Maslej, M., Sikstrom, L., Szkudlarek, P., Ratto, M. Mitigating Reliance when AI is Biased: Certainty Scores and Descriptive Flagging for Decision-Making in Mental Health. *Submitted to Journal.*
 * [Medialdea Carrera R, El Sabri S, Rabiyan Y, et al. Building the future of public health intelligence: updates from the fifth EIOS Global Technical Meeting. BMC Proc. 2025;19(Suppl 22):26.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12442272/)
 * [Sanchez A, El Sabri S, Khan N, Qaisar A, Wong J. Leveraging technology for equitable access to social benefits: a case study of civil society organization interventions among internal seasonal migrant workers in India. In: 2024 IEEE Global Humanitarian Technology Conference (GHTC) Proceedings; 2024. p. 439–445.](https://ieeexplore.ieee.org/document/10771516)
 * [El Sabri S, Sanchez A, Khan N, Qaisar A, Wong J. Improving access to government benefits for internal seasonal migrant workers in India. The Reach Alliance; 2024.](https://reachalliance.org/reports/streamlining-access-to-social-benefit-for-internal-seasonal-migrants-in-india/)
