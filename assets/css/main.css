@@ -440,6 +440,9 @@ pre code {
   color: rgba(255,255,255,0.65);
   text-decoration: underline;
   transition: color 0.2s;
+  display: block;
+  margin-bottom: 4px;
+}
 }
 
 .page-header__links a:hover {
