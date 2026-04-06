@@ -5,7 +5,7 @@ keywords: Deprivation analysis · Health Equity · Oxford, UK · 2026
 stack: "R · GIS · ONS Census 2021 · IMD 2025 · ONS Open Geography Portal"
 links:
     - label: "Full Report (coming soon)"
-    url: "https://samielsabri.github.io/projects/wypc"
+      url: "https://samielsabri.github.io/projects/wypc"
 ---
 Through the Micro-Internship Programme at the University of Oxford, I was commissioned to build the evidence base for [Wolvercote Young People's Club (WYPC)](https://wypc.org.uk/about-us/), which serves young people aged 8–24 in Wolvercote and Cutteslowe. This North Oxford area perceived as affluent but containing real concentrations of disadvantage invisible to standard area statistics. I tackled the Modifiable Areal Unit Problem, as many mixed Neighborhoods at the standard census level of granularity (LSOO) averages and washes out within-area inequality. I moved the analysis to the smallest available census unit, benchmarked all indicators against Oxford city, and was able to show how a street of social housing next to owner-occupied terraces registers as moderately deprived, erasing the circumstances of both populations. 
 
