@@ -4,27 +4,29 @@ title: About me
 subtitle: 
 ---
 
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 4rem;">
+
+  <h2 style="width: 100%; font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 20px;">
+    Hallo! Salut! ⴰⵣⵓⵍ! ¡Hola! Olá! أهلاً
+  </h2>
 
   <div style="flex: 1; min-width: 300px;">
-    <h2 style="font-family: var(--font-title); font-size: 2.5rem; margin-bottom: 10px;">Hallo! Salut! ⴰⵣⵓⵍ! ¡Hola! Olá! </h2>
-
     <div style="font-family: var(--font-body); line-height: 1.6; color: var(--text);">
       <p style="margin-bottom: 20px;">
-        Welcome to my personal website and project portfolio! I am <strong>Sami El Sabri</strong>, a public health analyst, epidemiologist, and data scientist. Currently, I am a <strong>Clarendon Scholar at the University of Oxford</strong> completing an MSc in Global Health Science & Epidemiology.
+        Welcome to my personal website and project portfolio! I am <strong>Sami El Sabri</strong>, a public health analyst, epidemiologist, and data scientist[cite: 8, 150]. Currently, I am a <strong>Clarendon Scholar at the University of Oxford</strong> completing an MSc in Global Health Science & Epidemiology.
       </p>
       
       <p style="margin-bottom: 30px;">
-        My work sits at the intersection of health equity, climate change, and migration. I specialize in turning complex, messy data into equitable, evidence-based decisions using <strong>R, Python, and GIS</strong>. Having lived and worked across three continents and traveled to 60 countries, I bring a global, multilingual perspective to local challenges. 
+        My work sits at the intersection of health equity, climate change, and migration. I specialize in turning complex, messy data into equitable, evidence-based decisions using <strong>R, Python, and GIS</strong>. Having lived across three continents and traveled to 60 countries, I bring a global, multilingual perspective to local challenges. 
       </p>
       
       <p style="margin-bottom: 0;">
-        Here you find a curated collection of my endeavours across quantitative applications, interdisciplinary collaborations, community service, and enriching travel experiences that have helped me learn and grow. Thanks for visiting, I hope you enjoy!
+        Here you find a curated collection of my endeavours across quantitative applications, interdisciplinary collaborations, community service, and enriching travel experiences[cite: 39, 246]. Thanks for visiting, I hope you enjoy!
       </p>
     </div>
   </div>
 
-  <div style="flex: 1; min-width: 300px; text-align: center; margin-top: 40px;">
+  <div style="flex: 1; min-width: 300px; text-align: center;">
     <img src="/assets/img/Sami_Headshot_2025.JPG" alt="Sami El Sabri" style="width: 100%; max-width: 450px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
   </div>
 
