@@ -166,36 +166,38 @@ Linguify is a full-stack web application that allows users to analyze the lingui
 
 ## Technical Stack
 
-* Backend: Flask (Python) following Clean Architecture principles to decouple business logic from external APIs.
+* **Backend:** Flask (Python) following Clean Architecture principles to decouple business logic from external APIs.
 
-* Frontend: React and Tailwind CSS for a responsive, dark-mode dashboard.
+* **Frontend**: React and Tailwind CSS for a responsive, dark-mode dashboard.
 
-* Database & APIs: Spotify Web API (OAuth 2.0), Musixmatch/Genius API, SQL for Database Query
+* **Database & APIs:** Spotify Web API (OAuth 2.0), Musixmatch/Genius API, SQL for Database Query
 
-* Data Visualization: Custom Charting (Chart.js), Dynamic Dashboards, Mapbox SDK for geospatial visualization
+* **Data Visualization:** Custom Charting (Chart.js), Dynamic Dashboards, Mapbox SDK for geospatial visualization
 
-* State Management & Parallel Processing: Real-time analysis progress tracking for large libraries (e.g., "Liked Songs" analysis)
+* **State Management & Parallel Processing:** Real-time analysis progress tracking for large libraries (e.g., "Liked Songs" analysis)
+
 
 To ensure high accuracy in language classification, I implemented a multi-layered detection pipeline:
 
-* Natural Language Processing: Initial language detection performed on song lyrics.
+* **Natural Language Processing:** Initial language detection performed on song lyrics.
 
-* Heuristics Programming: When NLP certainty scores fell below a specific threshold, the system automatically fell back on secondary heuristics, such as artist metadata and album-level language tags, to resolve ambiguities.
+* **Heuristics Programming:** When NLP certainty scores fell below a specific threshold, the system automatically fell back on secondary heuristics, such as artist metadata and album-level language tags, to resolve ambiguities.
 
-* Scalability: Designed the backend to manage long-running tasks, providing users with estimated analysis times for large libraries.
+* **Scalability:** Designed the backend to manage long-running tasks, providing users with estimated analysis times for large libraries.
 
 ## Key Features
-1. Automated Library Analysis
+**1. Automated Library Analysis**
+
 The application analyzes user libraries (up to 1000 songs across 28+ languages in test cases) to determine favorite languages and listening habits. It handles long-running data tasks by providing users with estimated analysis times and progress updates.
 
-2. Geospatial Musical Footprint
+**2. Geospatial Musical Footprint**
 Using Mapbox, I developed an interactive global map that pins the origin of a user's music library. This allows users to visualize their geographical "musical footprint" across different continents.
 
-3. Lyric-Integrated Learning
+**3. Lyric-Integrated Learning**
 Linguify bridges data and education by allowing users to interact with song lyrics.
 
-** Metadata: Displays language families and speaker populations (e.g., "Italian: Romance Family, 65 million speakers").
+* **Metadata:** Displays language families and speaker populations (e.g., "Italian: Romance Family, 65 million speakers").
 
-** Learning Tools: Users can select lyric lines to generate flashcard decks or custom Spotify playlists for immersion (coming soon).
+* **Learning Tools:** Users can select lyric lines to generate flashcard decks or custom Spotify playlists for immersion (coming soon).
 
 
