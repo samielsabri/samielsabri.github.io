@@ -1,7 +1,19 @@
 ---
 layout: page
 title: Linguify – A Full-Stack Spotify Language Analytics Dashboard
-stack: "Full-Stack·  Dashboards ·  API · Python · SQL · JavaScript · HTML · CSS"
+stack:
+  - "Public Health Intelligence"
+  - "Saly, Senegal"
+  - "Global Health Security"
+  - "2024"
+  - "Full-Stack
+  - "Dashboards"
+  - "API"
+  - "Python"
+  - "SQL"
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
 links:
   - label: "Web-App (not active)"
     url: "https://samielsabri.github.io/projects/linguify"
