@@ -10,7 +10,7 @@ links:
     url: "https://www.who.int/publications/m/item/2024-eios-global-technical-meeting-highlights"
 ---
 <div style="float: right; margin-right: 20px; margin-bottom: 10px; width: 40%;">
-  <img src="/assets/img/WHO/who5.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/assets/img/who/who5.jpg" alt="" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </div>
 As a core contributor to the fifth Epidemic Intelligence from Open Sources (EIOS) Global Technical Meeting (GTM), I worked at the WHO Hub for Pandemic and Epidemic Intelligence to convene nearly 200 experts from 70 countries. Our mission was to define "The Future of Public Health Intelligence (PHI)" by integrating cutting-edge AI technologies with robust collaborative surveillance frameworks to detect and respond to global health threats in real-time.
 
@@ -21,7 +21,7 @@ As a core contributor to the fifth Epidemic Intelligence from Open Sources (EIOS
    <img src="/assets/img/who/who4.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
    <img src="/assets/img/who/who6.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
    <img src="/assets/img/who/who7.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
-    <img src="/assets/img/who/who8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
+   <img src="/assets/img/who/who8.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #d9d3cb;">
 </div>
 
 ### AI Governance & Tech Innovation
