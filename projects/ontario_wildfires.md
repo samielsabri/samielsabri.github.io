@@ -1,18 +1,16 @@
 ---
 layout: page
-title: "When the Sky Turned Orange"
+title: "2023 Ontario Wildfires"
 keywords: "Environmental Health · 2025"
-stack: "R · ggplot2 · Leaflet · sf · ECCC NAPS · CWFIS"
+stack: "R · Leaflet · sf · ECCC NAPS · CWFIS"
 links:
-  - label: "GitHub"
-    url: "https://github.com/samielsabri"
   - label: "Interactive map"
     url: "/dashboards/wildfire_air_quality_gta.html"
 ---
 
-The 2023 Canadian wildfire season was the most destructive on record — burning nearly 15 million hectares, over seven times the historical annual mean. For most Canadians, the crisis did not arrive as flames. It arrived as smoke. This project quantifies what that meant for the air that Greater Toronto Area residents breathed across the summer of 2023, using hourly PM2.5 monitoring data from Ontario's MECP network and fire perimeter data from the Canadian National Fire Database.
+In June 2023, I was in Toronto when the sky turned orange. My phone showed an air quality alert and my asthma flared up after not having any issues for many years. Because of my longstanding interest in climate and health, I wanted to figure out *how bad* it actually was and *how we actually measure what happened to people's health*. What does the epidemiological infrastructure look like for an event like this? Who was the most affected, and did the public health response work? It started as coursework during my MSc in Epidemiology at Oxford and grew from there, informed by conversations with researchers at Public Health Ontario who were doing the same work at a much larger scale.
 
-This work builds on academic research conducted as part of my MSc in Global Health Science and Epidemiology at Oxford, and on conversations with environmental health researchers at Public Health Ontario — including researchers working on Ontario's first major wildfire-health epidemiological studies following the 2023 season.
+This project quantifies what the wildfires meant for the air that Greater Toronto Area residents breathed across the summer of 2023, using hourly PM2.5 monitoring data from Ontario's MECP network and fire perimeter data from the Canadian National Fire Database.
 
 <!-- STATS GRID -->
 <div style="display: flex; flex-wrap: wrap; background: #f5f0ea; border: 1px solid #ddd6cc; margin: 2rem 0; font-family: sans-serif;">
@@ -35,124 +33,31 @@ This work builds on academic research conducted as part of my MSc in Global Heal
 </div>
 
 ---
-
-## The health problem
-
-Fine particulate matter (PM2.5) — particles smaller than 2.5 micrometres — penetrates deep into the airways and enters the bloodstream. At sustained concentrations, it triggers inflammatory cascades that exacerbate asthma, COPD, and cardiovascular disease. Research suggests wildfire-specific PM2.5 may be up to ten times more harmful than PM2.5 from other sources due to its chemical composition, including polycyclic aromatic hydrocarbons and other combustion byproducts.
-
-The WHO's 2021 revised guidelines set a 24-hour mean threshold of 15 μg/m³. Ontario's own CAAQS reference level is 27 μg/m³. During the peak June 5–7 smoke event, GTA monitoring stations recorded hourly readings exceeding 150 μg/m³ — more than ten times the WHO guideline, sustained across multiple hours.
-
-Two distinct smoke events hit the GTA in summer 2023. The first, in early June, was driven by fires in Northern Ontario and Quebec. The second, in late June and early July, was longer-sustained and reached comparable peak concentrations.
-
----
-
-## PM2.5 across the summer
-
-The chart below shows daily mean PM2.5 averaged across all Ontario MECP monitoring stations in the GTA, from May through July 2023. Both smoke events are visible as sharp departures from otherwise moderate baseline air quality.
-
+ 
+## The data
+ 
+Two distinct smoke events hit the GTA that summer. The chart below shows daily mean PM2.5 averaged across ten Ontario MECP monitoring stations, May through July 2023. The WHO 24-hour guideline is 15 μg/m³; Ontario's reference level is 27 μg/m³.
+ 
 <!-- TIME SERIES CHART EMBED -->
 <div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; overflow: hidden;">
-  <img src="/assets/img/gta_pm25_timeseries.png" alt="GTA daily mean PM2.5, May–July 2023, showing two sharp peaks during the June and late June smoke events" style="width: 100%; display: block;" />
+  <img src="/assets/img/gta_pm25_timeseries.png" alt="GTA daily mean PM2.5, May–July 2023" style="width: 100%; display: block;" />
 </div>
-
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
-  Source: Air Quality Ontario / Ontario Ministry of the Environment, Conservation and Parks (MECP). WHO 24h guideline: 15 μg/m³. Ontario CAAQS reference: 27 μg/m³.
+  Source: Air Quality Ontario / Ontario MECP. WHO 24h guideline: 15 μg/m³. Ontario CAAQS reference: 27 μg/m³.
 </p>
-
-The shaded regions mark the two identified smoke events. Red points indicate days exceeding the Ontario reference level. The contrast between event and non-event periods is stark: on baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³; during peak smoke days it exceeded 50 μg/m³ on a daily average basis, with individual station hourly peaks well above 100 μg/m³.
-
----
-
-## Spatial variation across the GTA
-
-Not all parts of the GTA experienced the same exposure. The interactive map below shows peak PM2.5 recorded at each Ontario MECP monitoring station during the two smoke events. Circle size is proportional to peak concentration; colour encodes the US EPA AQI category.
-
+On baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³. During peak smoke days it exceeded 50 μg/m³ on a daily average, with individual station hourly peaks above 100 μg/m³ — more than ten times the WHO guideline. The two events have different profiles: the first sharper and more concentrated, the second longer-sustained. That difference turns out to matter, as I'll come back to.
+ 
+The interactive map below shows peak PM2.5 at each station during both events. Toggle between events; zoom out to see where the fires were.
+ 
 <!-- INTERACTIVE MAP EMBED -->
-<iframe src="/dashboards/wildfire_air_quality_gta.html" width="100%" height="560px" style="border: 1px solid #ddd6cc; border-radius: 4px; margin: 1.5rem 0; display: block;"></iframe>
-
+<iframe src="/dashboards/wildfire_air_quality_gta.html" width="100%" height="540px" style="border: 1px solid #ddd6cc; border-radius: 4px; margin: 1.5rem 0; display: block;"></iframe>
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
-  PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / Natural Resources Canada). Toggle between smoke events; zoom out to see national fire extent.
+  PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / NRCan).
 </p>
-
-Stations in the western GTA — Oakville, Milton, Mississauga — recorded the highest peak concentrations during both events, consistent with prevailing southwesterly wind patterns during smoke advection from Northern Ontario. Oshawa, at the eastern margin of the monitoring network, recorded substantially lower peaks.
-
----
-
-## Two events, different profiles
-
-<!-- BAR CHARTS -->
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 1.5rem 0; font-family: sans-serif;">
-
-  <div style="flex: 1 1 45%; min-width: 260px;">
-    <h3 style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6560; margin-bottom: 1rem; font-family: monospace;">Event 1 — Jun 5–7: peak station readings (μg/m³)</h3>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Oakville</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 100%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">193</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Milton</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 85%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">163</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Brampton</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 63%; background: #e74c3c;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">121</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Mississauga</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 73%; background: #e74c3c;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">141</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Oshawa</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 33%; background: #e74c3c;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">64</span>
-    </div>
-    <div style="margin-top: 10px; display: flex; gap: 12px; font-size: 10.5px; color: #888;">
-      <span><span style="display:inline-block;width:10px;height:10px;background:#8e44ad;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>Very unhealthy (&gt;150)</span>
-      <span><span style="display:inline-block;width:10px;height:10px;background:#e74c3c;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>Unhealthy (55–150)</span>
-    </div>
-  </div>
-
-  <div style="flex: 1 1 45%; min-width: 260px;">
-    <h3 style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6560; margin-bottom: 1rem; font-family: monospace;">Event 2 — Jun 27–Jul 2: peak station readings (μg/m³)</h3>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Brampton</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 100%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">196</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Milton</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 88%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">173</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Mississauga</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 79%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">155</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Oakville</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 72%; background: #8e44ad;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">141</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 12px; color: #6b6560; min-width: 80px; text-align: right;">Newmarket</span>
-      <div style="flex: 1; height: 18px; background: #f0ebe3; border-radius: 2px;"><div style="height: 100%; border-radius: 2px; width: 60%; background: #e74c3c;"></div></div>
-      <span style="font-size: 11px; color: #6b6560; min-width: 36px; font-family: monospace;">118</span>
-    </div>
-    <div style="margin-top: 10px; display: flex; gap: 12px; font-size: 10.5px; color: #888;">
-      <span><span style="display:inline-block;width:10px;height:10px;background:#8e44ad;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>Very unhealthy (&gt;150)</span>
-      <span><span style="display:inline-block;width:10px;height:10px;background:#e74c3c;border-radius:2px;margin-right:4px;vertical-align:middle;"></span>Unhealthy (55–150)</span>
-    </div>
-  </div>
-
-</div>
-
-The second event was in some ways more concerning than the first: it lasted longer, affected a broader geographic footprint, and Brampton recorded its highest single-station reading of the summer (196 μg/m³) during this event — not the first. Both events represent sustained exposures well above any regulatory threshold.
-
+Stations in the western GTA — Oakville, Milton, Mississauga, Brampton — recorded the highest peaks during both events, consistent with smoke advection from Northern Ontario. Oshawa, at the eastern margin of the network, recorded substantially lower readings.
+ 
+The second event recorded higher peak concentrations at most stations. For example, Brampton recorded its highest single-station reading of the summer (196µg/m³) during this event. However, it did not produce a proportionate surge in ED visits. A quasi-experimental study by Chen et al. (2025) from Public Health Ontario documented a 23.6% surge in asthma ED visits during Event 1 but found no consistent increase during Event 2. Their interpretation: people who sought medications during the first event were better protected, and advisory adherence improved. This is a rare natural experiment with a built-in comparator — direct evidence that timely risk communication, when acted upon, reduces acute burden. The harder question it raises is: acted upon by whom?
+ 
 ---
 
 ## Public health implications
@@ -162,7 +67,7 @@ The epidemiological evidence linking PM2.5 to acute respiratory and cardiovascul
 Several features of wildfire smoke health risk make it distinct from other air quality threats:
 
 * **Transboundary and episodic**: Unlike stationary industrial pollution, wildfire smoke arrives rapidly, with little warning, from sources hundreds of kilometres away. The standard monitoring and advisory frameworks were designed for local, predictable pollution sources.
-* **Differential vulnerability**: Older adults, people with pre-existing respiratory and cardiovascular conditions, outdoor workers, and newcomer populations with limited information access face disproportionate risk. Peel Region's population — among the most diverse in Canada, with large newcomer communities in Brampton and Mississauga — warrants targeted communication and intervention strategies.
+* **Differential vulnerability**: Indigenous communities, older adults, people with pre-existing respiratory and cardiovascular conditions, outdoor workers, and newcomer populations with limited information access face disproportionate risk. Toronto and Peel Region's population, in particular, are among the most diverse in Canada, with large newcomer communities, which warrants targeted communication and intervention strategies.
 * **Cumulative seasonal burden**: The 2023 season involved not one but multiple sustained exposure windows across May through July. Cumulative effects on lung function and cardiovascular health are poorly understood at the population level and represent a critical evidence gap.
 
 As climate projections indicate that seasons like 2023 will become increasingly frequent, local public health units have a central role in translating this epidemiological evidence into actionable risk management: targeted advisories, equity-informed messaging, clean air space designation, and integration of wildfire smoke response into existing heat and air quality emergency frameworks.
@@ -173,8 +78,8 @@ As climate projections indicate that seasons like 2023 will become increasingly 
 
 All data are open-access and fully reproducible.
 
-* **PM2.5 monitoring data**: Hourly readings from Ontario MECP's AQHI monitoring network, accessed via Air Quality Ontario (`airqualityontario.com`). Ten GTA stations used: Toronto Downtown, Toronto East, Toronto North, Toronto West, Brampton, Mississauga, Oakville, Milton, Newmarket, Oshawa. Daily means computed from hourly values with a minimum of 18 valid hourly observations; sentinel values (−999, 9999) treated as missing.
+* **PM2.5 monitoring data**: Hourly readings from Ontario MECP's AQHI monitoring network, accessed via Air Quality Ontario (`airqualityontario.com`). Ten GTA stations used: Toronto Downtown, Toronto East, Toronto North, Toronto West, Brampton, Mississauga, Oakville, Milton, Newmarket, Oshawa. Daily means computed from hourly values with a minimum of 18 valid hourly observations.
 * **Fire perimeter data**: Canadian National Fire Database (CWFIS / Natural Resources Canada), large fires polygon dataset. Filtered to 2023; geometries simplified for web rendering. Ontario-specific analysis uses `SRC_AGENCY == "ON"`.
 * **Analysis**: R with `tidyverse`, `sf`, `ggplot2`, `patchwork`, `maptiles`, `leaflet`. All code available on GitHub.
 
-*Note: This project began as academic coursework in environmental epidemiology at Oxford and was subsequently extended with additional data, spatial analysis, and public health framing. The views expressed are the author's own.*
+*Began as coursework in environmental epidemiology at Oxford; extended with primary data analysis and spatial visualisation. Views are my own.*
