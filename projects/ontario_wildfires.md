@@ -55,6 +55,8 @@ The interactive map below shows peak PM2.5 at each station during both events. T
     <a href="/dashboards/wildfire_air_quality_gta.html" target="_blank" style="background: #2c3e50; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">Launch Full-Screen Dashboard ↗</a>
   </div>
 
+
+
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
   PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / NRCan).
 </p>
