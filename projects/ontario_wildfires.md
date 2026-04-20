@@ -56,10 +56,6 @@ The interactive map below shows peak PM2.5 at each station during both events. T
   </div>
 
 
-
-<p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
-  PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / NRCan).
-</p>
  
 The second event recorded higher peak concentrations at most stations. For example, Brampton recorded its highest single-station reading of the summer (196µg/m³) during this event. However, it did not produce a proportionate surge in ED visits. A quasi-experimental study by Chen et al. (2025) from Public Health Ontario documented a 23.6% surge in asthma ED visits during Event 1 but found no consistent increase during Event 2. Their interpretation: people who sought medications during the first event were better protected, and advisory adherence improved. This is a rare natural experiment with a built-in comparator — direct evidence that timely risk communication, when acted upon, reduces acute burden. The harder question it raises is: acted upon by whom?
  
