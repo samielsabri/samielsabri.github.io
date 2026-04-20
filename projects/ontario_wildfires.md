@@ -83,6 +83,7 @@ All data are open-access and fully reproducible.
 * **PM2.5 monitoring data**: Hourly readings from Ontario MECP's AQHI monitoring network, accessed via Air Quality Ontario (`airqualityontario.com`). Ten GTA stations used: Toronto Downtown, Toronto East, Toronto North, Toronto West, Brampton, Mississauga, Oakville, Milton, Newmarket, Oshawa. Daily means computed from hourly values with a minimum of 18 valid hourly observations.
 * **Fire perimeter data**: Canadian National Fire Database (CWFIS / Natural Resources Canada), large fires polygon dataset. Filtered to 2023; geometries simplified for web rendering. Ontario-specific analysis uses `SRC_AGENCY == "ON"`.
 * **Analysis**: R with `tidyverse`, `sf`, `ggplot2`, `patchwork`, `maptiles`, `leaflet`. 
----
+
+
 
 *Began as coursework in environmental epidemiology at Oxford; extended with primary data analysis and spatial visualisation. Views are my own.*
