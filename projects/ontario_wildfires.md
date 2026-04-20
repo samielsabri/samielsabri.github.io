@@ -50,11 +50,17 @@ On baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³. During peak smoke d
 The interactive map below shows peak PM2.5 at each station during both events. Toggle between events; zoom out to see where the fires were.
  
 <!-- INTERACTIVE MAP EMBED -->
-<iframe src="/dashboards/wildfire_air_quality_gta.html" width="100%" height="540px" style="border: 1px solid #ddd6cc; border-radius: 4px; margin: 1.5rem 0; display: block;"></iframe>
+<div style="width: 100%; margin: 30px 0;">
+  <div style="border: 2px solid #2c3e50; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
+    <iframe src="/dashboards/wildfire_air_quality_gta.html width="100%" height="800px" style="border:none;"></iframe>
+  </div>
+  <div style="margin-top: 15px; text-align: center;">
+    <a href="/dashboards/wildfire_air_quality_gta.html" target="_blank" style="background: #2c3e50; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">Launch Full-Screen Dashboard ↗</a>
+  </div>
+</div>
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
   PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / NRCan).
 </p>
-Stations in the western GTA — Oakville, Milton, Mississauga, Brampton — recorded the highest peaks during both events, consistent with smoke advection from Northern Ontario. Oshawa, at the eastern margin of the network, recorded substantially lower readings.
  
 The second event recorded higher peak concentrations at most stations. For example, Brampton recorded its highest single-station reading of the summer (196µg/m³) during this event. However, it did not produce a proportionate surge in ED visits. A quasi-experimental study by Chen et al. (2025) from Public Health Ontario documented a 23.6% surge in asthma ED visits during Event 1 but found no consistent increase during Event 2. Their interpretation: people who sought medications during the first event were better protected, and advisory adherence improved. This is a rare natural experiment with a built-in comparator — direct evidence that timely risk communication, when acted upon, reduces acute burden. The harder question it raises is: acted upon by whom?
  
@@ -67,8 +73,9 @@ The epidemiological evidence linking PM2.5 to acute respiratory and cardiovascul
 Several features of wildfire smoke health risk make it distinct from other air quality threats:
 
 * **Transboundary and episodic**: Unlike stationary industrial pollution, wildfire smoke arrives rapidly, with little warning, from sources hundreds of kilometres away. The standard monitoring and advisory frameworks were designed for local, predictable pollution sources.
-* **Differential vulnerability**: Indigenous communities, older adults, people with pre-existing respiratory and cardiovascular conditions, outdoor workers, and newcomer populations with limited information access face disproportionate risk. Toronto and Peel Region's population, in particular, are among the most diverse in Canada, with large newcomer communities, which warrants targeted communication and intervention strategies.
+* **Differential vulnerability**: Indigenous communities, older adults, people with pre-existing respiratory and cardiovascular conditions, outdoor workers, and newcomer populations with limited information access face disproportionate risk. Toronto and Peel Region, in particular, are among the most diverse populations in Canada, with large newcomer communities, which warrants targeted communication and intervention strategies.
 * **Cumulative seasonal burden**: The 2023 season involved not one but multiple sustained exposure windows across May through July. Cumulative effects on lung function and cardiovascular health are poorly understood at the population level and represent a critical evidence gap.
+
 
 As climate projections indicate that seasons like 2023 will become increasingly frequent, local public health units have a central role in translating this epidemiological evidence into actionable risk management: targeted advisories, equity-informed messaging, clean air space designation, and integration of wildfire smoke response into existing heat and air quality emergency frameworks.
 
