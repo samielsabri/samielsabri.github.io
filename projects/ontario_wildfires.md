@@ -45,7 +45,7 @@ Two distinct smoke events hit the GTA that summer. The chart below shows daily m
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
   Source: Air Quality Ontario / Ontario MECP. WHO 24h guideline: 15 μg/m³. Ontario CAAQS reference: 27 μg/m³.
 </p>
-On baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³. During peak smoke days it exceeded 50 μg/m³ on a daily average, with individual station hourly peaks above 100 μg/m³ — more than ten times the WHO guideline. The two events have different profiles: the first sharper and more concentrated, the second longer-sustained. That difference turns out to matter, as I'll come back to.
+On baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³. During peak smoke days it exceeded 50 μg/m³ on a daily average, with individual station hourly peaks above 100 μg/m³ — more than ten times the WHO guideline. The first event was sharper and more concentrated, while the second was longer-sustained. They also differed in their health impact, as I discuss below.
  
 The interactive map below shows peak PM2.5 at each station during both events. Toggle between events; zoom out to see where the fires were.
  
@@ -57,7 +57,7 @@ The interactive map below shows peak PM2.5 at each station during both events. T
 
 ---
  
-The second event recorded higher peak concentrations at most stations. For example, Brampton recorded its highest single-station reading of the summer (196µg/m³) during this event. However, it did not produce a proportionate surge in ED visits. A quasi-experimental study by Chen et al. (2025) from Public Health Ontario documented a 23.6% surge in asthma ED visits during Event 1 but found no consistent increase during Event 2. Their interpretation: people who sought medications during the first event were better protected, and advisory adherence improved. This is a rare natural experiment with a built-in comparator — direct evidence that timely risk communication, when acted upon, reduces acute burden. The harder question it raises is: acted upon by whom?
+The second event recorded higher peak concentrations at most stations. For example, Brampton recorded its highest single-station reading of the summer (196µg/m³) during this event. However, it did not produce a proportionate surge in ED visits. A quasi-experimental study by Chen et al. (2025) from Public Health Ontario documented a 23.6% surge in asthma ED visits during Event 1 but found no consistent increase during Event 2. Their interpretation was that people who sought medications during the first event were better protected, and advisory adherence improved. This is a rare natural experiment with a built-in comparator. Direct evidence that timely risk communication, when acted upon, reduces acute burden. The harder question it raises is: acted upon by whom?
  
 ---
 
