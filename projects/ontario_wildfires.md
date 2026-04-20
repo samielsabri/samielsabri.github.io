@@ -50,14 +50,11 @@ On baseline days, GTA mean PM2.5 rarely exceeded 15 μg/m³. During peak smoke d
 The interactive map below shows peak PM2.5 at each station during both events. Toggle between events; zoom out to see where the fires were.
  
 <!-- INTERACTIVE MAP EMBED -->
-<div style="width: 100%; margin: 30px 0;">
-  <div style="border: 2px solid #2c3e50; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
-    <iframe src="/dashboards/wildfire_air_quality_gta.html width="100%" height="800px" style="border:none;"></iframe>
-  </div>
-  <div style="margin-top: 15px; text-align: center;">
+<iframe src="/dashboards/wildfire_air_quality_gta.html" width="100%" height="540px" style="border: 1px solid #ddd6cc; border-radius: 4px; margin: 1.5rem 0; display: block;"></iframe>
+<div style="margin-top: 15px; text-align: center;">
     <a href="/dashboards/wildfire_air_quality_gta.html" target="_blank" style="background: #2c3e50; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">Launch Full-Screen Dashboard ↗</a>
   </div>
-</div>
+
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: sans-serif;">
   PM2.5 data: Ontario MECP AQHI network. Fire perimeters: Canadian National Fire Database (CWFIS / NRCan).
 </p>
