@@ -13,38 +13,32 @@ Neglected by global health funding and surveillance systems, and by predictive t
 tropical disease (NTD) at the province level for at least two decades. This project builds a risk model trained on this data, satellite climate observations, and the known ecology of 
 *Phlebotomus papatasi* sandfly transmission. The full data pipeline, from bilingual Arabic-French PDF extraction to interactive choropleth, is open source.
 
-<!-- STATS GRID -->
-<div style="display: flex; flex-wrap: wrap; background: #f5f0ea; border: 1px solid 
-#ddd6cc; margin: 2rem 0; font-family: sans-serif;">
-  <div style="flex: 1 1 22%; text-align: center; padding: 1.75rem 1.25rem; 
-  border-right: 1px solid #ddd6cc; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; 
-    line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">21</span>
-    <span style="font-size: 0.9rem; color: #6b6560;">years of surveillance data 
-    (2003–2023)</span>
-  </div>
-  <div style="flex: 1 1 22%; text-align: center; padding: 1.75rem 1.25rem; 
-  border-right: 1px solid #ddd6cc; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; 
-    line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">75</span>
-    <span style="font-size: 0.9rem; color: #6b6560;">Moroccan provinces, 3 climate 
-    sources</span>
-  </div>
-  <div style="flex: 1 1 22%; text-align: center; padding: 1.75rem 1.25rem; 
-  border-right: 1px solid #ddd6cc; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; 
-    line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">0.77</span>
-    <span style="font-size: 0.9rem; color: #6b6560;">Pearson r on unseen 
-    2020–2023 data</span>
-  </div>
-  <div style="flex: 1 1 22%; text-align: center; padding: 1.75rem 1.25rem; 
-  box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; 
-    line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">4,402</span>
-    <span style="font-size: 0.9rem; color: #6b6560;">cases in Zagora in five 
-    months — validated against PLOS NTDs</span>
+
+<!-- INTERACTIVE DASHBOARD -->
+<div style="margin: 2rem 0;">
+  <iframe 
+    src="/dashboards/leish_dashboard.html" 
+    width="100%" 
+    height="620px" 
+    style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
+  </iframe>
+  <div style="margin-top: 0.8rem; text-align: center;">
+    <a href="/dashboards/leish_dashboard.html" target="_blank" 
+       style="background: #2c3e50; color: white; padding: 10px 22px; 
+              border-radius: 6px; text-decoration: none; font-weight: 600;
+              font-family: sans-serif; font-size: 0.85rem;">
+      Launch Full-Screen Dashboard ↗
+    </a>
   </div>
 </div>
+<p style="font-size: 0.82rem; color: #888; font-family: sans-serif; 
+   margin-top: -0.3rem;">
+  Province-level cutaneous leishmaniasis incidence per 100,000 population, 
+  2003–2023. Use the slider or play button to animate through years. 
+  Toggle between reported incidence and model predictions. 
+  Hover a province for case counts and residuals.
+  Data: Morocco Ministry of Health · Climate: CHIRPS / ERA5-Land / MODIS via GEE.
+</p>
 
 ---
 
