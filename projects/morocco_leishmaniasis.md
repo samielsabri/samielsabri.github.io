@@ -9,7 +9,7 @@ links:
 ---
 
 In 2019, I contracted cutaneous leishmaniasis during my time in Costa Rica. Luckily, I had access to treatment, but for many communities where it is endemic, it is truly a neglected disease. 
-Neglected by global health funding and surveillance systems, and by predictive tools that exist for other vector-borne diseases. My home country, Morocco, has tracked cases of its last neglected 
+Neglected by global health funding, surveillance systems, and by predictive tools that exist for other vector-borne diseases. My home country, Morocco, has tracked cases of its only remaining endemic neglected 
 tropical disease (NTD) at the province level for at least two decades. This project builds a risk model trained on this data, satellite climate observations, and the known ecology of 
 *Phlebotomus papatasi* sandfly transmission. The full data pipeline, from bilingual Arabic-French PDF extraction to interactive choropleth, is open source.
 
@@ -48,9 +48,9 @@ Cutaneous leishmaniasis in Morocco is caused by *Leishmania major*, transmitted
 by the sandfly *Phlebotomus papatasi*, with the fat sand rat *Meriones shawi* as 
 the primary rodent reservoir. Its epidemiology follows a predictable ecological 
 chain: rainfall triggers vegetation growth in arid pre-Saharan zones, which fuels 
-rodent population booms, which amplifies sandfly breeding, which reaches humans 
-— typically with a lag of one to three years. Outbreaks alternate with multi-year 
-remissions. Between 2000 and 2016, Morocco recorded over 31,000 cases nationally, 
+rodent population booms, which in turn amplifies sandfly breeding that reaches humans 
+typically with a lag of one to three years. Outbreaks alternate with multi-year 
+remissions. Between 2003 and 2023, Morocco recorded over 91,000 cases nationally, 
 concentrated in a handful of endemic provinces in the south and east.
 
 The disease is not random but clusters geographically, responds to climate, and 
@@ -69,14 +69,12 @@ at different points between 2004 and 2012. Building the panel required:
   detection to handle the bilingual table layout and a canonical province name 
   map covering all spelling variants across 20 years of publications
 - **Administrative reform harmonisation**: the 2015 reform created 12 new regions 
-  from 16 old ones. Provinces were reassigned but not dissolved — a crosswalk 
-  table maps every province to both its pre- and post-2015 regional identity
+  from 16 old ones. Provinces were reassigned and mapped to both their pre- and post-2015 regional identity
 - **Split-province handling**: 18 provinces created after 2004 were absorbed into 
   their historical parents for longitudinal modelling consistency, with a separate 
   raw panel preserved for recent-year mapping
 - **Climate extraction via Google Earth Engine**: monthly CHIRPS rainfall, 
-  ERA5-Land temperature, and MODIS NDVI extracted per province polygon using 
-  `reduceRegions()`, covering 2001–2023 to allow up to 3-year climate lags
+  ERA5-Land temperature, and MODIS NDVI extracted per province polygon using covering 2001–2023 to allow up to 3-year climate lags
 - **Population interpolation**: linear interpolation between the 2004, 2014, and 
   2024 census anchor years to compute annual incidence rates per 100,000
 
@@ -88,15 +86,13 @@ The full pipeline runs end-to-end from `main.py` and is documented at every step
 
 The modelling target is `log1p(incidence per 100,000)`. Only the 29 provinces with 
 historically endemic transmission (ever exceeding 5 cases/100k in the training 
-period) are modelled — this keeps the model focused on explaining variation *within* 
-the endemic belt, rather than trivially distinguishing rural endemic provinces from 
-urban ones.
+period) are modelled. This approach keeps the model focused on explaining relevant variation *within* the endemic belt, as opposed
+to simply learning how to distinguish rural provinces from urban provinces as the single most important proxy at the national level.
 
 Features fall into three groups:
 
 - **Province baseline**: historical mean log1p incidence over 2003–2019, computed 
-  on training data only. Captures structural endemic risk without encoding 
-  administrative labels.
+  on training data only. This captures structural endemic risk without learning urban vs rura from administrative labels.
 - **Climate signals**: annual and dry-season (June–September) totals for CHIRPS 
   rainfall, ERA5 temperature, and MODIS NDVI — each with 1, 2, and 3-year lags. 
   Wet-season (October–March) totals, peak rainfall month, summer temperature 
@@ -107,8 +103,7 @@ Features fall into three groups:
 
 Training used an expanding-window temporal cross-validation over 12 folds 
 (minimum 5 training years per fold), with a grid search over 144 hyperparameter 
-combinations evaluated on CV RMSE. The hold-out test set is 2020–2023 — years 
-the model never saw.
+combinations evaluated on the coefficient of variation (CV) of the Root Mean Squared Error (RMSE). The hold-out test set is 2020–2023.
 
 <!-- BEESWARM -->
 <div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; 
@@ -124,11 +119,8 @@ sans-serif;">
   year-to-year variation.
 </p>
 
-The SHAP beeswarm reveals a coherent biological signal. Province baseline dominates 
-structural risk as expected. Below it, dry-season rainfall at 1, 2, and 3-year 
-lags clusters together with lagged temperature and NDVI features — the satellite 
-fingerprint of the vegetation-rodent-sandfly transmission chain operating across 
-multiple years. The 3-year lag featuring prominently is consistent with the 
+As expected, province baseline dominates structural risk (if a province had a high incidence rate in prior years, we expect the baseline risk to be similar in future years). However, the more interesting variables are the dry-season rainfall at 1, 2, and 3-year 
+lags which clusters together with lagged temperature and NDVI features. This shows the vegetation-rodent-sandfly transmission chain at the satellite level, operating across multiple years. The 3-year lag featuring prominently is consistent with the 
 biological literature: rainfall in year T triggers rodent population growth in 
 year T+1, sandfly amplification in T+2, and epidemic transmission in T+3.
 
@@ -153,36 +145,33 @@ sans-serif;">
   cross-validation, red = hold-out (2020–2023). 1:1 line shown dashed.
 </p>
 
-The model performs well for climate-driven outbreaks. The 2008–2010 epidemic wave 
-— which followed anomalously high rainfall in endemic provinces — was well 
-anticipated by the lagged climate features. The largest residual, Zagora 2018 
-(actual: ~1,900/100k, predicted: ~620/100k), is instructive precisely *because* 
-the model missed it.
+The model captures directional risk well across endemic provinces, with Pearson
+r = 0.81 on completely unseen 2020–2023 data. However, the model systematically underpredicts incidence rates for the highest outbreak years: Zagora 2009 (actual ~637/100k, predicted ~260/100k) and Errachidia 2010 (actual ~641/100k,
+predicted ~150/100k) are both substantially underestimated. This is likely due to tree ensembles minimising average loss across all training rows and regressing toward the endemic mean rather than the full amplitude of
+outbreak peaks. Even with upweighting of high-incidence years, capturing
+outbreak magnitude at the extreme tail requires reservoir population data — rodent
+density indices, sandfly trap counts — not available at provincial scale from
+satellite observations alone.
+
+The largest single residual is Zagora 2018 (actual ~1,900/100k, predicted
+~530/100k). I have treated this data point as an informative outlier.
 
 ---
 
 ## The outbreak the model couldn't predict — and what that tells us
 
 Zagora 2018 is the model's largest residual by a wide margin. My first instinct 
-was a data entry error. It wasn't. A 2019 paper in *PLOS Neglected Tropical 
-Diseases* (El Hamouchi et al.) documented 4,402 confirmed cases in Zagora between 
-October 2017 and March 2018 — a figure that aligns exactly with my surveillance 
-data.
-
-The critical finding: the climate signal going into this outbreak was *negative*. 
-Zagora's 2016 rainfall anomaly was −0.72σ and 2017 was −1.70σ — among the driest 
-years in the 21-year record. The model correctly interpreted these conditions as 
-low risk. The outbreak happened anyway.
-
-El Hamouchi et al. identified the proximate driver: an explosion in *Meriones 
+was a data entry error, but it turns out that it was a well documented and unexpected outbreak.
+A 2019 paper in *PLOS Neglected Tropical Diseases* (El Hamouchi et al.) documented 4,402 confirmed cases in Zagora between 
+October 2017 and March 2018. They concluded that the outbreak was caused by an explosion in *Meriones 
 shawi* rodent reservoir density, linked to the deceleration of vector control 
 measures following the post-2010 remission period. Once control programmes are 
 scaled back after a multi-year lull, accumulated susceptibility in both the rodent 
-and human populations creates conditions for severe re-emergence — invisible to 
-satellite climate data.
+and human populations creates conditions for severe re-emergence. This would be invisible in climate data, such that the climate signal going into this outbreak was even negative: Zagora's 2016 rainfall anomaly was −0.72σ and 2017 was −1.70σ; among the driest 
+years in the 21-year record. The model correctly interpreted these conditions as 
+lower risk, but could not easily account for other transmission dynamics and vector control.
 
-This points to a genuine ceiling on climate-based early warning, and also to its 
-most defensible use case. Compare the two major Zagora outbreaks:
+This example both shows the ceiling of climate-based early warning, but also its use case in guiding vector control programmes. Compare the two major Zagora outbreaks:
 
 | Outbreak | Climate signal | Model | Driver |
 |---|---|---|---|
@@ -201,25 +190,24 @@ rodent reservoir indices.
 <!-- WATERFALL -->
 <div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; 
 overflow: hidden;">
-  <img src="/assets/img/leish_waterfall_chichaoua_2023.png" 
+  <img src="/assets/img/leish_shap_waterfall_chichaoua_2023.png" 
   alt="SHAP waterfall — Chichaoua 2023" style="width: 100%; display: block;" />
 </div>
 <p style="font-size: 0.82rem; color: #888; margin-top: -0.5rem; font-family: 
 sans-serif;">
-  SHAP waterfall for Chichaoua, 2023 — a year the model never saw during training. 
+  SHAP waterfall for Chichaoua, 2023 (test year unseen in training)
   Actual: 133.3/100k. Predicted: 101.7/100k.
 </p>
 
-Chichaoua is one of Morocco's most persistently endemic provinces, in the 
-Marrakech-Tensift foothills. For 2023 — a completely unseen hold-out year — the 
+Chichaoua is one of Morocco's most persistently endemic provinces, close to Marrakech. For 2023 — a completely unseen hold-out year — the 
 model predicted 101.7 cases per 100,000 against an actual of 133.3, a 24% error.
 
 The waterfall shows how the prediction is assembled. The province baseline (+1.8) 
 anchors it at Chichaoua's structural risk level. Lagged dry-season rainfall 
 (+0.09 at lag1, +0.07 at lag2) and lagged NDVI (+0.06) push the prediction higher, 
 reflecting wet conditions in 2021–2022. A negative annual rainfall anomaly (−0.06) 
-partially offsets — 2023 itself was drier than usual — but the reservoir dynamics 
-built up in prior years dominate. This is the biological mechanism made legible.
+partially offsets this, since 2023 itself was drier than usual. However, the reservoir dynamics 
+built up in prior years dominate, building a solid case for the aforementioned biological mechanism.
 
 ---
 
@@ -242,4 +230,4 @@ All data are open-access. The full pipeline is reproducible from `main.py`.
 - **Stack**: Python — `pdfplumber`, `geopandas`, `xgboost`, `shap`, `folium`, 
   `earthengine-api`.
 
-*This project began after I contracted leishmaniasis in 2022. Views are my own.*
+*This project began during my internship at the Moroccan Ministry of Health (Service des Réseaux des Etablissements de Santé) in Al Hoceima. Views are my own.*
