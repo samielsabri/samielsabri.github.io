@@ -129,9 +129,9 @@ year T+1, sandfly amplification in T+2, and epidemic transmission in T+3.
 ## Results
 
 **Hold-out performance (2020–2023, unseen during training):**
-- Pearson r = 0.77
-- R² = 0.53
-- Median absolute error = 6.2 cases/100k
+- Pearson r = 0.81
+- R² = 0.65
+- Median absolute error = 8.14 cases/100k
 
 <!-- PRED VS ACTUAL -->
 <div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; 
