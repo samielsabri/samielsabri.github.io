@@ -4,8 +4,7 @@ title: "Predicting Leishmaniasis Outbreaks in Morocco"
 keywords: "Infectious Disease · Climate & Health · 2025"
 stack: "Python · XGBoost · SHAP · Google Earth Engine · Folium"
 links:
-  - label: "GitHub"
-    url: "https://github.com/samielsabri/morocco_leishmaniasis"
+  - label: "GitHub link coming soon"
 ---
 
 In 2019, I contracted cutaneous leishmaniasis during my time in Costa Rica. Luckily, I had access to treatment, but for many communities where it is endemic, it is truly a neglected disease. 
