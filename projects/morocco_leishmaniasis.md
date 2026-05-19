@@ -10,7 +10,9 @@ links:
 
 In 2019, I contracted cutaneous leishmaniasis during my time in Costa Rica. Luckily, I had access to treatment, but for many communities where it is endemic, it is truly a neglected disease. 
 Neglected by global health funding, surveillance systems, and by predictive tools that exist for other vector-borne diseases. My home country, Morocco, has tracked cases of its only remaining endemic neglected 
-tropical disease (NTD) at the province level for at least two decades. This project builds a risk model trained on this data, satellite climate observations, and the known ecology of 
+tropical disease (NTD) at the province level for at least two decades. When I found myself working alongside regional epidemiologists at the Moroccan Ministry of Health in Al Hoceima in early 2025, I realized the data existed to do something more rigorous than the surveillance system was currently doing with it.
+
+This project builds a risk model trained on this data, satellite climate observations, and the known ecology of 
 *Phlebotomus papatasi* sandfly transmission. The full data pipeline, from bilingual Arabic-French PDF extraction to interactive choropleth, is open source.
 
 
@@ -63,11 +65,10 @@ is predictable in ways that existing surveillance infrastructure does not fully 
 Morocco's Ministry of Health publishes case counts in bilingual Arabic-French PDF tables, with province names 
 that vary in spelling across editions, administrative boundaries that changed in 
 the 2015 reform, and newly-created provinces that split from historical parents 
-at different points between 2004 and 2012. Building the panel required:
+at different points between 2004 and 2012. Getting to a clean, longitudinal panel was the messiest part of this project:
 
-- **Custom PDF extraction** in Python (`pdfplumber`), with bbox-based column 
-  detection to handle the bilingual table layout and a canonical province name 
-  map covering all spelling variants across 20 years of publications
+- **Custom PDF extraction** in Python (pdfplumber), built to handle the bilingual Arabic-French layout
+  and 20 years of inconsistent province name spellings across editions
 - **Administrative reform harmonisation**: the 2015 reform created 12 new regions 
   from 16 old ones. Provinces were reassigned and mapped to both their pre- and post-2015 regional identity
 - **Split-province handling**: 18 provinces created after 2004 were absorbed into 
@@ -77,6 +78,8 @@ at different points between 2004 and 2012. Building the panel required:
   ERA5-Land temperature, and MODIS NDVI extracted per province polygon using covering 2001–2023 to allow up to 3-year climate lags
 - **Population interpolation**: linear interpolation between the 2004, 2014, and 
   2024 census anchor years to compute annual incidence rates per 100,000
+  
+
 
 The full pipeline runs end-to-end from `main.py` and is documented at every step.
 
@@ -84,15 +87,13 @@ The full pipeline runs end-to-end from `main.py` and is documented at every step
 
 ## Model
 
-The modelling target is `log1p(incidence per 100,000)`. Only the 29 provinces with 
-historically endemic transmission (ever exceeding 5 cases/100k in the training 
-period) are modelled. This approach keeps the model focused on explaining relevant variation *within* the endemic belt, as opposed
+The model predicts log-transformed incidence per 100,000 population (log1p), to handle the zero-inflation in non-endemic provinces without dropping them entirely. This approach keeps the model focused on explaining relevant variation *within* the endemic belt, as opposed
 to simply learning how to distinguish rural provinces from urban provinces as the single most important proxy at the national level.
 
 Features fall into three groups:
 
 - **Province baseline**: historical mean log1p incidence over 2003–2019, computed 
-  on training data only. This captures structural endemic risk without learning urban vs rura from administrative labels.
+  on training data only. This captures structural endemic risk without learning urban vs rural from administrative labels.
 - **Climate signals**: annual and dry-season (June–September) totals for CHIRPS 
   rainfall, ERA5 temperature, and MODIS NDVI — each with 1, 2, and 3-year lags. 
   Wet-season (October–March) totals, peak rainfall month, summer temperature 
@@ -102,8 +103,7 @@ Features fall into three groups:
   hot for *this province*, not just in absolute terms.
 
 Training used an expanding-window temporal cross-validation over 12 folds 
-(minimum 5 training years per fold), with a grid search over 144 hyperparameter 
-combinations evaluated on the coefficient of variation (CV) of the Root Mean Squared Error (RMSE). The hold-out test set is 2020–2023.
+(minimum 5 training years per fold). Hyperparameters were tuned via grid search across 144 combinations, evaluated on the coefficient of variation (CV) of the Root Mean Squared Error (RMSE). The hold-out test set is 2020–2023.
 
 <!-- BEESWARM -->
 <div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; 
@@ -226,7 +226,6 @@ All data are open-access. The full pipeline is reproducible from `main.py`.
 - **Model**: XGBoost regressor. Target: log1p(incidence/100k). Expanding-window 
   temporal CV, 12 folds. Grid search over 144 hyperparameter combinations. 
   Hold-out: 2020–2023.
-- **Explainability**: SHAP TreeExplainer.
 - **Stack**: Python — `pdfplumber`, `geopandas`, `xgboost`, `shap`, `folium`, 
   `earthengine-api`.
 
