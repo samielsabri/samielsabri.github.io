@@ -5,7 +5,7 @@ keywords: "Infectious Disease · Surveillance · 2025–2026"
 stack: "Python · R · pdfplumber · Farrington · Moran's I · Chart.js"
 links:
   - label: "GitHub"
-    url: "https://github.com/samielsabri/morocco_leishmaniasis"
+    url: "https://github.com/samielsabri/morocco_surveillance"
 ---
 
 In 2019 I caught cutaneous leishmaniasis in Costa Rica. I had access to
