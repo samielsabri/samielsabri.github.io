@@ -33,7 +33,7 @@ Hospital and mortality data show what heat did to people's health, but they arri
   <iframe
     src="/dashboards/ems_heat_watch/ems_heat_watch.html"
     width="100%"
-    height="680px"
+    height="1000px"
     style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
   </iframe>
   <div style="margin-top: 0.8rem; text-align: center;">
