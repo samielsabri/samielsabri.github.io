@@ -114,10 +114,8 @@ Zagora as a hotspot, the endemic south-east, from the numbers alone (global
 Moran's I = 0.20, p = 0.003).
 
 <!-- Screenshot of the Clusters tab, leishmaniasis 2009 -->
-<div style="margin: 1.5rem 0; border: 1px solid #ddd6cc; border-radius: 4px; overflow: hidden;">
-  <img src="/assets/img/morocco_clusters_2009.png"
-  alt="Leishmaniasis hotspots, 2009" style="width: 100%; display: block;" />
-</div>
+<img src="/assets/img/morocco_clusters_2009.png" width="520" alt="Leishmaniasis hotspots, 2009">
+
 
 ## The annual report
 
