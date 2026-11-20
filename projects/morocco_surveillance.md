@@ -133,14 +133,14 @@ health units use for their communicable disease reports:
   is fine for planning and trends but too slow for outbreak response, so the
   signals are a look back, not an early warning.
 
-div style="margin-top: 0.8rem; text-align: center;">
+<div style="margin-top: 0.8rem; text-align: center;">
     <a href="/reports/morocco_surveillance_annual_report_2024.html" target="_blank"
        style="background: #2c3e50; color: white; padding: 10px 22px;
               border-radius: 6px; text-decoration: none; font-weight: 600;
               font-family: sans-serif; font-size: 0.85rem;">
       Open the 2024 report↗
     </a>
-  </div>
+</div>
 
 ## What climate can and cannot explain
 
