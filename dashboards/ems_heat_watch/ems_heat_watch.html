@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMS Heat Watch</title>
+<style>
+:root {
+  --bg: #f4f3ef; --card: #ffffff; --ink: #0b0b0b; --muted: #5d5c55; --line: #e6e3dc;
+  --blue: #2a78d6; --band: rgba(42,120,214,0.15); --red: #e34948; --wave: #fbe6d6; --temp: #6b6a63; --chip: #eef3fa;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141517; --card: #1c1d20; --ink: #ecebe7; --muted: #a3a29b; --line: #2e2f33;
+    --blue: #5b9bea; --band: rgba(91,155,234,0.20); --red: #ef6b6a; --wave: rgba(235,104,52,0.22); --temp: #a3a29b; --chip: #23303f;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+       font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 28px 16px 48px; }
+header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+header p { margin: 0; color: var(--muted); max-width: 70ch; }
+header .meta { font-size: 13px; margin-top: 6px; }
+a { color: var(--blue); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-top: 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
+.controls label { font-size: 13px; color: var(--muted); margin-right: 8px; }
+.years { display: flex; flex-wrap: wrap; gap: 6px; }
+.years button, .seg button {
+  font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.years button.on, .seg button.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+.years button .tag { font-size: 10px; opacity: .8; margin-left: 3px; }
+select { font: inherit; font-size: 14px; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--line);
+         background: var(--card); color: var(--ink); }
+.seg { display: inline-flex; gap: 4px; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+.kpi b { display: block; font-size: 24px; font-variant-numeric: tabular-nums; }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+#chart { width: 100%; height: 470px; }
+.note { font-size: 12.5px; color: var(--muted); margin: 6px 0 0; }
+h2 { font-size: 16px; margin: 0 0 10px; }
+.tw { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--muted); font-weight: 600; font-size: 12.5px; }
+.hit { color: var(--blue); font-weight: 600; } .miss { color: var(--red); }
+tr.sel td { font-weight: 600; }
+.about p { margin: 0 0 8px; max-width: 80ch; }
+@media (max-width: 760px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } #chart { height: 420px; } .card { padding: 14px; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>EMS Heat Watch</h1>
+  <p>Can paramedic data give early warning of heat&#39;s health impact, and measure the burden that heat-coded records
+     miss? Daily NYC ambulance calls coded <i>heat</i>, compared with what a normal-temperature day would bring.
+     Alerts mark days with more heat calls than expected.</p>
+  <p class="meta" id="meta"></p>
+</header>
+
+<div class="card controls">
+  <div><label>Year</label><div class="years" id="years"></div></div>
+  <div><label>Show</label><span class="seg" id="span"><button data-v="season" class="on">May–Sep</button><button data-v="year">Whole year</button></span></div>
+  <div><label for="method">Alerts from</label>
+    <select id="method">
+      <option value="indicator">This indicator</option>
+      <option value="farrington">Farrington Flexible</option>
+      <option value="ears_c1">EARS C1</option>
+      <option value="ears_c2">EARS C2</option>
+      <option value="ears_c3">EARS C3</option>
+    </select></div>
+</div>
+
+<div class="kpis" id="kpis"></div>
+
+<div class="card">
+  <div id="chart"></div>
+  <p class="note" id="chartnote"></p>
+</div>
+
+<div class="card"><h2 id="wavetitle">Heat waves</h2><div class="tw" id="waves"></div>
+    <p class="note">Heat wave: 3 or more days in a row at 32.2 °C (90 °F) or above, Central Park. Cells show the day of the
+    heat wave on which each method first raised an alert (day 0 = first day), or ✗ if it raised none. Excess: calls above a
+    normal-temperature day during the wave and the 3 days after (model estimate).</p></div>
+<div class="card"><h2>Hidden burden: how much of the heat excess is coded as heat?</h2><div id="burden"></div></div>
+<div class="card"><h2>All methods, all years</h2><div class="tw" id="compare"></div>
+    <p class="note">2016–24 was used to build the indicator; 2025–26 was held out. Alerts per summer are alerts outside heat
+    waves, on cool summer days (May–Sep, Tmax under 29.4 °C that day and the three before). Farrington Flexible is the
+    standard method for routine communicable disease surveillance; EARS is the CDC&#39;s syndromic method.</p></div>
+
+<div class="card about">
+  <h2>How it works</h2>
+  <p>Each week a Poisson regression is fitted to the previous three years of daily heat calls (season, day of week,
+     trend, and temperature above a threshold). It gives the number of heat calls expected if the temperature were
+     normal for that date. An alert is raised when calls exceed the 99.5% upper limit of that expectation. Farrington
+     Flexible and EARS C1–C3 come from the R <i>surveillance</i> package and use the call counts only.</p>
+  <p>Hidden burden: the same model is fitted to heat-related calls with other codes, chosen in advance (unconscious,
+     altered mental status, sick, breathing difficulty, cardiac, respiratory, arrest). During each heat wave, their excess
+     over a normal-temperature day is compared with the excess in heat-coded calls.</p>
+  <p>Limits: dispatch codes record what callers and crews report, not diagnoses. One weather station, maximum
+     temperature only. Mar–Jul 2020 (COVID) is excluded. NYC's public data is released in batches, weeks behind.</p>
+  <p><a href="summary.pdf">One-page summary (PDF)</a> · <a href="https://github.com/samielsabri/ems-heat-watch">Code and data on GitHub</a></p>
+</div>
+</main>
+
+<script src="dashboard_data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script>
+const E = window.EMS, D = E.daily;
+const METHODS = { indicator: "This indicator", farrington: "Farrington Flexible",
+                  ears_c1: "EARS C1", ears_c2: "EARS C2", ears_c3: "EARS C3" };
+const years = [...new Set(D.date.map(d => d.slice(0, 4)))];
+const state = { year: years[years.length - 1], span: "season", method: "indicator" };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const dayNum = s => Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)) / 864e5;
+const sign = v => v === undefined ? "–" : (v > 0 ? "+" : "") + Math.round(v).toLocaleString("en-CA");
+const fmt = s => new Date(s + "T00:00:00Z").toLocaleDateString("en-CA", { month: "short", day: "numeric", timeZone: "UTC" });
+
+document.getElementById("meta").textContent =
+  `Back-test ${D.date[0]} to ${E.settings.data_to}. Data: NYC Open Data (EMS dispatch), NOAA (Central Park).`;
+
+// year buttons
+const yb = document.getElementById("years");
+years.forEach(y => {
+  const b = document.createElement("button");
+  b.innerHTML = y + (y >= "2025" ? '<span class="tag">held out</span>' : "");
+  b.onclick = () => { state.year = y; render(); };
+  b.dataset.y = y; yb.appendChild(b);
+});
+document.querySelectorAll("#span button").forEach(b => b.onclick = () => { state.span = b.dataset.v; render(); });
+document.getElementById("method").onchange = e => { state.method = e.target.value; render(); };
+
+function firstAlarm(method, w) {
+  const a = D.alarms[method];
+  for (let i = 0; i < D.date.length; i++)
+    if (D.date[i] >= w.start && D.date[i] <= w.end && a[i]) return dayNum(D.date[i]) - dayNum(w.start);
+  return null;
+}
+
+function render() {
+  document.querySelectorAll("#years button").forEach(b => b.classList.toggle("on", b.dataset.y === state.year));
+  document.querySelectorAll("#span button").forEach(b => b.classList.toggle("on", b.dataset.v === state.span));
+  const idx = [];
+  D.date.forEach((d, i) => {
+    if (d.slice(0, 4) !== state.year) return;
+    const m = +d.slice(5, 7);
+    if (state.span === "season" && (m < 5 || m > 9)) return;
+    idx.push(i);
+  });
+  const pick = arr => idx.map(i => arr[i]);
+  const dates = pick(D.date), alarms = pick(D.alarms[state.method]);
+  const yearWaves = E.waves.filter(w => w.start.slice(0, 4) === state.year);
+
+  // KPIs (whole selected year, regardless of the May–Sep view)
+  const yi = D.date.map((d, i) => i).filter(i => D.date[i].slice(0, 4) === state.year);
+  const A = D.alarms[state.method];
+  const alarmDays = yi.filter(i => A[i]).length;
+  const cool = yi.filter(i => D.day_type[i] === "cool_summer_day");
+  const hot1 = yi.filter(i => D.day_type[i] === "hot_single_day");
+  const flagged = yearWaves.filter(w => firstAlarm(state.method, w) !== null).length;
+  const peak = yi.reduce((b, i) => D.calls[i] > D.calls[b] ? i : b, yi[0]);
+  document.getElementById("kpis").innerHTML = [
+    [`${flagged} of ${yearWaves.length}`, `heat waves in ${state.year} flagged by ${METHODS[state.method]}`],
+    [`${cool.filter(i => A[i]).length}`, `alerts outside heat waves (on ${cool.length} cool summer days)`],
+    [hot1.length ? `${hot1.filter(i => A[i]).length} of ${hot1.length}` : "none", "single hot days flagged (no heat wave)"],
+    [`${D.calls[peak]}`, `most heat calls in one day (${fmt(D.date[peak])}, ${D.tmax[peak]} °C)`],
+  ].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+
+  // chart
+  const ink = css("--ink"), muted = css("--muted"), line = css("--line");
+  const shapes = yearWaves.map(w => ({
+    type: "rect", xref: "x", yref: "paper", x0: w.start + "T00:00", x1: w.end + "T23:59", y0: 0, y1: 1,
+    fillcolor: css("--wave"), line: { width: 0 }, layer: "below" }));
+  shapes.push({ type: "line", xref: "paper", yref: "y2", x0: 0, x1: 1, y0: 32.2, y1: 32.2,
+                line: { color: muted, width: 1, dash: "dot" } });
+  const ai = alarms.map((a, k) => a ? k : -1).filter(k => k >= 0);
+  const traces = [
+    { x: dates, y: pick(D.upper), type: "scatter", mode: "lines", line: { width: 0, shape: "hv" },
+      name: "upper limit (99.5%)", hoverinfo: "skip", showlegend: false },
+    { x: dates, y: pick(D.expected), type: "scatter", mode: "lines", fill: "tonexty", fillcolor: css("--band"),
+      line: { color: css("--blue"), width: 2 }, name: "expected on a normal day (band: normal range)",
+      hovertemplate: "expected %{y:.1f}<extra></extra>" },
+    { x: dates, y: pick(D.calls), type: "scatter", mode: "lines", line: { color: ink, width: 1.4 },
+      name: "heat calls", hovertemplate: "heat calls %{y}<extra></extra>" },
+    { x: ai.map(k => dates[k]), y: ai.map(k => pick(D.calls)[k]), type: "scatter", mode: "markers",
+      marker: { color: "rgba(0,0,0,0)", size: 9, line: { color: css("--red"), width: 2 } },
+      name: "alert (" + METHODS[state.method] + ")", hoverinfo: "skip" },
+    { x: dates, y: pick(D.tmax), type: "scatter", mode: "lines", line: { color: css("--temp"), width: 1.3 },
+      name: "max temperature", xaxis: "x", yaxis: "y2", hovertemplate: "Tmax %{y} °C<extra></extra>", showlegend: false },
+  ];
+  const axis = { gridcolor: line, linecolor: line, zeroline: false, tickfont: { color: muted, size: 12 },
+                 title: { font: { color: muted, size: 12 } } };
+  Plotly.react("chart", traces, {
+    margin: { l: 56, r: 12, t: 8, b: 30 }, paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+    font: { family: "Helvetica Neue, Helvetica, Arial, sans-serif", color: ink }, hovermode: "x unified",
+    hoverlabel: { bgcolor: css("--card"), bordercolor: line, font: { color: ink } },
+    legend: { orientation: "h", x: 0, y: -0.08, font: { size: 12.5, color: muted } },
+    xaxis: { ...axis, anchor: "y2", type: "date", tickformat: "%b %-d" },
+    yaxis: { ...axis, domain: [0.34, 1], title: { ...axis.title, text: "heat calls per day" }, rangemode: "tozero" },
+    yaxis2: { ...axis, domain: [0, 0.24], title: { ...axis.title, text: "Tmax °C" } },
+    shapes,
+  }, { responsive: true, displayModeBar: false });
+  document.getElementById("chartnote").textContent =
+    `Shaded: heat waves. Dotted line in the lower panel: 32.2 °C.` +
+    (state.year === "2020" ? " March to July 2020 is excluded from fitting and scoring (COVID)." : "") +
+    (state.year === E.settings.data_to.slice(0, 4) ? ` Data end on ${E.settings.data_to}.` : "");
+
+  // heat wave table for the year
+  document.getElementById("wavetitle").textContent = `Heat waves in ${state.year}`;
+  const head = "<tr><th>Dates</th><th>Days</th><th>Peak °C</th>" +
+    Object.values(METHODS).map(m => `<th>${m.replace("Farrington Flexible", "Farrington").replace("This indicator", "Indicator")}</th>`).join("") +
+    "<th>Excess, heat-coded</th><th>Excess, other codes</th></tr>";
+  const rows = yearWaves.map(w => { const b = E.burden.find(x => x.start === w.start) || {};
+    return "<tr>" +
+    `<td>${fmt(w.start)}–${fmt(w.end)}</td><td>${w.days}</td><td>${w.peak_tmax.toFixed(1)}</td>` +
+    Object.keys(METHODS).map(m => { const f = firstAlarm(m, w);
+      return f === null ? '<td class="miss">✗</td>' : `<td class="hit">day ${f}</td>`; }).join("") +
+    `<td>${sign(b.heat_model)}</td><td>${sign(b.syndrome_model)}</td></tr>`; }).join("");
+  document.getElementById("waves").innerHTML = yearWaves.length
+    ? `<table>${head}${rows}</table>` : `<p class="note">No heat wave in ${state.year}.</p>`;
+
+  // hidden burden
+  const S = p => E.burden_summary.find(r => r.period === p);
+  const pct = v => Math.round(100 * v) + "%";
+  const brow = (label, r) => `<tr><td>${label}</td><td>${r.heat_waves}</td><td>${sign(r.heat_model)}</td>` +
+    `<td>${sign(r.syndrome_model)}</td><td>${pct(r.share_coded_model)} (${pct(r.share_model_lo)}–${pct(r.share_model_hi)})</td>` +
+    `<td>${pct(r.share_coded_observed)}</td><td>${r.waves_syndrome_excess_positive} of ${r.heat_waves}</td></tr>`;
+  document.getElementById("burden").innerHTML = '<div class="tw"><table><tr><th>Period</th><th>Heat waves</th>' +
+    "<th>Excess, heat-coded</th><th>Excess, other codes</th><th>Coded as heat (95% CI)</th><th>Raw counts</th>" +
+    "<th>Waves above normal</th></tr>" + brow("All, 2016–2026", S("all")) + brow("2016–24", S("development")) +
+    brow("2025–26 (held out)", S("heldout")) + "</table></div>" +
+    '<p class="note">Excess: calls above a normal-temperature day during each heat wave and the 3 days after, from the model ' +
+    "(raw counts are noisier; 2021–22 baselines are pulled down by low volumes in 2020). Only about a third of the " +
+    "heat-associated excess carries a heat code; the rest is coded as unconscious, sick, breathing, cardiac and similar.</p>";
+
+  // comparison table
+  const get = (p, m) => E.backtest.find(r => r.period === p && r.method === m);
+  document.getElementById("compare").innerHTML = "<table><tr><th>Method</th><th>2016–24 flagged</th><th>alerts / summer</th>" +
+    "<th>2025–26 flagged</th><th>alerts / summer</th></tr>" + Object.entries(METHODS).map(([k, label]) => {
+      const d = get("development", k), h = get("heldout", k);
+      return `<tr class="${k === state.method ? "sel" : ""}"><td>${label}</td><td>${d.detected}/${d.heat_waves}</td>` +
+        `<td>${d.false_alarms_per_summer.toFixed(1)}</td><td>${h.detected}/${h.heat_waves}</td>` +
+        `<td>${h.false_alarms_per_summer.toFixed(1)}</td></tr>`; }).join("") + "</table>";
+}
+render();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+</script>
+</body>
+</html>

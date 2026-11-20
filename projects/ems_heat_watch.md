@@ -4,10 +4,6 @@ title: "EMS Heat Watch"
 keywords: "Environmental Health · Surveillance · 2026"
 stack: "R · Time Series · surveillance · NYC Open Data · NOAA"
 links:
-  - label: "One-page summary (PDF)"
-    url: "https://samielsabri.github.io/ems-heat-watch/summary.pdf"
-  - label: "Interactive dashboard"
-    url: "https://samielsabri.github.io/ems-heat-watch/"
   - label: "Code (R)"
     url: "https://github.com/samielsabri/ems-heat-watch"
 ---
@@ -32,10 +28,28 @@ Hospital and mortality data show what heat did to people's health, but they arri
   </div>
 </div>
 
-<div style="margin: 1.5rem 0 2.5rem; text-align: center;">
-  <a href="https://samielsabri.github.io/ems-heat-watch/summary.pdf" target="_blank" style="background: #2c3e50; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin: 6px;">Read the one-page summary (PDF) ↗</a>
-  <a href="https://samielsabri.github.io/ems-heat-watch/" target="_blank" style="border: 2px solid #2c3e50; color: #2c3e50; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin: 6px;">Open the dashboard ↗</a>
+<!-- INTERACTIVE DASHBOARD -->
+<div style="margin: 2rem 0;">
+  <iframe
+    src="/dashboards/ems_heat_watch/ems_heat_watch.html"
+    width="100%"
+    height="680px"
+    style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
+  </iframe>
+  <div style="margin-top: 0.8rem; text-align: center;">
+    <a href="/dashboards/ems_heat_watch/ems_heat_watch.html" target="_blank"
+       style="background: #2c3e50; color: white; padding: 10px 22px;
+              border-radius: 6px; text-decoration: none; font-weight: 600;
+              font-family: sans-serif; font-size: 0.85rem;">
+      Open the full-screen dashboard ↗
+    </a>
+  </div>
 </div>
+<p style="font-size: 0.82rem; color: #888; font-family: sans-serif;
+   margin-top: 1rem;">
+  Pick a year and a method to see daily heat-coded ambulance calls against the number expected on a normal-temperature day, with alerts and heat waves marked. Held-out years: 2025–2026.
+  Source: NYC Open Data (EMS Incident Dispatch Data); NOAA (Central Park daily maximum temperature).
+</p>
 
 ---
 
