@@ -17,10 +17,10 @@ leishmaniasis and grew into a surveillance tool for all 33 notifiable diseases
 that Morocco reports by province.
 
 The Ministry of Health publishes these numbers only as tables inside a PDF
-yearbook, *Santé en chiffres*. Nobody can chart them, compare provinces or
-spot an unusual year without first copying them out by hand. This project
-does that copying automatically for 2003 to 2024 and builds a dashboard and an
-annual report on top.
+yearbook, *Santé en chiffres*. There is no publicly accessible tool to chart them, 
+compare provinces or spot an unusual year without first copying by hand.
+This project does that by extracting pdfs from 2003 to 2024 and builds a dashboard 
+and an annual report on top, similar to tools like the German *Survstat@RKI 2.0*.
 
 <!-- INTERACTIVE DASHBOARD -->
 <div style="margin: 2rem 0;">
@@ -71,11 +71,11 @@ Every number is checked:
   compared with the sum of its provinces;
 - every number keeps a link to its yearbook, table and page.
 
+
 The mismatches I traced were errors in the yearbooks themselves. In 2017,
 for example, the national leishmaniasis total is printed as 1,250 while the
-provinces add up to 6,895. The checks also turned up errors in the
-hand-made spreadsheet I had started from: for twelve years one province held
-another province's numbers.
+provinces add up to 6,895. As a source of truth, I first tediously created a 
+spreadsheet by hand for comparison, before scaling up.
 
 ## Outbreak signals
 
@@ -93,10 +93,10 @@ reporting. On measles, the method stays quiet through the long decline to
 near-elimination and flags the national resurgence in 2023 and again in 2024.
 
 I validated my implementation against the reference version in R's
-`surveillance` package on 350 simulated series. They first disagreed often.
-The cause turned out to be a bug in the R function: it stores the outbreak
-weights where the regression keeps its own working weights, so it
-underestimates the variability and finds a "significant" trend in 56% of
+`surveillance` package on 350 simulated series. They first disagreed often, 
+which turned out to be a bug in the R function where it stores the outbreak
+weights where the regression keeps its own working weights, 
+underestimating the variability and finding a "significant" trend in 56% of
 series that have none (mine: 6%, as expected at the 5% level). With that one
 line corrected, the two give identical results on every series. The
 comparison now runs automatically on every change to the code.
@@ -121,7 +121,7 @@ Moran's I = 0.20, p = 0.003).
 
 ## The annual report
 
-The same data also produce a printable annual report, in the format public
+The same data also automatically produce a printable annual report, in the format public
 health units use for their communicable disease reports:
 - a summary table of every disease;
 - a section per disease with the key facts in plain language, the trend, a
@@ -133,18 +133,27 @@ health units use for their communicable disease reports:
   is fine for planning and trends but too slow for outbreak response, so the
   signals are a look back, not an early warning.
 
+div style="margin-top: 0.8rem; text-align: center;">
+    <a href="/reports/morocco_surveillance_annual_report_2024.html" target="_blank"
+       style="background: #2c3e50; color: white; padding: 10px 22px;
+              border-radius: 6px; text-decoration: none; font-weight: 600;
+              font-family: sans-serif; font-size: 0.85rem;">
+      Open the 2024 report↗
+    </a>
+  </div>
+
 ## What climate can and cannot explain
 
 The project began as a climate model for leishmaniasis: rainfall, temperature
 and vegetation from satellite data, fed into a gradient-boosted model. I kept
 it, but the honest result is that for leishmaniasis it does not beat a simple
 benchmark, "each province stays at its usual level", on the 2020–2023
-hold-out. Climate does add skill for malaria and typhoid.
+hold-out. Climate does add some value for malaria and typhoid.
 
-Zagora 2018 shows why. The province had one of its largest outbreaks after
+The province Zagora in 2018 shows why: The province had one of its largest outbreaks after
 two of the driest years on record. El Hamouchi et al. (2019, *PLOS NTDs*)
 link it to a surge in the rodent reservoir after vector control was scaled
-back during the quiet years. Climate cannot see that. Surveillance can: a
+back during the quiet years. Climate cannot see that, but surveillance can. A
 signal comparing Zagora with its own past is exactly the prompt to check
 whether control activities lapsed.
 
@@ -164,6 +173,7 @@ whether control activities lapsed.
   rate ratios, in a companion script.
 - **Code:** open source and tested. Nothing in it is specific to Morocco, so
   another country with similar yearbooks only needs a new configuration.
+
 
 *This project began during my internship at the Moroccan Ministry of Health
 (Service des Réseaux des Etablissements de Santé) in Al Hoceima. Views are my
