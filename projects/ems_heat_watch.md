@@ -15,15 +15,15 @@ Hospital and mortality data show what heat did to people's health, but they arri
 <!-- STATS GRID -->
 <div style="display: flex; flex-wrap: wrap; background: #f5f0ea; border: 1px solid #ddd6cc; margin: 2rem 0; font-family: sans-serif;">
   <div style="flex: 1 1 30%; text-align: center; padding: 1.75rem 1.25rem; border-right: 1px solid #ddd6cc; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #2a78d6"; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">19/20</span>
+    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">19/20</span>
     <span style="font-size: 0.9rem; color: #6b6560;">heat waves flagged in 2016–2024, and 3/3 in held-out 2025–2026, all on the first day</span>
   </div>
   <div style="flex: 1 1 30%; text-align: center; padding: 1.75rem 1.25rem; border-right: 1px solid #ddd6cc; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #2a78d6"; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">~2</span>
+    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">~2</span>
     <span style="font-size: 0.9rem; color: #6b6560;">alerts per summer outside heat waves</span>
   </div>
   <div style="flex: 1 1 30%; text-align: center; padding: 1.75rem 1.25rem; box-sizing: border-box;">
-    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #2a78d6"; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">1 in 3</span>
+    <span style="display: block; font-size: 2.6rem; font-weight: 600; color: #c0392b; line-height: 1; margin-bottom: 0.7rem; font-family: Georgia, serif;">1 in 3</span>
     <span style="font-size: 0.9rem; color: #6b6560;">heat-associated excess calls carries a heat code</span>
   </div>
 </div>
