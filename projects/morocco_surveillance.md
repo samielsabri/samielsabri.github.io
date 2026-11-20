@@ -138,7 +138,7 @@ health units use for their communicable disease reports:
        style="background: #2c3e50; color: white; padding: 10px 22px;
               border-radius: 6px; text-decoration: none; font-weight: 600;
               font-family: sans-serif; font-size: 0.85rem;">
-      Open the 2024 report↗
+      Open the 2024 sample report↗
     </a>
 </div>
 
