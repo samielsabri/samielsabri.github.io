@@ -8,7 +8,7 @@
 :root {
   color-scheme: light;
   --bg: #f4f3ef; --card: #ffffff; --ink: #0b0b0b; --muted: #5d5c55; --line: #e6e3dc;
-  --blue: #2a78d6; --band: rgba(42,120,214,0.15); --red: #e34948; --wave: #fbe6d6; --temp: #6b6a63; --chip: #eef3fa;
+  --accent: #c0392b; --blue: #2a78d6; --band: rgba(42,120,214,0.15); --red: #e34948; --wave: #fbe6d6; --temp: #6b6a63; --chip: #eef3fa;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink);
@@ -17,7 +17,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 28px 16px 48px; }
 header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
 header p { margin: 0; color: var(--muted); }
 header .meta { font-size: 13px; margin-top: 6px; }
-a { color: var(--blue); }
+a { color: var(--accent); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-top: 16px; }
 .controls { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; }
 .controls label { font-size: 13px; color: var(--muted); margin-right: 8px; }
@@ -25,7 +25,7 @@ a { color: var(--blue); }
 .years button, .seg button {
   font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--card); color: var(--ink);
   border-radius: 999px; padding: 4px 11px; cursor: pointer; }
-.years button.on, .seg button.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+.years button.on, .seg button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 .years button .tag { font-size: 10px; opacity: .8; margin-left: 3px; }
 select { font: inherit; font-size: 14px; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--line);
          background: var(--card); color: var(--ink); }
@@ -42,7 +42,7 @@ table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-
 th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
 th:first-child, td:first-child { text-align: left; }
 th { color: var(--muted); font-weight: 600; font-size: 12.5px; }
-.hit { color: var(--blue); font-weight: 600; } .miss { color: var(--red); }
+.hit { color: var(--ink); font-weight: 600; } .miss { color: var(--red); }
 tr.sel td { font-weight: 600; }
 .about p { margin: 0 0 8px; }
 @media (max-width: 760px) {
