@@ -6,14 +6,9 @@
 <title>EMS Heat Watch</title>
 <style>
 :root {
+  color-scheme: light;
   --bg: #f4f3ef; --card: #ffffff; --ink: #0b0b0b; --muted: #5d5c55; --line: #e6e3dc;
   --blue: #2a78d6; --band: rgba(42,120,214,0.15); --red: #e34948; --wave: #fbe6d6; --temp: #6b6a63; --chip: #eef3fa;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #141517; --card: #1c1d20; --ink: #ecebe7; --muted: #a3a29b; --line: #2e2f33;
-    --blue: #5b9bea; --band: rgba(91,155,234,0.20); --red: #ef6b6a; --wave: rgba(235,104,52,0.22); --temp: #a3a29b; --chip: #23303f;
-  }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink);
@@ -106,7 +101,7 @@ tr.sel td { font-weight: 600; }
      over a normal-temperature day is compared with the excess in heat-coded calls.</p>
   <p>Limits: dispatch codes record what callers and crews report, not diagnoses. One weather station, maximum
      temperature only. Mar–Jul 2020 (COVID) is excluded. NYC's public data is released in batches, weeks behind.</p>
-  <p><a href="summary.pdf">One-page summary (PDF)</a> · <a href="https://github.com/samielsabri/ems-heat-watch">Code and data on GitHub</a></p>
+  <p><a href="https://github.com/samielsabri/ems-heat-watch/blob/main/docs/summary.pdf">One-page summary (PDF)</a> · <a href="https://github.com/samielsabri/ems-heat-watch">Code and data on GitHub</a></p>
 </div>
 </main>
 
@@ -250,7 +245,6 @@ function render() {
         `<td>${h.false_alarms_per_summer.toFixed(1)}</td></tr>`; }).join("") + "</table>";
 }
 render();
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
 </script>
 </body>
 </html>
