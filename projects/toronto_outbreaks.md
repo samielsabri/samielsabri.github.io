@@ -77,36 +77,36 @@ dataset, runs the test suite and publishes the dashboard. If a column is
 renamed or a new pathogen label appears, the run stops and opens a GitHub
 issue that says exactly what changed.
 
-## Cleaning a decade of free-text records
+## Free-text records data cleaning
 
 The source is one row per outbreak per ward, typed by hand over ten years.
-Pathogen labels drift: *Norovirus-like* becomes *Norovirus* in 2023,
+Once in a while, pathogen labels drift. For example, *Norovirus-like* becomes *Norovirus* in 2023,
 *Coronavirus* becomes *Coronavirus\** in 2020 to separate seasonal
 coronaviruses from COVID-19, and co-detections move from one row with two
 agents to two separate rows. 101 raw labels are mapped to eleven analysis
 groups in a reviewed lookup table. Facility addresses, with their typos,
 abbreviations and ward suffixes, are normalized and matched to the City's
-Address Points register; the match itself exposed an address that does not
+Address Points register. The match itself exposed an address that does not
 exist and had split one home into two facilities.
 
-## Comparing like with like
+## Pre vs Post-Pandemic comparisons
 
 Outbreak counts roughly doubled after 2020, and most of that is not disease.
 COVID-19 added hundreds of outbreaks a season, outbreaks are now declared
 ward by ward (about 1.4 wards per facility episode, up from 1.1), and almost
 every respiratory outbreak now has a pathogen identified (none was identified
-in 26–29% in 2018 and 2019, against 1–4% since 2020). So the dashboard never pools the eras: each season is
-compared separately with a pre-pandemic and a post-pandemic range. Season
-onset for influenza and RSV uses the moving epidemic method, the approach
-ECDC and WHO Europe use; outbreak duration uses Kaplan–Meier so that
+in 26–29% in 2018 and 2019, against 1–4% since 2020). So the dashboard never 
+pools the eras: each season is compared separately with a pre-pandemic and a post-pandemic range. 
+Season onset for influenza and RSV uses the moving epidemic method, the approach
+ECDC and WHO Europe use. Outbreak duration uses Kaplan–Meier so that
 outbreaks still open are not counted as short ones.
 
 ## Limitations
 
-There are no case counts, attack rates or deaths, so everything is
-outbreak-level, and counts reflect testing and reporting practices as well
+There are no case counts, attack rates or deaths, so everything is at the
+outbreak-level. Counts, therefore, reflect testing and reporting practices as well
 as disease activity. Facilities are not ranked, because there are no bed
-counts to compare them fairly. The most recent weeks are provisional; how
+counts to compare them fairly. The most recent weeks are provisional and how
 much they grow will be measured from the weekly snapshots as they
 accumulate. Every methodological choice is recorded in the
 [decisions log](https://github.com/samielsabri/toronto_healthcare_institutions_outbreaks/blob/main/reports/decisions.md).
