@@ -7,16 +7,16 @@ links:
   - label: "GitHub"
     url: "https://github.com/samielsabri/toronto_healthcare_institutions_outbreaks"
 ---
-
 Hospitals, long-term care homes and retirement homes in Toronto must report
-respiratory and enteric outbreaks to Toronto Public Health, and the City
-publishes every declared outbreak as open data, refreshed each Thursday. The
-data are public, but there is no ready-made view of the season: how this week
-compares with past years, which pathogens are driving it, whether the
-influenza season has started, or which homes keep having outbreaks. This
-project is the routine surveillance a public health unit would run on these
-data: an automated weekly pipeline, a dashboard, and documented methods with
-honest limitations.
+respiratory and enteric outbreaks to Toronto Public Health (TPH), and the City
+publishes every declared outbreak as open data, refreshed each Thursday. TPH's
+own respiratory dashboard shows one citywide chart of weekly institutional
+outbreaks for the current season. It doesn't show which settings or facilities
+are affected, how long outbreaks last, which homes keep having them, whether
+the RSV season has started, or how this season compares with earlier ones.
+This project is the routine surveillance a public health unit would run on
+these data: an automated weekly pipeline, a dashboard, and documented methods
+with honest limitations.
 
 <!-- STATS GRID -->
 <div style="display: flex; flex-wrap: wrap; background: #f5f0ea; border: 1px solid #ddd6cc; margin: 2rem 0; font-family: sans-serif;">
@@ -35,12 +35,13 @@ honest limitations.
 </div>
 
 <!-- INTERACTIVE DASHBOARD (served from the project repository's GitHub Pages
-     site, so it is always the latest weekly build) -->
-<div style="margin: 2rem 0;">
+     site, so it is always the latest weekly build). Wider than the text
+     column so the dashboard keeps its one-screen desktop layout. -->
+<div style="margin: 2rem 0; position: relative; left: 50%; transform: translateX(-50%); width: min(1400px, 96vw);">
   <iframe
     src="/toronto_healthcare_institutions_outbreaks/"
     width="100%"
-    height="760px"
+    height="820px"
     style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
   </iframe>
   <div style="margin-top: 0.8rem; text-align: center;">
@@ -54,14 +55,17 @@ honest limitations.
 </div>
 <p style="font-size: 0.82rem; color: #888; font-family: sans-serif;
    margin-top: -0.3rem;">
-  Pick a season, setting and outbreak type, move the week slider or press
-  play. The map shows facilities with an outbreak active that week; the tabs
-  show this season against past ranges, the pathogen mix, influenza and RSV
-  season onset, outbreak duration, repeat outbreaks, a facility's history and
-  the outbreak table. Data: City of Toronto Open Data, <i>Outbreaks in Toronto
-  Healthcare Institutions</i> (Open Government Licence – Toronto). Unofficial;
-  not produced or endorsed by Toronto Public Health.
+  The left panel answers the weekly question: are influenza, COVID-19 and RSV
+  outbreaks higher, similar or lower than last week, using TPH's own rule. The
+  tabs show active outbreaks on a map with each facility's history, this season
+  against pre- and post-pandemic ranges, influenza and RSV season onset, the
+  pathogen mix, how long outbreaks last, repeat outbreaks, and the full table
+  to download. Pick a season, week, setting and outbreak type at the top.
+  Data: City of Toronto Open Data, <i>Outbreaks in Toronto Healthcare
+  Institutions</i> (Open Government Licence – Toronto). Unofficial; not
+  produced or endorsed by Toronto Public Health.
 </p>
+
 
 ---
 
@@ -77,10 +81,22 @@ dataset, runs the test suite and publishes the dashboard. If a column is
 renamed or a new pathogen label appears, the run stops and opens a GitHub
 issue that says exactly what changed.
 
+## Matching the official numbers
+
+Weeks run Sunday to Saturday, the epidemiological weeks used by TPH, Public
+Health Ontario and the national FluWatch reports. With them, the pipeline
+reproduces the institutional outbreak counts on TPH's Integrated Respiratory
+Diseases Dashboard week for week. The weekly higher / similar / lower call
+uses the decision rule published in TPH's technical notes, so the two can be
+checked against each other. TPH doesn't assess RSV, because outside
+institutional outbreaks it isn't a reportable disease in Ontario. That makes
+these data the only Toronto-specific RSV signal, so the dashboard applies the
+influenza rule to RSV and adds a season-onset alert for it.
+
 ## Free-text records data cleaning
 
-The source is one row per outbreak per ward, typed by hand over ten years.
-Once in a while, pathogen labels drift. For example, *Norovirus-like* becomes *Norovirus* in 2023,
+The source is one row per outbreak per ward, typed by hand over ten years, and pathogen labels drift.
+For example, *Norovirus-like* becomes *Norovirus* in 2023,
 *Coronavirus* becomes *Coronavirus\** in 2020 to separate seasonal
 coronaviruses from COVID-19, and co-detections move from one row with two
 agents to two separate rows. 101 raw labels are mapped to eleven analysis
@@ -103,10 +119,12 @@ outbreaks still open are not counted as short ones.
 
 ## Limitations
 
-There are no case counts, attack rates or deaths, so everything is at the
-outbreak-level. Counts, therefore, reflect testing and reporting practices as well
-as disease activity. Facilities are not ranked, because there are no bed
-counts to compare them fairly. The most recent weeks are provisional and how
-much they grow will be measured from the weekly snapshots as they
+The open data has no case counts, attack rates, hospitalizations or deaths, so
+everything is at the outbreak level: how often outbreaks happen and how long
+they last, not how severe they are. Counts reflect testing and reporting
+practices as well as disease activity. Facilities are listed by their number
+of separate outbreak episodes, but not compared as rates, because there are
+no bed counts to adjust for size. The most recent weeks are provisional, and
+how much they grow will be measured from the weekly snapshots as they
 accumulate. Every methodological choice is recorded in the
 [decisions log](https://github.com/samielsabri/toronto_healthcare_institutions_outbreaks/blob/main/reports/decisions.md).
