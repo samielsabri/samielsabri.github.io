@@ -28,16 +28,20 @@ Hospital and mortality data show what heat did to people's health, but they arri
   </div>
 </div>
 
-<!-- INTERACTIVE DASHBOARD -->
-<div style="margin: 2rem 0;">
+<!-- INTERACTIVE DASHBOARD (served from the project repository's GitHub Pages
+     site at /ems-heat-watch/, so it is always the latest build). Wider than
+     the text column so the dashboard keeps its desktop layout.
+     For a local Jekyll preview, temporarily use
+     src="https://samielsabri.me/ems-heat-watch/". -->
+<div style="margin: 2rem 0; position: relative; left: 50%; transform: translateX(-50%); width: min(1400px, 96vw);">
   <iframe
-    src="/dashboards/ems_heat_watch/ems_heat_watch.html"
+    src="/ems-heat-watch/"
     width="100%"
-    height="1000px"
+    height="820px"
     style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
   </iframe>
   <div style="margin-top: 0.8rem; text-align: center;">
-    <a href="/dashboards/ems_heat_watch/ems_heat_watch.html" target="_blank"
+    <a href="/ems-heat-watch/" target="_blank"
        style="background: #2c3e50; color: white; padding: 10px 22px;
               border-radius: 6px; text-decoration: none; font-weight: 600;
               font-family: sans-serif; font-size: 0.85rem;">
