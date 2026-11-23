@@ -23,11 +23,11 @@ This project does that by extracting pdfs from 2003 to 2024 and builds a dashboa
 and an annual report on top, similar to tools like the German *Survstat@RKI 2.0*.
 
 <!-- INTERACTIVE DASHBOARD -->
-<div style="margin: 2rem 0;">
+<div style="margin: 2rem 0; position: relative; left: 50%; transform: translateX(-50%); width: min(1400px, 96vw);">
   <iframe
     src="/dashboards/morocco_surveillance_dashboard.html"
     width="100%"
-    height="680px"
+    height="820px"
     style="border: 1px solid #ddd6cc; border-radius: 4px; display: block;">
   </iframe>
   <div style="margin-top: 0.8rem; text-align: center;">
